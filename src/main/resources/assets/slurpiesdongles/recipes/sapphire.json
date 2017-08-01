@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:sapphire_block"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:sapphire",
+      "count": 9
+  }
+}

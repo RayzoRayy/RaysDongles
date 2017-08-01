@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "slurpiesdongles:corn0" },
+        "age=1": { "model": "slurpiesdongles:corn1" },
+        "age=2": { "model": "slurpiesdongles:corn2" },
+        "age=3": { "model": "slurpiesdongles:corn3" },
+        "age=4": { "model": "slurpiesdongles:corn4" },
+        "age=5": { "model": "slurpiesdongles:corn5" },
+        "age=6": { "model": "slurpiesdongles:corn6" },
+        "age=7": { "model": "slurpiesdongles:corn7" }
+    }
+}

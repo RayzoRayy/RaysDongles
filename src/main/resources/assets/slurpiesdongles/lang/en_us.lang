@@ -1,0 +1,105 @@
+#Armor
+item.sapphire_helmet.name=Sapphire Helmet
+item.sapphire_chestplate.name=Sapphire Chestplate
+item.sapphire_leggings.name=Sapphire Leggings
+item.sapphire_boots.name=Sapphire Boots
+
+#Blocks
+tile.blue_bricks.name=Blue Bricks
+tile.cyan_bricks.name=Cyan Bricks
+tile.green_bricks.name=Green Bricks
+tile.orange_bricks.name=Orange Bricks
+tile.purple_bricks.name=Purple Bricks
+tile.rainbow_bricks.name=Rainbow Bricks
+tile.yellow_bricks.name=Yellow Bricks
+tile.blue_glowstone.name=Blue Glowstone
+tile.gray_glowstone.name=Gray Glowstone
+tile.green_glowstone.name=Green Glowstone
+tile.orange_glowstone.name=Orange Glowstone
+tile.pink_glowstone.name=Pink Glowstone
+tile.purple_glowstone.name=Purple Glowstone
+tile.red_glowstone.name=Red Glowstone
+tile.hardened_topaz_block.name=Hardened Topaz Block
+tile.lignite_block.name=Lignite Block
+tile.reinforced_obsidian.name=Reinforced Obsidian
+tile.ruby_block.name=Ruby Block
+tile.sapphire_block.name=Sapphire Block
+tile.topaz_block.name=Topaz Block
+
+#Drinks
+item.apple_juice.name=Apple Juice
+item.black_coffee.name=Black Coffee
+item.carrot_juice.name=Carrot Juice
+item.coffee.name=Coffee
+item.lemonade.name=Lemonade
+item.melon_juice.name=Melon Juice
+item.melon_slushie.name=Melon Slushee
+item.orange_juice.name=Orange Juice (OJ)
+
+#Dusts
+item.blue_glowstone_dust.name=Blue Glowstone Dust
+item.gray_glowstone_dust.name=Gray Glowstone Dust
+item.green_glowstone_dust.name=Green Glowstone Dust
+item.orange_glowstone_dust.name=Orange Glowstone Dust
+item.purple_glowstone_dust.name=Purple Glowstone Dust
+item.pink_glowstone_dust.name=Pink Glowstone Dust
+item.red_glowstone_dust.name=Red Glowstone Dust
+
+#Food
+item.bacon.name=Bacon
+item.beef_jerky.name=Jimmer's Beef Jerky
+item.chicken_nugget.name=Chicken Nugget
+item.corn.name=Corn
+tile.corn_crop.name=Corn Crop
+item.eggs.name=Eggs
+item.holy_bread.name=Holy Bread
+item.lemon.name=Lemon
+tile.lemon_bush.name=Lemon Bush
+tile.lemon_crop.name=Lemon Crop
+item.mixed_seeds.name=Mixed Seeds
+item.orange.name=Orange
+tile.orange_bush.name=Orange Bush
+tile.orange_crop.name=Orange Crop
+item.raw_bacon.name=Raw Bacon
+item.raw_beef_slice.name=Raw Beef Slice
+item.roasted_apple.name=Roasted Apple
+item.roasted_beetroot_seeds.name=Roasted Beetroot Seeds
+item.roasted_melon_seeds.name=Roasted Melon Seeds
+item.roasted_pumpkin_seeds.name=Roasted Pumpkin Seeds
+item.roasted_seeds.name=Roasted Seeds
+item.toast.name=Toast
+
+#Gems
+item.lignite.name=Lignite
+item.ruby.name=Ruby
+item.sapphire.name=Sapphire
+item.hardened_topaz.name=Hardened Topaz
+item.topaz.name=Topaz
+
+#Items
+item.repair.name=Blacksmith Repair Kit
+item.blender.name=Blender
+item.corn_seed.name=Corn Seed
+item.hammer.name=Hammer
+item.hot_water.name=Hot Water
+item.knife.name=Knife
+item.pops_sign.name=Pop's Sign
+item.time_staff.name=Staff of Time
+item.topaz_handle.name=Topaz Handle
+item.vmp_upgrade.name=VMP Upgrade
+
+#Ores
+tile.lignite_ore.name=Lignite Ore
+tile.ruby_ore.name=Ruby Ore
+tile.sapphire_ore.name=Sapphire Ore
+tile.topaz_ore.name=Topaz Ore
+
+#Nether Ores
+tile.nether_coal_ore.name=Nether Coal Ore
+tile.nether_diamond_ore.name=Nether Diamond Ore
+tile.nether_emerald_ore.name=Nether Emerald Ore
+tile.nether_gold_ore.name=Nether Gold Ore
+tile.nether_iron_ore.name=Nether Iron Ore
+tile.nether_lapis_ore.name=Nether Lapis Ore
+tile.nether_redstone_ore.name=Nether Redstone Ore
+

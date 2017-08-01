@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:black_coffee"
+    },
+	{
+	  "item": "minecraft:milk_bucket" 
+	}, 
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:coffee"
+  }
+}

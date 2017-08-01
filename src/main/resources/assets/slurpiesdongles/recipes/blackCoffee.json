@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:paper"
+    },
+	{
+	  "item": "slurpiesdongles:hot_water" 
+	}, {
+      "item": "minecraft:dye",
+      "data": 3
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:black_coffee"
+  }
+}

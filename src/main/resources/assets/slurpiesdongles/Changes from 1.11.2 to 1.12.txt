@@ -1,0 +1,8 @@
+Nether Gold Ore now drops Gold Nuggets instead of Nether Gold Ore. The Gold Nuggets drop randomly, similar to Lapis, so each time it'll drop a different ammount. 
+It's also changed to drop like my Nether Lapis Ore, more than what Vanilla Lapis drops.
+
+Nether Redstone Ore now drops Redstone instead of Nether Redstone Ore. The Redstone drop randomly, similar to Lapis, so each time it'll drop a different ammount. 
+It's also changed to drop like my Nether Lapis Ore, more than what Vanilla Lapis drops.
+
+Staff of Time now has a GUIScreen however the mouse cursor at the moment is a little buggy
+

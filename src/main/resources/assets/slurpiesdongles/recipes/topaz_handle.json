@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  T",
+    " N ",
+    "T  "
+  ],
+  "key": {
+    "T": {
+      "item": "slurpiesdongles:topaz"
+    },
+      "N": {
+          "item": "minecraft:nether_star"
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:topaz_handle"
+  }
+}

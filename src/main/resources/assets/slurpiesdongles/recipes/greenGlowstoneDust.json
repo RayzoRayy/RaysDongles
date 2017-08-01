@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:glowstone_dust"
+    },
+	{
+	  "item": "minecraft:dye",
+        "data" : 2
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:green_glowstone_dust"
+  }
+}
