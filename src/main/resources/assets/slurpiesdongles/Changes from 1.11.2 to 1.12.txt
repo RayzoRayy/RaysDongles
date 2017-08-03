@@ -6,3 +6,5 @@ It's also changed to drop like my Nether Lapis Ore, more than what Vanilla Lapis
 
 Staff of Time now has a GUIScreen however the mouse cursor at the moment is a little buggy
 
+VMPick now has a durability of 6,200, down from 22,000. This can still be changed in the config if you wish to do so.
+

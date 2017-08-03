@@ -17,7 +17,7 @@ public class SDFood {
     public static FoodDrinkBase appleJuice = new FoodDrinkBase(5, 0.7F, false, "apple_juice");
     public static DrinkBlackCoffee blackCoffee = new DrinkBlackCoffee(2, 0.6F, false, "black_coffee");
     public static FoodDrinkBase carrotJuice = new FoodDrinkBase(4, 0.5F, false, "carrot_juice");
-    public static DrinkCoffee coffee = new DrinkCoffee(4, 0.8F, false, "coffee");
+    public static DrinkCoffee coffee = new DrinkCoffee(3, 0.8F, false, "coffee");
     public static FoodDrinkBase lemonade = new FoodDrinkBase(4, 0.6F, false, "lemonade");
     public static FoodDrinkBase melonJuice = new FoodDrinkBase(4, 0.4F, false, "melon_juice");
     public static FoodDrinkBase melonSlushie = new FoodDrinkBase(6, 0.7F, false, "melon_slushie");
@@ -39,6 +39,8 @@ public class SDFood {
     public static FoodBase roastedMelonSeeds = new FoodBase(2, 0.3F, false, "roasted_melon_seeds");
     public static FoodBase roastedPumpkinSeeds = new FoodBase(2, 0.3F, false, "roasted_pumpkin_seeds");
     public static FoodBase roastedSeeds = new FoodBase(2, 0.3F, false, "roasted_seeds");
+    public static FoodSugarCoatedBase sugarcoatedLemon = new FoodSugarCoatedBase(2, 0.2F, false, "sugarcoated_lemon");
+    public static FoodSugarCoatedBase sugarcoatedMelon = new FoodSugarCoatedBase(2, 0.3F, false, "sugarcoated_melon");
     public static FoodBase toast = new FoodBase(6, 1.0F, false, "toast");
 
     public static void register(IForgeRegistry<Item> registry) {
@@ -70,6 +72,8 @@ public class SDFood {
                 roastedMelonSeeds,
                 roastedPumpkinSeeds,
                 roastedSeeds,
+                sugarcoatedLemon,
+                sugarcoatedMelon,
                 toast
 
         );
@@ -104,6 +108,8 @@ public class SDFood {
         registerRender(roastedMelonSeeds);
         registerRender(roastedPumpkinSeeds);
         registerRender(roastedSeeds);
+        registerRender(sugarcoatedLemon);
+        registerRender(sugarcoatedMelon);
         registerRender(toast);
     }
 

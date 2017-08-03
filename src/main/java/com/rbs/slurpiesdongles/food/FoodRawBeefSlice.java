@@ -1,6 +1,7 @@
 package com.rbs.slurpiesdongles.food;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemFood;
@@ -10,6 +11,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class FoodRawBeefSlice extends ItemFood {
@@ -35,8 +37,8 @@ public class FoodRawBeefSlice extends ItemFood {
         }
     }
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
-    {
-        list.add("Perhaps I should cook this first?");
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        tooltip.add("Perhaps I should cook this first?");
     }
+
 }

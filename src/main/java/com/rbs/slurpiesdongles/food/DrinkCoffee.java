@@ -1,6 +1,7 @@
 package com.rbs.slurpiesdongles.food;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.EnumAction;
@@ -11,6 +12,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class DrinkCoffee extends ItemFood {
@@ -36,13 +38,14 @@ public class DrinkCoffee extends ItemFood {
                 player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 1200, 1));
 
             } else {
+                player.addPotionEffect(new PotionEffect(MobEffects.HASTE, 1200, 1));
 
             }
         }
     }
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
-    {
-        list.add("Drinking this gives you Haste!");
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        tooltip.add("Drinking this gives you haste for a bit!");
     }
+
 }

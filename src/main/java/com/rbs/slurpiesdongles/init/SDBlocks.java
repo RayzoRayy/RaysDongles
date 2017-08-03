@@ -13,6 +13,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class SDBlocks {
 
     //Blocks
+    public static BlockBlender blenderCyan = new BlockBlender("blender_cyan");
     public static BlockCustomBricks blueBricks = new BlockCustomBricks("blue_bricks");
     public static BlockCustomBricks cyanBricks = new BlockCustomBricks("cyan_bricks");
     public static BlockCustomBricks greenBricks = new BlockCustomBricks("green_bricks");
@@ -59,6 +60,7 @@ public class SDBlocks {
         final Block[] blocks = {
 
                 //Blocks
+                blenderCyan,
                 blueBricks,
                 cyanBricks,
                 greenBricks,
@@ -108,6 +110,7 @@ public class SDBlocks {
     public static void registerModels() {
 
         //Blocks
+        registerRender(blenderCyan);
         registerRender(blueBricks);
         registerRender(cyanBricks);
         registerRender(greenBricks);
@@ -156,6 +159,7 @@ public class SDBlocks {
         registry.registerAll(
 
                 //Blocks
+                blenderCyan.createItemBlock(),
                 blueBricks.createItemBlock(),
                 cyanBricks.createItemBlock(),
                 greenBricks.createItemBlock(),

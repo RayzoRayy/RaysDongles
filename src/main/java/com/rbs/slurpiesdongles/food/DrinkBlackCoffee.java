@@ -1,6 +1,7 @@
 package com.rbs.slurpiesdongles.food;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.EnumAction;
@@ -11,6 +12,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class DrinkBlackCoffee extends ItemFood {
@@ -43,10 +45,9 @@ public class DrinkBlackCoffee extends ItemFood {
 
         }
     }
-
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
-    {
-        list.add("Gives you speed for a minute!");
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        tooltip.add("Gives you speed for a minute!");
     }
+
 }

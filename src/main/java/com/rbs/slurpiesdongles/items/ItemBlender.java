@@ -16,4 +16,5 @@ public class ItemBlender extends Item {
         setUnlocalizedName(name);
         setRegistryName(name);
     }
+
 }

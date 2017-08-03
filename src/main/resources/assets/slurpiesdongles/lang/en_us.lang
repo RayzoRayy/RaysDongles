@@ -1,10 +1,35 @@
 #Armor
+item.ruby_helmet.name=Ruby Helmet
+item.ruby_chestplate.name=Ruby Chestplate
+item.ruby_leggings.name=Ruby Leggings
+item.ruby_boots.name=Ruby Boots
 item.sapphire_helmet.name=Sapphire Helmet
 item.sapphire_chestplate.name=Sapphire Chestplate
 item.sapphire_leggings.name=Sapphire Leggings
 item.sapphire_boots.name=Sapphire Boots
+item.topaz_helmet.name=Topaz Helmet
+item.topaz_chestplate.name=Topaz Chestplate
+item.topaz_leggings.name=Topaz Leggings
+item.topaz_boots.name=Topaz Boots
+
+#Axes
+item.ruby_axe.name=Ruby Axe
+item.sapphire_axe.name=Sapphire Axe
+item.topaz_axe.name=Topaz Axe
+
+#Battle Axes
+item.diamond_battleaxe.name=Diamond Battleaxe
+item.emerald_battleaxe.name=Emerald Battleaxe
+item.gold_battleaxe.name=Golden Battleaxe
+item.iron_battleaxe.name=Iron Battleaxe
+item.ruby_battleaxe.name=Ruby Battleaxe
+item.sapphire_battleaxe.name=Sapphire Battleaxe
+item.stone_battleaxe.name=Stone Battleaxe
+item.topaz_battleaxe.name=Topaz Battleaxe
+item.wooden_battleaxe.name=Wooden Battleaxe
 
 #Blocks
+tile.blender_cyan.name=Blender
 tile.blue_bricks.name=Blue Bricks
 tile.cyan_bricks.name=Cyan Bricks
 tile.green_bricks.name=Green Bricks
@@ -67,6 +92,8 @@ item.roasted_beetroot_seeds.name=Roasted Beetroot Seeds
 item.roasted_melon_seeds.name=Roasted Melon Seeds
 item.roasted_pumpkin_seeds.name=Roasted Pumpkin Seeds
 item.roasted_seeds.name=Roasted Seeds
+item.sugarcoated_lemon.name=Sugar Coated Lemon
+item.sugarcoated_melon.name=Sugar Coated Melon
 item.toast.name=Toast
 
 #Gems
@@ -75,6 +102,11 @@ item.ruby.name=Ruby
 item.sapphire.name=Sapphire
 item.hardened_topaz.name=Hardened Topaz
 item.topaz.name=Topaz
+
+#Hoes
+item.ruby_hoe.name=Ruby Hoe
+item.sapphire_hoe.name=Sapphire Hoe
+item.topaz_hoe.name=Topaz Hoe
 
 #Items
 item.repair.name=Blacksmith Repair Kit
@@ -102,4 +134,30 @@ tile.nether_gold_ore.name=Nether Gold Ore
 tile.nether_iron_ore.name=Nether Iron Ore
 tile.nether_lapis_ore.name=Nether Lapis Ore
 tile.nether_redstone_ore.name=Nether Redstone Ore
+
+#Paxels
+item.diamond_paxel.name=Diamond Paxel
+item.gold_paxel.name=Gold Paxel
+item.iron_paxel.name=Iron Paxel
+item.stone_paxel.name=Stone Paxel
+item.ruby_paxel.name=Ruby Paxel
+item.sapphire_paxel.name=Sapphire Paxel
+item.topaz_paxel.name=Topaz Paxel
+item.wooden_paxel.name=Wooden Paxel
+
+#Pickaxes
+item.ruby_pickaxe.name=Ruby Pickaxe
+item.sapphire_pickaxe.name=Sapphire Pickaxe
+item.topaz_pickaxe.name=Topaz Pickaxe
+item.vmpick.name=Mass Mining Pick
+
+#Shovels
+item.ruby_shovel.name=Ruby Shovel
+item.sapphire_shovel.name=Sapphire Shovel
+item.topaz_shovel.name=Topaz Shovel
+
+#Swords
+item.ruby_sword.name=Ruby Sword
+item.sapphire_sword.name=Sapphire Sword
+item.topaz_sword.name=Topaz Sword
 

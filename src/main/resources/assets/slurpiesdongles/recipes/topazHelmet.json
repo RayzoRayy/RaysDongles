@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XRX"
+  ],
+  "key": {
+    "X": {
+    "item": "slurpiesdongles:hardened_topaz"
+    },
+      "R": {
+          "item": "slurpiesdongles:ruby_helmet"
+      }
+      
+  },
+  "result": {
+    "item": "slurpiesdongles:topaz_helmet"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XRX",
+    "XBX",
+    "XFX"
+  ],
+  "key": {
+    "X": {
+    "item": "slurpiesdongles:hardened_topaz"
+    },
+      "R": {
+          "item": "slurpiesdongles:ruby_chestplate"
+      },
+      "B": {
+          "item": "slurpiesdongles:hardened_topaz_block"
+      },
+      "F": {
+          "item": "minecraft:feather"
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:topaz_chestplate"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick",
+    "data": 0
+    },
+    "X": {
+    "item": "slurpiesdongles:sapphire"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:sapphire_pickaxe"
+  }
+}

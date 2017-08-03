@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XSX",
+    "X X"
+  ],
+  "key": {
+    "X": {
+    "item": "slurpiesdongles:ruby"
+    },
+      "S": {
+          "item": "slurpiesdongles:sapphire_boots"
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:ruby_boots"
+  }
+}

@@ -3,6 +3,7 @@ package com.rbs.slurpiesdongles.init;
 import com.rbs.slurpiesdongles.SlurpiesDongles;
 import com.rbs.slurpiesdongles.armor.ArmorRubyArmor;
 import com.rbs.slurpiesdongles.armor.ArmorSapphireArmor;
+import com.rbs.slurpiesdongles.armor.ArmorTopazArmor;
 import com.rbs.slurpiesdongles.items.*;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -20,16 +21,37 @@ public class SDItems {
 
 
     //armor
-    /*
-    public static Item rubyHelmet = new ArmorRubyArmor("ruby_helmet", ConfigPreInit.ruby_armor, "ruby", EntityEquipmentSlot.HEAD);
-    public static Item rubyChestplate = new ArmorRubyArmor("ruby_chestplate", ConfigPreInit.ruby_armor, "ruby", EntityEquipmentSlot.CHEST);
-    public static Item rubyLeggings = new ArmorRubyArmor("ruby_leggings", ConfigPreInit.ruby_armor, "ruby", EntityEquipmentSlot.LEGS);
-    public static Item rubyBoots = new ArmorRubyArmor("ruby_boots", ConfigPreInit.ruby_armor, "ruby", EntityEquipmentSlot.FEET);
-    */
+
+    public static Item rubyHelmet = new ArmorRubyArmor("ruby_helmet", ConfigPreInit.rubyArmor, "ruby", EntityEquipmentSlot.HEAD);
+    public static Item rubyChestplate = new ArmorRubyArmor("ruby_chestplate", ConfigPreInit.rubyArmor, "ruby", EntityEquipmentSlot.CHEST);
+    public static Item rubyLeggings = new ArmorRubyArmor("ruby_leggings", ConfigPreInit.rubyArmor, "ruby", EntityEquipmentSlot.LEGS);
+    public static Item rubyBoots = new ArmorRubyArmor("ruby_boots", ConfigPreInit.rubyArmor, "ruby", EntityEquipmentSlot.FEET);
     public static Item sapphireHelmet = new ArmorSapphireArmor("sapphire_helmet", ConfigPreInit.sapphireArmor, "sapphire",EntityEquipmentSlot.HEAD);
     public static Item sapphireChestplate = new ArmorSapphireArmor("sapphire_chestplate", ConfigPreInit.sapphireArmor, "sapphire", EntityEquipmentSlot.CHEST);
     public static Item sapphireLeggings = new ArmorSapphireArmor("sapphire_leggings", ConfigPreInit.sapphireArmor, "sapphire", EntityEquipmentSlot.LEGS);
     public static Item sapphireBoots = new ArmorSapphireArmor("sapphire_boots", ConfigPreInit.sapphireArmor, "sapphire", EntityEquipmentSlot.FEET);
+    public static Item topazHelmet = new ArmorTopazArmor("topaz_helmet", ConfigPreInit.topazArmor, "topaz", EntityEquipmentSlot.HEAD);
+    public static Item topazChestplate = new ArmorTopazArmor("topaz_chestplate", ConfigPreInit.topazArmor, "topaz", EntityEquipmentSlot.CHEST);
+    public static Item topazLeggings = new ArmorTopazArmor("topaz_leggings", ConfigPreInit.topazArmor, "topaz", EntityEquipmentSlot.LEGS);
+    public static Item topazBoots = new ArmorTopazArmor("topaz_boots", ConfigPreInit.topazArmor, "topaz", EntityEquipmentSlot.FEET);
+
+    //Axes
+    public static Item rubyAxe = new ItemAxe("ruby_axe", ConfigPreInit.rubyMaterial);
+    public static Item sapphireAxe = new ItemAxe("sapphire_axe", ConfigPreInit.sapphireMaterial);
+    public static Item topazAxe = new ItemAxe("topaz_axe", ConfigPreInit.topazMaterial);
+
+    //Battle Axes
+    public static Item diamondBattleAxe = new ItemSword("diamond_battleaxe", ConfigPreInit.diamondBattleaxeMaterial);
+    public static Item emeraldBattleAxe = new ItemSword("emerald_battleaxe", ConfigPreInit.emeraldBattleaxeMaterial);
+    public static Item goldBattleAxe = new ItemSword("gold_battleaxe", ConfigPreInit.goldBattleaxeMaterial);
+    public static Item ironBattleAxe = new ItemSword("iron_battleaxe", ConfigPreInit.ironBattleaxeMaterial);
+    public static Item rubyBattleAxe = new ItemSword("ruby_battleaxe", ConfigPreInit.rubyBattleaxeMaterial);
+    public static Item sapphireBattleAxe = new ItemSword("sapphire_battleaxe", ConfigPreInit.sapphireBattleaxeMaterial);
+    public static Item stoneBattleAxe = new ItemSword("stone_battleaxe", ConfigPreInit.stoneBattleaxeMaterial);
+    public static Item topazBattleAxe = new ItemSword("topaz_battleaxe", ConfigPreInit.topazBattleaxeMaterial);
+    public static Item woodenBattleAxe = new ItemSword("wooden_battleaxe", ConfigPreInit.woodenBattleaxeMaterial);
+
+
 
 
     //Dust
@@ -40,6 +62,18 @@ public class SDItems {
     public static Item pinkGlowstoneDust = new ItemBase("pink_glowstone_dust");
     public static Item purpleGlowstoneDust = new ItemBase("purple_glowstone_dust");
     public static Item redGlowstoneDust = new ItemBase("red_glowstone_dust");
+
+    //Gems
+    public static Item lignite = new ItemLignite("lignite");
+    public static Item ruby = new ItemBase("ruby");
+    public static Item sapphire = new ItemBase("sapphire");
+    public static Item hardenedTopaz = new ItemBase("hardened_topaz");
+    public static Item topaz = new ItemBase("topaz");
+
+    //Hoes
+    public static Item rubyHoe = new ItemHoe("ruby_hoe", ConfigPreInit.rubyMaterial);
+    public static Item sapphireHoe = new ItemHoe("sapphire_hoe", ConfigPreInit.sapphireMaterial);
+    public static Item topazHoe = new ItemHoe("topaz_hoe", ConfigPreInit.topazMaterial);
 
     //Items
     public static Item blender = new ItemBlender("blender");
@@ -52,29 +86,67 @@ public class SDItems {
     public static Item VMPUpgrade = new ItemBase("vmp_upgrade");
     public static Item repairItem = new DaRepairItem("repair");
 
+    //Paxels
+    public static Item diamondPaxel = new ItemPaxel("diamond_paxel", ConfigPreInit.diamondPaxelMaterial);
+    public static Item goldPaxel = new ItemPaxel("gold_paxel", ConfigPreInit.goldPaxelMaterial);
+    public static Item ironPaxel = new ItemPaxel("iron_paxel", ConfigPreInit.ironPaxelMaterial);
+    public static Item stonePaxel = new ItemPaxel("stone_paxel", ConfigPreInit.stonePaxelMaterial);
+    public static Item rubyPaxel = new ItemPaxel("ruby_paxel", ConfigPreInit.rubyPaxelMaterial);
+    public static Item sapphirePaxel = new ItemPaxel("sapphire_paxel", ConfigPreInit.sapphirePaxelMaterial);
+    public static Item topazPaxel = new ItemPaxel("topaz_paxel", ConfigPreInit.topazPaxelMaterial);
+    public static Item woodenPaxel = new ItemPaxel("wooden_paxel", ConfigPreInit.woodenPaxelMaterial);
 
-    //Gems
-    public static Item lignite = new ItemLignite("lignite");
-    public static Item ruby = new ItemBase("ruby");
-    public static Item sapphire = new ItemBase("sapphire");
-    public static Item hardenedTopaz = new ItemBase("hardened_topaz");
-    public static Item topaz = new ItemBase("topaz");
+    //Pickaxes
+    public static Item rubyPickaxe = new ItemPickaxe("ruby_pickaxe", ConfigPreInit.rubyMaterial);
+    public static Item sapphirePickaxe = new ItemPickaxe("sapphire_pickaxe", ConfigPreInit.sapphireMaterial);
+    public static Item topazPickaxe = new ItemPickaxe("topaz_pickaxe", ConfigPreInit.topazMaterial);
+     public static Item VMPick = new VMPick("vmpick", ConfigPreInit.vmpickMaterial);
 
     //Seeds
     public static ItemSeeds cornSeed = new ItemCornSeed("corn_seed", SDBlocks.cornCrop, Blocks.FARMLAND);
+
+    //Shovels
+    public static Item rubyShovel = new ItemShovel("ruby_shovel", ConfigPreInit.rubyMaterial);
+    public static Item sapphireShovel = new ItemShovel("sapphire_shovel", ConfigPreInit.sapphireMaterial);
+    public static Item topazShovel = new ItemShovel("topaz_shovel", ConfigPreInit.topazMaterial);
+
+    //Swords
+    public static Item rubySword = new ItemSword("ruby_sword", ConfigPreInit.rubySwordMaterial);
+    public static Item sapphireSword = new ItemSword("sapphire_sword", ConfigPreInit.sapphireSwordMaterial);
+    public static Item topazSword = new ItemSword("topaz_sword", ConfigPreInit.topazSwordMaterial);
 
 
     public static void register(IForgeRegistry<Item> registry) {
         registry.registerAll(
                 //armor
-                //ruby_helmet,
-                //ruby_chestplate,
-                //ruby_leggings,
-                //ruby_boots,
+                rubyHelmet,
+                rubyChestplate,
+                rubyLeggings,
+                rubyBoots,
                 sapphireHelmet,
                 sapphireChestplate,
                 sapphireLeggings,
                 sapphireBoots,
+                topazHelmet,
+                topazChestplate,
+                topazLeggings,
+                topazBoots,
+
+                //Axes
+                rubyAxe,
+                sapphireAxe,
+                topazAxe,
+
+                //Battle Axes
+                diamondBattleAxe,
+                emeraldBattleAxe,
+                goldBattleAxe,
+                ironBattleAxe,
+                rubyBattleAxe,
+                sapphireBattleAxe,
+                stoneBattleAxe,
+                topazBattleAxe,
+                woodenBattleAxe,
 
                 //Dust
                 blueGlowstoneDust,
@@ -84,6 +156,18 @@ public class SDItems {
                 pinkGlowstoneDust,
                 purpleGlowstoneDust,
                 redGlowstoneDust,
+
+                //Gems
+                lignite,
+                ruby,
+                sapphire,
+                hardenedTopaz,
+                topaz,
+
+                //Hoes
+                rubyHoe,
+                sapphireHoe,
+                topazHoe,
 
                 //Items
                 blender.setContainerItem(SDItems.blender),
@@ -96,29 +180,69 @@ public class SDItems {
                 VMPUpgrade,
                 repairItem,
 
-                //Gems
-                lignite,
-                ruby,
-                sapphire,
-                hardenedTopaz,
-                topaz,
+                //Paxels
+                diamondPaxel,
+                goldPaxel,
+                ironPaxel,
+                stonePaxel,
+                rubyPaxel,
+                sapphirePaxel,
+                topazPaxel,
+                woodenPaxel,
+
+                //Pickaxes
+                rubyPickaxe,
+                sapphirePickaxe,
+                topazPickaxe,
+                VMPick,
 
                 //Seeds
-                cornSeed
+                cornSeed,
+
+                //Shovels
+                rubyShovel,
+                sapphireShovel,
+                topazShovel,
+
+                //Swords
+                rubySword,
+                sapphireSword,
+                topazSword
+
 
         );
 
     }
     public static void registerModels() {
         //Armor
-        //registerRender(ruby_helmet);
-        //registerRender(ruby_chestplate);
-       // registerRender(ruby_leggings);
-       // registerRender(ruby_boots);
+        registerRender(rubyHelmet);
+        registerRender(rubyChestplate);
+        registerRender(rubyLeggings);
+        registerRender(rubyBoots);
         registerRender(sapphireHelmet);
         registerRender(sapphireChestplate);
         registerRender(sapphireLeggings);
         registerRender(sapphireBoots);
+        registerRender(topazHelmet);
+        registerRender(topazChestplate);
+        registerRender(topazLeggings);
+        registerRender(topazBoots);
+
+        //Axes
+        registerRender(rubyAxe);
+        registerRender(sapphireAxe);
+        registerRender(topazAxe);
+
+        //Battle Axes
+        registerRender(diamondBattleAxe);
+        registerRender(emeraldBattleAxe);
+        registerRender(ironBattleAxe);
+        registerRender(goldBattleAxe);
+        registerRender(rubyBattleAxe);
+        registerRender(sapphireBattleAxe);
+        registerRender(stoneBattleAxe);
+        registerRender(topazBattleAxe);
+        registerRender(woodenBattleAxe);
 
         //Dust
         registerRender(blueGlowstoneDust);
@@ -128,6 +252,18 @@ public class SDItems {
         registerRender(pinkGlowstoneDust);
         registerRender(purpleGlowstoneDust);
         registerRender(redGlowstoneDust);
+
+        //Gems
+        registerRender(lignite);
+        registerRender(ruby);
+        registerRender(sapphire);
+        registerRender(hardenedTopaz);
+        registerRender(topaz);
+
+        //Hoes
+        registerRender(rubyHoe);
+        registerRender(sapphireHoe);
+        registerRender(topazHoe);
 
         //Items
         registerRender(blender);
@@ -140,15 +276,34 @@ public class SDItems {
         registerRender(VMPUpgrade);
         registerRender(repairItem);
 
-        //Gems
-        registerRender(lignite);
-        registerRender(ruby);
-        registerRender(sapphire);
-        registerRender(hardenedTopaz);
-        registerRender(topaz);
+        //Paxels
+        registerRender(diamondPaxel);
+        registerRender(goldPaxel);
+        registerRender(ironPaxel);
+        registerRender(stonePaxel);
+        registerRender(rubyPaxel);
+        registerRender(sapphirePaxel);
+        registerRender(topazPaxel);
+        registerRender(woodenPaxel);
+
+        //Pickaxes
+        registerRender(rubyPickaxe);
+        registerRender(sapphirePickaxe);
+        registerRender(topazPickaxe);
+        registerRender(VMPick);
 
         //Seeds
         registerRender(cornSeed);
+
+        //Shovels
+        registerRender(rubyShovel);
+        registerRender(sapphireShovel);
+        registerRender(topazShovel);
+
+        //Swords
+        registerRender(rubySword);
+        registerRender(sapphireSword);
+        registerRender(topazSword);
 
 
     }

@@ -2,6 +2,7 @@ package com.rbs.slurpiesdongles.armor;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
 import com.rbs.slurpiesdongles.init.SDItems;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -13,6 +14,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 /**
@@ -25,7 +27,7 @@ public class ArmorSapphireArmor extends ItemArmor {
     public ArmorSapphireArmor(String unlocalizedName, ArmorMaterial material, String armorType, EntityEquipmentSlot equipmentSlotIn) {
 
         super(material, 0, equipmentSlotIn);
-        //this.setCreativeTab(SlurpiesDonglesTab.SLURPIES_DONGLES_TAB);
+        this.setCreativeTab(SlurpiesDongles.creativeTab);
 
         this.name = unlocalizedName;
         setUnlocalizedName(unlocalizedName);
@@ -55,9 +57,8 @@ public class ArmorSapphireArmor extends ItemArmor {
     }
 
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
-    {
-        list.add("Wearing full set grants Night Vison!");
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        tooltip.add("Wearing full set grants Night Vison!");
     }
 
 

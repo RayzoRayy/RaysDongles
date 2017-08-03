@@ -1,0 +1,8 @@
+{
+	"variants": {
+        "facing=north": { "model": "slurpiesdongles:blender_cyan" },
+        "facing=south": { "model": "slurpiesdongles:blender_cyan", "y": 180 },
+        "facing=west":  { "model": "slurpiesdongles:blender_cyan", "y": 270 },
+        "facing=east":  { "model": "slurpiesdongles:blender_cyan", "y": 90 }
+    }
+}

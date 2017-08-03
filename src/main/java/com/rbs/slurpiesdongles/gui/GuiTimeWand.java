@@ -29,8 +29,6 @@ public class GuiTimeWand extends GuiScreen {
 
     @Override
     public void drawScreen(int x, int y, float partialTicks) {
-
-        Mouse.setGrabbed(false);
         this.drawDefaultBackground();
         this.drawCenteredString(this.fontRenderer, this.title, this.width / 2, 15, 16777215);
         super.drawScreen(x, y, partialTicks);

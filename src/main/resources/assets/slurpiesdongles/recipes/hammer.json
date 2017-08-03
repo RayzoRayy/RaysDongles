@@ -3,16 +3,18 @@
   "pattern": [
     "III",
     "ISI",
-    " S "
+    "BSB"
   ],
   "key": {
     "S": {
-    "item": "minecraft:stick",
-    "data": 0
+    "item": "minecraft:stick"
     },
     "I": {
     "item": "minecraft:iron_ingot"
-    }
+    },
+      "B": {
+    "item": "minecraft:blaze_rod"
+      }
   },
   "result": {
     "item": "slurpiesdongles:hammer"

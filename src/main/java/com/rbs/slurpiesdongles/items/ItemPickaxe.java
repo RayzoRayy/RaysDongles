@@ -6,7 +6,7 @@ public class ItemPickaxe extends net.minecraft.item.ItemPickaxe {
 
     protected String name;
 
-    public ItemPickaxe(ToolMaterial material) {
+    public ItemPickaxe(String name, ToolMaterial material) {
         super(material);
         setCreativeTab(SlurpiesDongles.creativeTab);
         this.setMaxStackSize(1);
