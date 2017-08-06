@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ADP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick"
+    },
+    "A": {
+    "item": "slurpiesdongles:emerald_axe"
+    },
+      "D": {
+    "item": "slurpiesdongles:emerald_shovel"
+      },
+      "P": {
+          "item": "slurpiesdongles:emerald_pickaxe"
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:emerald_paxel"
+  }
+}

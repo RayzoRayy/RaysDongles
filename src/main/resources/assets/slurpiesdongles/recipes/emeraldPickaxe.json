@@ -2,18 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "EEE",
-    " SE",
-    "S E"
+    " S ",
+    " S "
   ],
   "key": {
     "S": {
-    "item": "minecraft:stick"
+    "item": "minecraft:stick",
+    "data": 0
     },
     "E": {
     "item": "minecraft:emerald"
     }
   },
   "result": {
-    "item": "slurpiesdongles:emerald_battleaxe"
+    "item": "slurpiesdongles:emerald_pickaxe"
   }
 }

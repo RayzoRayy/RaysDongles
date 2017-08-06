@@ -58,7 +58,7 @@ public class ConfigFile {
 
         ConfigPreInit.emeraldBattleaxeMaterial = EnumHelper.addToolMaterial("emerald_battleaxe_material",
                 SlurpiesDongles.Config.get("SlurpiesDongles.emerald_battleaxe_material", "Harvest Level", 0).getInt(),
-                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_battleaxe_material", "Max Uses", 1921).getInt(),
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_battleaxe_material", "Max Uses", 2149).getInt(),
                 (float) SlurpiesDongles.Config.get("SlurpiesDongles.emerald_battleaxe_material", "EfficiencyOnProperty", 0.0D).getDouble(0.0D),
                 (float) SlurpiesDongles.Config.get("SlurpiesDongles.emerald_battleaxe_material", "DamageVsEntity", 8).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.emerald_battleaxe_material", "Enchantability", 42).getInt());
@@ -67,7 +67,7 @@ public class ConfigFile {
                 SlurpiesDongles.Config.get("SlurpiesDongles.gold_battleaxe_material", "Harvest Level", 0).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.gold_battleaxe_material", "Max Uses", 32).getInt(),
                 (float) SlurpiesDongles.Config.get("SlurpiesDongles.gold_battleaxe_material", "EfficiencyOnProperty", 0.0D).getDouble(0.0D),
-                (float) SlurpiesDongles.Config.get("SlurpiesDongles.gold_battleaxe_material", "DamageVsEntity", 6).getInt(),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.gold_battleaxe_material", "DamageVsEntity", 1).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.gold_battleaxe_material", "Enchantability", 22).getInt());
 
         ConfigPreInit.ironBattleaxeMaterial = EnumHelper.addToolMaterial("iron_battleaxe_material",
@@ -117,9 +117,16 @@ public class ConfigFile {
         ConfigPreInit.diamondPaxelMaterial = EnumHelper.addToolMaterial("diamond_paxel_material",
                 SlurpiesDongles.Config.get("SlurpiesDongles.diamond_paxel_material", "Harvest Level", 3).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.diamond_paxel_material", "Max Uses", 4683).getInt(),
-                (float) SlurpiesDongles.Config.get("SlurpiesDongles.diamond_paxel_material", "EfficiencyOnProperty", 8.0D).getDouble(0.0D),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.diamond_paxel_material", "EfficiencyOnProperty", 9.0D).getDouble(0.0D),
                 (float) SlurpiesDongles.Config.get("SlurpiesDongles.diamond_paxel_material", "DamageVsEntity", 3).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.diamond_paxel_material", "Enchantability", 10).getInt());
+
+        ConfigPreInit.emeraldPaxelMaterial = EnumHelper.addToolMaterial("emerald_paxel_material",
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_paxel_material", "Harvest Level", 3).getInt(),
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_paxel_material", "Max Uses", 6447).getInt(),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.emerald_paxel_material", "EfficiencyOnProperty", 10.0D).getDouble(0.0D),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.emerald_paxel_material", "DamageVsEntity", 3).getInt(),
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_paxel_material", "Enchantability", 17).getInt());
 
         ConfigPreInit.goldPaxelMaterial = EnumHelper.addToolMaterial("gold_paxel_material",
                 SlurpiesDongles.Config.get("SlurpiesDongles.gold_paxel_material", "Harvest Level", 0).getInt(),
@@ -159,18 +166,25 @@ public class ConfigFile {
         ConfigPreInit.topazPaxelMaterial = EnumHelper.addToolMaterial("topaz_paxel_material",
                 SlurpiesDongles.Config.get("SlurpiesDongles.topaz_paxel_material", "Harvest Level", 3).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.topaz_paxel_material", "Max Uses", 0).getInt(),
-                (float) SlurpiesDongles.Config.get("SlurpiesDongles.topaz_paxel_material", "EfficiencyOnProperty", 8.0D).getDouble(0.0D),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.topaz_paxel_material", "EfficiencyOnProperty", 14.0D).getDouble(0.0D),
                 (float) SlurpiesDongles.Config.get("SlurpiesDongles.topaz_paxel_material", "DamageVsEntity", 1).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.topaz_paxel_material", "Enchantability", 20).getInt());
 
         ConfigPreInit.woodenPaxelMaterial = EnumHelper.addToolMaterial("wooden_paxel_material",
                 SlurpiesDongles.Config.get("SlurpiesDongles.wooden_paxel_material", "Harvest Level", 0).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.wooden_paxel_material", "Max Uses", 177).getInt(),
-                (float) SlurpiesDongles.Config.get("SlurpiesDongles.wooden_paxel_material", "EfficiencyOnProperty", 2.D).getDouble(0.0D),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.wooden_paxel_material", "EfficiencyOnProperty", 2.0D).getDouble(0.0D),
                 (float) SlurpiesDongles.Config.get("SlurpiesDongles.wooden_paxel_material", "DamageVsEntity", 1).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.wooden_paxel_material", "Enchantability", 15).getInt());
 
         //Sword Materials
+        ConfigPreInit.emeraldSwordMaterial = EnumHelper.addToolMaterial("emerald_sword_material",
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_sword_material", "Harvest Level", 0).getInt(),
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_sword_material", "Max Uses", 2149).getInt(),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.emerald_sword_material", "EfficiencyOnProperty", 0.0D).getDouble(0.0D),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.emerald_sword_material", "DamageVsEntity", 5).getInt(),
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_sword_material", "Enchantability", 17).getInt());
+
         ConfigPreInit.rubySwordMaterial = EnumHelper.addToolMaterial("ruby_sword_material",
                 SlurpiesDongles.Config.get("SlurpiesDongles.ruby_sword_material", "Harvest Level", 0).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.ruby_sword_material", "Max Uses", 721).getInt(),
@@ -193,6 +207,14 @@ public class ConfigFile {
                 SlurpiesDongles.Config.get("SlurpiesDongles.topaz_sword_material", "Enchantability", 20).getInt());
 
         //Tool Materials
+        ConfigPreInit.emeraldMaterial = EnumHelper.addToolMaterial("emerald_material",
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_material", "Harvest Level", 3).getInt(),
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_material", "Max Uses", 2149).getInt(),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.emerald_material", "EfficiencyOnProperty", 10.0D).getDouble(0.0D),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.emerald_material", "DamageVsEntity", 1).getInt(),
+                SlurpiesDongles.Config.get("SlurpiesDongles.emerald_material", "Enchantability", 17).getInt());
+
+
         ConfigPreInit.rubyMaterial = EnumHelper.addToolMaterial("ruby_material",
                 SlurpiesDongles.Config.get("SlurpiesDongles.ruby_material", "Harvest Level", 3).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.ruby_material", "Max Uses", 721).getInt(),
@@ -210,7 +232,7 @@ public class ConfigFile {
         ConfigPreInit.topazMaterial = EnumHelper.addToolMaterial("topaz_material",
                 SlurpiesDongles.Config.get("SlurpiesDongles.topaz_material", "Harvest Level", 4).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.topaz_material", "Max Uses", 0).getInt(),//0 = unbreakable
-                (float) SlurpiesDongles.Config.get("SlurpiesDongles.topaz_material", "EfficiencyOnProperty", 15.0D).getDouble(0.0D),
+                (float) SlurpiesDongles.Config.get("SlurpiesDongles.topaz_material", "EfficiencyOnProperty", 14.0D).getDouble(0.0D),
                 (float) SlurpiesDongles.Config.get("SlurpiesDongles.topaz_material", "DamageVsEntity", 1).getInt(),
                 SlurpiesDongles.Config.get("SlurpiesDongles.topaz_material", "Enchantability", 20).getInt());
 

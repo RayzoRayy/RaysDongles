@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "GGG",
-    " SG",
-    "S G"
+    " EE",
+    " SE",
+    " S "
   ],
   "key": {
     "S": {
     "item": "minecraft:stick"
     },
-    "G": {
-    "item": "minecraft:gold_ingot"
+    "E": {
+    "item": "minecraft:emerald"
     }
   },
   "result": {
-    "item": "slurpiesdongles:gold_battleaxe"
+    "item": "slurpiesdongles:emerald_axe"
   }
 }

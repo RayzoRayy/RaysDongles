@@ -36,6 +36,7 @@ public class SDItems {
     public static Item topazBoots = new ArmorTopazArmor("topaz_boots", ConfigPreInit.topazArmor, "topaz", EntityEquipmentSlot.FEET);
 
     //Axes
+    public static Item emeraldAxe = new ItemAxe("emerald_axe", ConfigPreInit.emeraldMaterial);
     public static Item rubyAxe = new ItemAxe("ruby_axe", ConfigPreInit.rubyMaterial);
     public static Item sapphireAxe = new ItemAxe("sapphire_axe", ConfigPreInit.sapphireMaterial);
     public static Item topazAxe = new ItemAxe("topaz_axe", ConfigPreInit.topazMaterial);
@@ -71,6 +72,7 @@ public class SDItems {
     public static Item topaz = new ItemBase("topaz");
 
     //Hoes
+    public static Item emeraldHoe = new ItemHoe("emerald_hoe", ConfigPreInit.emeraldMaterial);
     public static Item rubyHoe = new ItemHoe("ruby_hoe", ConfigPreInit.rubyMaterial);
     public static Item sapphireHoe = new ItemHoe("sapphire_hoe", ConfigPreInit.sapphireMaterial);
     public static Item topazHoe = new ItemHoe("topaz_hoe", ConfigPreInit.topazMaterial);
@@ -88,6 +90,7 @@ public class SDItems {
 
     //Paxels
     public static Item diamondPaxel = new ItemPaxel("diamond_paxel", ConfigPreInit.diamondPaxelMaterial);
+    public static Item emeraldPaxel = new ItemPaxel("emerald_paxel", ConfigPreInit.emeraldPaxelMaterial);
     public static Item goldPaxel = new ItemPaxel("gold_paxel", ConfigPreInit.goldPaxelMaterial);
     public static Item ironPaxel = new ItemPaxel("iron_paxel", ConfigPreInit.ironPaxelMaterial);
     public static Item stonePaxel = new ItemPaxel("stone_paxel", ConfigPreInit.stonePaxelMaterial);
@@ -97,6 +100,7 @@ public class SDItems {
     public static Item woodenPaxel = new ItemPaxel("wooden_paxel", ConfigPreInit.woodenPaxelMaterial);
 
     //Pickaxes
+    public static Item emeraldPickaxe = new ItemPickaxe("emerald_pickaxe", ConfigPreInit.emeraldMaterial);
     public static Item rubyPickaxe = new ItemPickaxe("ruby_pickaxe", ConfigPreInit.rubyMaterial);
     public static Item sapphirePickaxe = new ItemPickaxe("sapphire_pickaxe", ConfigPreInit.sapphireMaterial);
     public static Item topazPickaxe = new ItemPickaxe("topaz_pickaxe", ConfigPreInit.topazMaterial);
@@ -106,11 +110,13 @@ public class SDItems {
     public static ItemSeeds cornSeed = new ItemCornSeed("corn_seed", SDBlocks.cornCrop, Blocks.FARMLAND);
 
     //Shovels
+    public static Item emeraldShovel = new ItemShovel("emerald_shovel", ConfigPreInit.emeraldMaterial);
     public static Item rubyShovel = new ItemShovel("ruby_shovel", ConfigPreInit.rubyMaterial);
     public static Item sapphireShovel = new ItemShovel("sapphire_shovel", ConfigPreInit.sapphireMaterial);
     public static Item topazShovel = new ItemShovel("topaz_shovel", ConfigPreInit.topazMaterial);
 
     //Swords
+    public static Item emeraldSword = new ItemSword("emerald_sword", ConfigPreInit.emeraldSwordMaterial);
     public static Item rubySword = new ItemSword("ruby_sword", ConfigPreInit.rubySwordMaterial);
     public static Item sapphireSword = new ItemSword("sapphire_sword", ConfigPreInit.sapphireSwordMaterial);
     public static Item topazSword = new ItemSword("topaz_sword", ConfigPreInit.topazSwordMaterial);
@@ -133,6 +139,7 @@ public class SDItems {
                 topazBoots,
 
                 //Axes
+                emeraldAxe,
                 rubyAxe,
                 sapphireAxe,
                 topazAxe,
@@ -165,6 +172,7 @@ public class SDItems {
                 topaz,
 
                 //Hoes
+                emeraldHoe,
                 rubyHoe,
                 sapphireHoe,
                 topazHoe,
@@ -182,6 +190,7 @@ public class SDItems {
 
                 //Paxels
                 diamondPaxel,
+                emeraldPaxel,
                 goldPaxel,
                 ironPaxel,
                 stonePaxel,
@@ -191,6 +200,7 @@ public class SDItems {
                 woodenPaxel,
 
                 //Pickaxes
+                emeraldPickaxe,
                 rubyPickaxe,
                 sapphirePickaxe,
                 topazPickaxe,
@@ -200,11 +210,13 @@ public class SDItems {
                 cornSeed,
 
                 //Shovels
+                emeraldShovel,
                 rubyShovel,
                 sapphireShovel,
                 topazShovel,
 
                 //Swords
+                emeraldSword,
                 rubySword,
                 sapphireSword,
                 topazSword
@@ -229,6 +241,7 @@ public class SDItems {
         registerRender(topazBoots);
 
         //Axes
+        registerRender(emeraldAxe);
         registerRender(rubyAxe);
         registerRender(sapphireAxe);
         registerRender(topazAxe);
@@ -261,6 +274,7 @@ public class SDItems {
         registerRender(topaz);
 
         //Hoes
+        registerRender(emeraldHoe);
         registerRender(rubyHoe);
         registerRender(sapphireHoe);
         registerRender(topazHoe);
@@ -278,6 +292,7 @@ public class SDItems {
 
         //Paxels
         registerRender(diamondPaxel);
+        registerRender(emeraldPaxel);
         registerRender(goldPaxel);
         registerRender(ironPaxel);
         registerRender(stonePaxel);
@@ -287,6 +302,7 @@ public class SDItems {
         registerRender(woodenPaxel);
 
         //Pickaxes
+        registerRender(emeraldPickaxe);
         registerRender(rubyPickaxe);
         registerRender(sapphirePickaxe);
         registerRender(topazPickaxe);
@@ -296,11 +312,13 @@ public class SDItems {
         registerRender(cornSeed);
 
         //Shovels
+        registerRender(emeraldShovel);
         registerRender(rubyShovel);
         registerRender(sapphireShovel);
         registerRender(topazShovel);
 
         //Swords
+        registerRender(emeraldSword);
         registerRender(rubySword);
         registerRender(sapphireSword);
         registerRender(topazSword);

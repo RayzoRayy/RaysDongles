@@ -25,6 +25,7 @@ public class ConfigPreInit {
     public static ToolMaterial woodenBattleaxeMaterial;
     //Paxel Materials
     public static ToolMaterial diamondPaxelMaterial;
+    public static ToolMaterial emeraldPaxelMaterial;
     public static ToolMaterial goldPaxelMaterial;
     public static ToolMaterial ironPaxelMaterial;
     public static ToolMaterial stonePaxelMaterial;
@@ -33,10 +34,12 @@ public class ConfigPreInit {
     public static ToolMaterial topazPaxelMaterial;
     public static ToolMaterial woodenPaxelMaterial;
     //Sword Materials
+    public static ToolMaterial emeraldSwordMaterial;
     public static ToolMaterial rubySwordMaterial;
     public static ToolMaterial sapphireSwordMaterial;
     public static ToolMaterial topazSwordMaterial;
     //Tool Materials
+    public static ToolMaterial emeraldMaterial;
     public static ToolMaterial rubyMaterial;
     public static ToolMaterial sapphireMaterial;
     public static ToolMaterial topazMaterial;

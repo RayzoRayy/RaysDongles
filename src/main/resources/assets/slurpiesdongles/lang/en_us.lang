@@ -13,6 +13,7 @@ item.topaz_leggings.name=Topaz Leggings
 item.topaz_boots.name=Topaz Boots
 
 #Axes
+item.emerald_axe.name=Emerald Axe
 item.ruby_axe.name=Ruby Axe
 item.sapphire_axe.name=Sapphire Axe
 item.topaz_axe.name=Topaz Axe
@@ -104,6 +105,7 @@ item.hardened_topaz.name=Hardened Topaz
 item.topaz.name=Topaz
 
 #Hoes
+item.emerald_hoe.name=Emerald Hoe
 item.ruby_hoe.name=Ruby Hoe
 item.sapphire_hoe.name=Sapphire Hoe
 item.topaz_hoe.name=Topaz Hoe
@@ -137,6 +139,7 @@ tile.nether_redstone_ore.name=Nether Redstone Ore
 
 #Paxels
 item.diamond_paxel.name=Diamond Paxel
+item.emerald_paxel.name=Emerald Paxel
 item.gold_paxel.name=Gold Paxel
 item.iron_paxel.name=Iron Paxel
 item.stone_paxel.name=Stone Paxel
@@ -146,17 +149,20 @@ item.topaz_paxel.name=Topaz Paxel
 item.wooden_paxel.name=Wooden Paxel
 
 #Pickaxes
+item.emerald_pickaxe.name=Emerald Pickaxe
 item.ruby_pickaxe.name=Ruby Pickaxe
 item.sapphire_pickaxe.name=Sapphire Pickaxe
 item.topaz_pickaxe.name=Topaz Pickaxe
 item.vmpick.name=Mass Mining Pick
 
 #Shovels
+item.emerald_shovel.name=Emerald Shovel
 item.ruby_shovel.name=Ruby Shovel
 item.sapphire_shovel.name=Sapphire Shovel
 item.topaz_shovel.name=Topaz Shovel
 
 #Swords
+item.emerald_sword.name=Emerald Sword
 item.ruby_sword.name=Ruby Sword
 item.sapphire_sword.name=Sapphire Sword
 item.topaz_sword.name=Topaz Sword
