@@ -2,6 +2,7 @@ package com.rbs.slurpiesdongles;
 
 import com.rbs.slurpiesdongles.events.EventPigDrops;
 import com.rbs.slurpiesdongles.events.FuelHandler;
+import com.rbs.slurpiesdongles.events.OreDictHandler;
 import com.rbs.slurpiesdongles.events.SeedsDropFromGrass;
 import com.rbs.slurpiesdongles.gui.GuiHandler;
 import com.rbs.slurpiesdongles.init.*;
@@ -26,7 +27,7 @@ import java.util.Random;
 /**
  * Created by Consular on 7/19/2017.
  */
-@Mod(modid = SlurpiesDongles.modId, name = SlurpiesDongles.name, version = SlurpiesDongles.version)
+@Mod(modid = SlurpiesDongles.modId, name = SlurpiesDongles.name, version = SlurpiesDongles.version, acceptedMinecraftVersions = SlurpiesDongles.MC_VERSION)
 public class SlurpiesDongles {
 
 
@@ -39,7 +40,9 @@ public class SlurpiesDongles {
 
         public static final String modId = "slurpiesdongles";
         public static final String name = "Slurpies Dongles";
-        public static final String version = "1.0.0";
+        public static final String version = "2.1.5.2";
+        public static final String MC_VERSION = "1.12, 1.12.1, 1.12.2";
+
 
         @SidedProxy(serverSide = "com.rbs.slurpiesdongles.proxy.CommonProxy", clientSide = "com.rbs.slurpiesdongles.proxy.ClientProxy")
         public static CommonProxy proxy;
@@ -65,6 +68,7 @@ public class SlurpiesDongles {
 
         @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+            OreDictHandler.registerOreDict();
             MinecraftForge.EVENT_BUS.register(instance);
             NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
             proxy.registerRenders();

@@ -1,10 +1,6 @@
 package com.rbs.slurpiesdongles.items;
-
 import com.rbs.slurpiesdongles.SlurpiesDongles;
-import com.rbs.slurpiesdongles.init.SDTab;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import sun.font.CreatedFontTracker;
 
 /**
  * Created by Consular on 7/19/2017.
