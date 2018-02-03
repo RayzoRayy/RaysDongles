@@ -46,51 +46,33 @@ public class ArmorTopazArmor extends ItemArmor {
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
 
-        if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == SDItems.topazHelmet
-                && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == SDItems.topazChestplate
-                && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == SDItems.topazLeggings
-                && player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == SDItems.topazBoots) {
-            player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 1200, 1000, false, false));
-
             if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == SDItems.topazHelmet
                     && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == SDItems.topazChestplate
                     && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == SDItems.topazLeggings
-                    && player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == SDItems.topazBoots)
-                player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1200, 1, false, false));
+                    && player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == SDItems.topazBoots) {
+                player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 600, 0, false, false));
 
-            if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == SDItems.topazHelmet
-                    && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == SDItems.topazChestplate
-                    && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == SDItems.topazLeggings
-                    && player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == SDItems.topazBoots)
-                player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 1200, 1, false, false));
-
-
-            if (!player.capabilities.isCreativeMode) {
-                if (!player.capabilities.allowFlying) {
-                    player.capabilities.allowFlying = true;
-
-                }
-
-            }
-        } else {
-            if (!player.capabilities.isCreativeMode) {
-                player.capabilities.isFlying = false;
-                player.capabilities.allowFlying = false;
-
+                if (!player.capabilities.isCreativeMode) {
+            if (!player.capabilities.allowFlying) {
+                player.capabilities.allowFlying = true;
             }
 
         }
-
+    } else {
+        if (!player.capabilities.isCreativeMode) {
+            player.capabilities.isFlying = false;
+            player.capabilities.allowFlying = false;
+        }
 
     }
-
+}
     public EnumRarity getRarity(ItemStack stack) {
-        return stack.getMetadata() == 0 ? EnumRarity.RARE : EnumRarity.EPIC;
+        return stack.getMetadata() == 0 ? EnumRarity.EPIC : EnumRarity.EPIC;
 
     }
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add("Wearing full set grants Flight, Night Vison, Speed, and Fire Resistance!");
+        tooltip.add("Wearing full set grants creative flight, and Strength");
     }
 
 }

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "CNC",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+    "item": "minecraft:glowstone"
+    },
+    "C": {
+    "item": "minecraft:golden_carrot"
+     },
+     "N": {
+    "item": "minecraft:nether_star"
+  }
+  },
+  "result": {
+    "item": "slurpiesdongles:night_vision_charm"
+  }
+}

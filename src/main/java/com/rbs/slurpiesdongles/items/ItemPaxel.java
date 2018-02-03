@@ -30,101 +30,76 @@ import java.util.Set;
 public class ItemPaxel extends net.minecraft.item.ItemPickaxe {
 
     private float speed;
-    protected String name;
     public ToolMaterial material;
-
-    private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(new Block[] {Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE, Blocks.COBBLESTONE, Blocks.DETECTOR_RAIL, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, Blocks.DOUBLE_STONE_SLAB, Blocks.GOLDEN_RAIL, Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE, Blocks.LAPIS_BLOCK, Blocks.LAPIS_ORE, Blocks.LIT_REDSTONE_ORE, Blocks.MOSSY_COBBLESTONE, Blocks.NETHERRACK, Blocks.PACKED_ICE, Blocks.RAIL, Blocks.REDSTONE_ORE, Blocks.SANDSTONE, Blocks.RED_SANDSTONE, Blocks.STONE, Blocks.STONE_SLAB, Blocks.STONE_BUTTON, Blocks.STONE_PRESSURE_PLATE, Blocks.PLANKS, Blocks.BOOKSHELF, Blocks.LOG, Blocks.LOG2, Blocks.CHEST, Blocks.PUMPKIN, Blocks.LIT_PUMPKIN, Blocks.MELON_BLOCK, Blocks.LADDER, Blocks.WOODEN_BUTTON, Blocks.WOODEN_PRESSURE_PLATE, Blocks.CLAY, Blocks.DIRT, Blocks.FARMLAND, Blocks.GRASS, Blocks.GRAVEL, Blocks.MYCELIUM, Blocks.SAND, Blocks.SNOW, Blocks.SNOW_LAYER, Blocks.SOUL_SAND, Blocks.GRASS_PATH});
 
     public ItemPaxel(String name, ToolMaterial materialIn) {
         super(materialIn);
-
-        setCreativeTab(SlurpiesDongles.creativeTab);
-
-        this.name = name;
-        setUnlocalizedName(name);
-        setRegistryName(name);
-
-    }
-
-    protected ItemPaxel(Item.ToolMaterial material, float damage, float speed)
-    {
-        super(material);
-        this.damageVsEntity = damage;
-        this.attackSpeed = speed;
-        this.maxStackSize = 1;
+        this.material = materialIn;
         this.setMaxDamage(material.getMaxUses());
-        this.setCreativeTab(CreativeTabs.TOOLS);
-        this.speed = material.getDamageVsEntity() + 1.0F;
+        this.speed = 4.0F + material.getDamageVsEntity();
+        this.setUnlocalizedName(name);
+        this.setRegistryName(name);
+        this.setCreativeTab(SlurpiesDongles.creativeTab);
+
     }
 
-    public boolean canHarvestBlock(IBlockState blockIn)
+    @Override
+    public float getStrVsBlock(ItemStack stack, IBlockState blockState)
     {
-        Block block = blockIn.getBlock();
-
-        if (block == Blocks.OBSIDIAN)
-        {
-            return this.toolMaterial.getHarvestLevel() == 3;
-        }
-        else if (block != Blocks.DIAMOND_BLOCK && block != Blocks.DIAMOND_ORE)
-        {
-            if (block != Blocks.EMERALD_ORE && block != Blocks.EMERALD_BLOCK)
-            {
-                if (block != Blocks.GOLD_BLOCK && block != Blocks.GOLD_ORE)
-                {
-                    if (block != Blocks.IRON_BLOCK && block != Blocks.IRON_ORE)
-                    {
-                        if (block != Blocks.LAPIS_BLOCK && block != Blocks.LAPIS_ORE)
-                        {
-                            if (block != Blocks.REDSTONE_ORE && block != Blocks.LIT_REDSTONE_ORE)
-                            {
-                                Material material = blockIn.getMaterial();
-                                return material == Material.ROCK ? true : (material == Material.IRON ? true : material == Material.ANVIL);
-                            }
-                            else
-                            {
-                                return this.toolMaterial.getHarvestLevel() >= 2;
-                            }
-                        }
-                        else
-                        {
-                            return this.toolMaterial.getHarvestLevel() >= 1;
-                        }
-                    }
-                    else
-                    {
-                        return this.toolMaterial.getHarvestLevel() >= 1;
-                    }
-                }
-                else
-                {
-                    return this.toolMaterial.getHarvestLevel() >= 2;
-                }
-            }
-            else
-            {
-                return this.toolMaterial.getHarvestLevel() >= 2;
-            }
-        }
-        else
-        {
-            return this.toolMaterial.getHarvestLevel() >= 2;
-        }
+        return blockState.getBlock() != Blocks.BEDROCK ? efficiencyOnProperMaterial : 1.0F;
     }
 
-    public float getStrVsBlock(ItemStack stack, IBlockState state)
+    @Override
+    public boolean canHarvestBlock(IBlockState state, ItemStack stack)
     {
         Block block = state.getBlock();
 
-        if (block == Blocks.WEB)
+        if(block == Blocks.OBSIDIAN)
         {
-            return 15.0F;
+            return toolMaterial.getHarvestLevel() == 3;
         }
-        else
-        {
-            Material material = state.getMaterial();
-            return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK && material != Material.WOOD && material != Material.PLANTS && material != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
 
+        if(block == Blocks.DIAMOND_BLOCK || block == Blocks.DIAMOND_ORE)
+        {
+            return toolMaterial.getHarvestLevel() >= 2;
         }
+
+        if(block == Blocks.GOLD_BLOCK || block == Blocks.GOLD_ORE)
+        {
+            return toolMaterial.getHarvestLevel() >= 2;
+        }
+
+        if(block == Blocks.IRON_BLOCK || block == Blocks.IRON_ORE)
+        {
+            return toolMaterial.getHarvestLevel() >= 1;
+        }
+
+        if(block == Blocks.LAPIS_BLOCK || block == Blocks.LAPIS_ORE)
+        {
+            return toolMaterial.getHarvestLevel() >= 1;
+        }
+
+        if(block == Blocks.REDSTONE_ORE || block == Blocks.LIT_REDSTONE_ORE)
+        {
+            return toolMaterial.getHarvestLevel() >= 2;
+        }
+
+        if(block == Blocks.ANVIL)
+        {
+            return toolMaterial.getHarvestLevel() >= 0;
+        }
+
+        if(block == Blocks.SNOW || block == Blocks.SNOW_LAYER)
+        {
+            return true;
+        }
+
+        if(state.getMaterial() == Material.ROCK)
+        {
+            return true;
+        }
+
+        return state.getMaterial() == Material.IRON;
     }
 
     public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker)
@@ -137,7 +112,7 @@ public class ItemPaxel extends net.minecraft.item.ItemPickaxe {
     {
         if ((double)state.getBlockHardness(worldIn, pos) != 0.0D)
         {
-            stack.damageItem(2, entityLiving);
+            stack.damageItem(1, entityLiving);
         }
 
         return true;
@@ -214,5 +189,4 @@ public class ItemPaxel extends net.minecraft.item.ItemPickaxe {
             stack.damageItem(1, player);
         }
     }
-
 }

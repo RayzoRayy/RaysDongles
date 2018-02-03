@@ -42,29 +42,15 @@ public class ArmorRubyArmor extends ItemArmor {
 
     @Override
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
-
         if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == SDItems.rubyHelmet
                 && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == SDItems.rubyChestplate
                 && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == SDItems.rubyLeggings
                 && player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == SDItems.rubyBoots)
-            player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 1200, 1000, false, false));
-
-        if (player.getItemStackFromSlot(EntityEquipmentSlot.HEAD) != null && player.getItemStackFromSlot(EntityEquipmentSlot.HEAD).getItem() == SDItems.rubyHelmet
-                && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST) != null && player.getItemStackFromSlot(EntityEquipmentSlot.CHEST).getItem() == SDItems.rubyChestplate
-                && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS) != null && player.getItemStackFromSlot(EntityEquipmentSlot.LEGS).getItem() == SDItems.rubyLeggings
-                && player.getItemStackFromSlot(EntityEquipmentSlot.FEET) != null && player.getItemStackFromSlot(EntityEquipmentSlot.FEET).getItem() == SDItems.rubyBoots)
-            player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 1200, 1, false, false));
-    }
-
-    public void effectPlayer(EntityPlayer player, Potion potion, int amplifier) {
-
-        if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1000) {
-            player.addPotionEffect(new PotionEffect(potion, 1000, amplifier, true, true));
-        }
+            player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 600, 0, false, false));
     }
 
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add("Wearing full set grants Night Vison, and Speed!");
+        tooltip.add("Wearing full set grants Speed");
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "slurpiesdongles:items/ruby_hoe"
+        "layer0": "slurpiesdongles:tools/ruby_hoe"
     }
 }

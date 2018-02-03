@@ -63,7 +63,7 @@ public class BlockCornCrop extends BlockCrops {
 
     @Override
     protected Item getCrop() {
-        return SDFood.corn;
+        return SDFood.rawCorn;
     }
 
     @Override

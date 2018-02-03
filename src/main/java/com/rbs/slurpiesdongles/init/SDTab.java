@@ -2,6 +2,7 @@ package com.rbs.slurpiesdongles.init;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 /**
@@ -18,7 +19,7 @@ public class SDTab extends CreativeTabs {
 
     @Override
     public ItemStack getTabIconItem() {
-        return new ItemStack(SDItems.repairItem);
+        return new ItemStack(Items.ENCHANTED_BOOK);
     }
 
     @Override

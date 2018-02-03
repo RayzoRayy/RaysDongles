@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "PNP",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+    "item": "minecraft:water_bucket"
+    },
+    "N": {
+    "item": "minecraft:nether_star"
+  },
+    "P": {
+    "item": "minecraft:fish",
+    "data": 3
+     }
+  },
+  "result": {
+    "item": "slurpiesdongles:water_breathing_charm"
+  }
+}

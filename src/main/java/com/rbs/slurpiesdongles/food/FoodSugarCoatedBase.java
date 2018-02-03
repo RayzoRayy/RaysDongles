@@ -44,7 +44,7 @@ public class FoodSugarCoatedBase extends ItemFood {
     }
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add("Eating anything sugarcoated will give you a speed boost for 1 minute");
+        tooltip.add("Right click the blender to blend this into a slushee! Also Eating this will give you a speed boost for 1 minute");
     }
 
 }

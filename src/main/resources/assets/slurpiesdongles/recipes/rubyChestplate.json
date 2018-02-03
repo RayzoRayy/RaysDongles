@@ -1,17 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XSX",
+    "X X",
     "XXX",
     "XXX"
   ],
   "key": {
     "X": {
     "item": "slurpiesdongles:ruby"
-    },
-      "S": {
-          "item": "slurpiesdongles:sapphire_chestplate"
-      }
+    }
   },
   "result": {
     "item": "slurpiesdongles:ruby_chestplate"

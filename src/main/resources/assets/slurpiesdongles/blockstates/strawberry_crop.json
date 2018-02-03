@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "slurpiesdongles:strawberry0" },
+        "age=1": { "model": "slurpiesdongles:strawberry0" },
+        "age=2": { "model": "slurpiesdongles:strawberry1" },
+        "age=3": { "model": "slurpiesdongles:strawberry1" },
+        "age=4": { "model": "slurpiesdongles:strawberry2" },
+        "age=5": { "model": "slurpiesdongles:strawberry2" },
+        "age=6": { "model": "slurpiesdongles:strawberry2" },
+        "age=7": { "model": "slurpiesdongles:strawberry3" }
+    }
+}

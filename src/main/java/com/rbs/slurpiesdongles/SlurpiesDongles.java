@@ -35,8 +35,11 @@ public class SlurpiesDongles {
     public static Random random = new Random();
     public static final SDTab creativeTab = new SDTab();
 
-    public static Configuration Config;
     public static Configuration Armor;
+    public static Configuration Charms;
+    public static Configuration Config;
+    public static Configuration OreAndFood;
+    public static Configuration Worldgen;
 
         public static final String modId = "slurpiesdongles";
         public static final String name = "Slurpies Dongles";
@@ -52,8 +55,12 @@ public class SlurpiesDongles {
 
         @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-            Config = new Configuration(new File("config/SlurpiesDongles/ToolMaterials.cfg"));
-            Armor = new Configuration(new File("config/SlurpiesDongles/ArmorMaterials.cfg"));
+            Armor = new Configuration(new File("config/SlurpiesDongles/Armor Materials.cfg"));
+            Charms = new Configuration(new File("config/SlurpiesDongles/Charms.cfg"));
+            Config = new Configuration(new File("config/SlurpiesDongles/Tool Materials.cfg"));
+            OreAndFood = new Configuration(new File("config/SlurpiesDongles/Ore.cfg"));
+            Worldgen = new Configuration(new File("config/SlurpiesDongles/World Generation.cfg"));
+
             ConfigFile.SyncConfig();
 
             MinecraftForge.EVENT_BUS.register(new EventPigDrops());

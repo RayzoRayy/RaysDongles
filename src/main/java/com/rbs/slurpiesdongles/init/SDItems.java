@@ -20,8 +20,7 @@ public class SDItems {
 
 
 
-    //armor
-
+    //Armor
     public static Item rubyHelmet = new ArmorRubyArmor("ruby_helmet", ConfigPreInit.rubyArmor, "ruby", EntityEquipmentSlot.HEAD);
     public static Item rubyChestplate = new ArmorRubyArmor("ruby_chestplate", ConfigPreInit.rubyArmor, "ruby", EntityEquipmentSlot.CHEST);
     public static Item rubyLeggings = new ArmorRubyArmor("ruby_leggings", ConfigPreInit.rubyArmor, "ruby", EntityEquipmentSlot.LEGS);
@@ -36,10 +35,10 @@ public class SDItems {
     public static Item topazBoots = new ArmorTopazArmor("topaz_boots", ConfigPreInit.topazArmor, "topaz", EntityEquipmentSlot.FEET);
 
     //Axes
-    public static Item emeraldAxe = new ItemAxe("emerald_axe", ConfigPreInit.emeraldMaterial);
-    public static Item rubyAxe = new ItemAxe("ruby_axe", ConfigPreInit.rubyMaterial);
-    public static Item sapphireAxe = new ItemAxe("sapphire_axe", ConfigPreInit.sapphireMaterial);
-    public static Item topazAxe = new ItemAxe("topaz_axe", ConfigPreInit.topazMaterial);
+    public static Item emeraldAxe = new ItemAx("emerald_axe", ConfigPreInit.emeraldAxeMaterial);
+    public static Item rubyAxe = new ItemAx("ruby_axe", ConfigPreInit.rubyAxeMaterial);
+    public static Item sapphireAxe = new ItemAx("sapphire_axe", ConfigPreInit.sapphireAxeMaterial);
+    public static Item topazAxe = new ItemAx("topaz_axe", ConfigPreInit.topazAxeMaterial);
 
     //Battle Axes
     public static Item diamondBattleAxe = new ItemSword("diamond_battleaxe", ConfigPreInit.diamondBattleaxeMaterial);
@@ -52,8 +51,14 @@ public class SDItems {
     public static Item topazBattleAxe = new ItemSword("topaz_battleaxe", ConfigPreInit.topazBattleaxeMaterial);
     public static Item woodenBattleAxe = new ItemSword("wooden_battleaxe", ConfigPreInit.woodenBattleaxeMaterial);
 
-
-
+    //Charms
+    public static Item fireResistanceCharm = new ItemFireCharm("fire_resistance_charm");
+    public static Item flightCharm = new ItemFlightCharm("flight_charm");
+    public static Item nightVisionCharm = new ItemNightVisionCharm("night_vision_charm");
+    public static Item regenCharm = new ItemRegenCharm("regen_charm");
+    public static Item speedCharm = new ItemSpeedCharm("speed_charm");
+    public static Item strengthCharm = new ItemStrengthCharm("strength_charm");
+    public static Item waterBreathingCharm = new ItemWaterBreathingCharm("water_breathing_charm");
 
     //Dust
     public static Item blueGlowstoneDust = new ItemBase("blue_glowstone_dust");
@@ -78,7 +83,6 @@ public class SDItems {
     public static Item topazHoe = new ItemHoe("topaz_hoe", ConfigPreInit.topazMaterial);
 
     //Items
-    public static Item blender = new ItemBlender("blender");
     public static Item hammer = new ItemBase("hammer");
     public static Item hotWater = new ItemBase("hot_water");
     public static Item knife = new ItemBase("knife");
@@ -104,10 +108,11 @@ public class SDItems {
     public static Item rubyPickaxe = new ItemPickaxe("ruby_pickaxe", ConfigPreInit.rubyMaterial);
     public static Item sapphirePickaxe = new ItemPickaxe("sapphire_pickaxe", ConfigPreInit.sapphireMaterial);
     public static Item topazPickaxe = new ItemPickaxe("topaz_pickaxe", ConfigPreInit.topazMaterial);
-     public static Item VMPick = new VMPick("vmpick", ConfigPreInit.vmpickMaterial);
+    public static Item VMPick = new VMPick("vmpick", ConfigPreInit.vmpickMaterial);
 
     //Seeds
     public static ItemSeeds cornSeed = new ItemCornSeed("corn_seed", SDBlocks.cornCrop, Blocks.FARMLAND);
+    public static ItemSeeds strawberrySeed = new ItemStrawBerrrySeed ("strawberry_seed", SDBlocks.strawberryCrop, Blocks.FARMLAND);
 
     //Shovels
     public static Item emeraldShovel = new ItemShovel("emerald_shovel", ConfigPreInit.emeraldMaterial);
@@ -178,7 +183,6 @@ public class SDItems {
                 topazHoe,
 
                 //Items
-                blender.setContainerItem(SDItems.blender),
                 hammer,
                 hotWater,
                 knife.setContainerItem(SDItems.knife),
@@ -208,6 +212,7 @@ public class SDItems {
 
                 //Seeds
                 cornSeed,
+                strawberrySeed,
 
                 //Shovels
                 emeraldShovel,
@@ -223,6 +228,29 @@ public class SDItems {
 
 
         );
+        registry.registerAll();
+        if (ConfigPreInit.disableFireResistanceCharm == false) {
+            registry.register(fireResistanceCharm);
+
+            if (ConfigPreInit.disableFlightCharm == false) {
+                registry.register(flightCharm);
+            }
+        }
+        if (ConfigPreInit.disableNightVisionCharm == false) {
+            registry.register(nightVisionCharm);
+        }
+        if (ConfigPreInit.disableRegenCharm == false) {
+            registry.register(regenCharm);
+        }
+        if (ConfigPreInit.disableSpeedCharm == false) {
+            registry.register(speedCharm);
+        }
+        if (ConfigPreInit.disableStrengthCharm == false) {
+            registry.register(strengthCharm);
+        }
+        if (ConfigPreInit.disableWaterBreathingCharm == false) {
+            registry.register(waterBreathingCharm);
+        }
 
     }
     public static void registerModels() {
@@ -280,7 +308,6 @@ public class SDItems {
         registerRender(topazHoe);
 
         //Items
-        registerRender(blender);
         registerRender(hammer);
         registerRender(hotWater);
         registerRender(knife);
@@ -310,6 +337,7 @@ public class SDItems {
 
         //Seeds
         registerRender(cornSeed);
+        registerRender(strawberrySeed);
 
         //Shovels
         registerRender(emeraldShovel);
@@ -323,6 +351,34 @@ public class SDItems {
         registerRender(sapphireSword);
         registerRender(topazSword);
 
+        if (ConfigPreInit.disableFireResistanceCharm == false) {
+            registerRender(fireResistanceCharm);
+
+            if (ConfigPreInit.disableFlightCharm == false) {
+                registerRender(flightCharm);
+            }
+
+        }
+        if (ConfigPreInit.disableNightVisionCharm == false) {
+            registerRender(nightVisionCharm);
+
+        }
+        if (ConfigPreInit.disableRegenCharm == false) {
+            registerRender(regenCharm);
+
+        }
+        if (ConfigPreInit.disableSpeedCharm == false) {
+            registerRender(speedCharm);
+
+        }
+        if (ConfigPreInit.disableStrengthCharm == false) {
+            registerRender(strengthCharm);
+
+        }
+        if (ConfigPreInit.disableWaterBreathingCharm == false) {
+            registerRender(waterBreathingCharm);
+
+        }
 
     }
     public static void registerRender(Item item) {

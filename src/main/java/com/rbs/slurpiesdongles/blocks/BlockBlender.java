@@ -9,6 +9,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -18,6 +19,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 /**
  * Created by patrick on 30/07/2017.
@@ -142,16 +148,16 @@ public class BlockBlender extends Block {
         if (!worldIn.isRemote){
 
 
-        if (playerIn.getHeldItem(hand).getItem() == Items.CARROT) { //Change this to the item you want to change
+        if (playerIn.getHeldItem(hand).getItem() == Items.CARROT) { //Input of the item
 
-            ItemStack CARROT_JUICE = new ItemStack(SDFood.carrotJuice);
+            ItemStack CARROT_JUICE = new ItemStack(SDFood.carrotJuice);//Output of the item
 
             playerIn.getHeldItem(hand).splitStack(1);
             playerIn.addItemStackToInventory(CARROT_JUICE);
             return true;
         }
 
-        if (playerIn.getHeldItem(hand).getItem() == Items.MELON) { //Change this to the item you want to change
+        if (playerIn.getHeldItem(hand).getItem() == Items.MELON) {
 
             ItemStack MELON_JUICE = new ItemStack(SDFood.melonJuice);
 
@@ -160,7 +166,7 @@ public class BlockBlender extends Block {
             return true;
         }
 
-        if (playerIn.getHeldItem(hand).getItem() == Items.APPLE) { //Change this to the item you want to change
+        if (playerIn.getHeldItem(hand).getItem() == Items.APPLE) {
 
             ItemStack APPLE_JUICE = new ItemStack(SDFood.appleJuice);
 
@@ -169,7 +175,7 @@ public class BlockBlender extends Block {
             return true;
         }
 
-            if (playerIn.getHeldItem(hand).getItem() == SDFood.sugarcoatedLemon) { //Change this to the item you want to change
+            if (playerIn.getHeldItem(hand).getItem() == SDFood.sugarcoatedLemon) {
 
                 ItemStack LEMONADE = new ItemStack(SDFood.lemonade);
 
@@ -178,7 +184,7 @@ public class BlockBlender extends Block {
                 return true;
             }
 
-            if (playerIn.getHeldItem(hand).getItem() == SDFood.sugarcoatedMelon) { //Change this to the item you want to change
+            if (playerIn.getHeldItem(hand).getItem() == SDFood.sugarcoatedMelon) {
 
                 ItemStack MELON_SLUSHIE = new ItemStack(SDFood.melonSlushie);
 
@@ -187,7 +193,7 @@ public class BlockBlender extends Block {
                 return true;
             }
 
-            if (playerIn.getHeldItem(hand).getItem() == SDFood.orange) { //Change this to the item you want to change
+            if (playerIn.getHeldItem(hand).getItem() == SDFood.orange) {
 
                 ItemStack ORANGE_JUICE = new ItemStack(SDFood.orangeJuice);
 
@@ -196,20 +202,55 @@ public class BlockBlender extends Block {
                 return true;
             }
 
+            if (playerIn.getHeldItem(hand).getItem() == SDFood.sugarcoatedApple) {
 
-            /*if (playerIn.getHeldItem(hand).getItem() == Items.MELON && playerIn.getHeldItemOffhand().getItem() == Items.SUGAR) { //Change this to the item you want to change
-
-                ItemStack COOKIE = new ItemStack(Items.COOKIE);
+                ItemStack ORANGE_JUICE = new ItemStack(SDFood.appleSlushie);
 
                 playerIn.getHeldItem(hand).splitStack(1);
-                playerIn.getHeldItemOffhand().shrink(1);
-                playerIn.addItemStackToInventory(COOKIE);
-
+                playerIn.addItemStackToInventory(ORANGE_JUICE);
                 return true;
             }
-            */
-    }
+
+        }
+
+        if (playerIn.getHeldItem(hand).getItem() == SDFood.sugarcoatedOrange) {
+
+            ItemStack ORANGE_JUICE = new ItemStack(SDFood.orangeSlushie);
+
+            playerIn.getHeldItem(hand).splitStack(1);
+            playerIn.addItemStackToInventory(ORANGE_JUICE);
+            return true;
+
+        }
+
+        if (playerIn.getHeldItem(hand).getItem() == SDFood.sugarcoatedStrawberry) {
+
+            ItemStack ORANGE_JUICE = new ItemStack(SDFood.strawberrySlushie);
+
+            playerIn.getHeldItem(hand).splitStack(1);
+            playerIn.addItemStackToInventory(ORANGE_JUICE);
+            return true;
+
+        }
+
+        if (playerIn.getHeldItem(hand).getItem() == SDFood.strawBerry) {
+
+            ItemStack ORANGE_JUICE = new ItemStack(SDFood.strawberryJuice);
+
+            playerIn.getHeldItem(hand).splitStack(1);
+            playerIn.addItemStackToInventory(ORANGE_JUICE);
+            return true;
+
+        }
+
+
+
         return false;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        tooltip.add("Place blender anywhere you want, & right click with the food in your hand to blend it");
     }
 
     public Item createItemBlock() {

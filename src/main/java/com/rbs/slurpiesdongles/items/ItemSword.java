@@ -1,6 +1,11 @@
 package com.rbs.slurpiesdongles.items;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
+import com.rbs.slurpiesdongles.init.SDItems;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 public class ItemSword extends net.minecraft.item.ItemSword {
 
@@ -31,5 +36,14 @@ public class ItemSword extends net.minecraft.item.ItemSword {
 
     }*/
 
+    //This Method adds an enchant to a specified weapon
+    /*@Override
+    public void onCreated(ItemStack stack, World worldIn, EntityPlayer playerIn) {
+        if (stack.getItem() == SDItems.sapphireSword) {
+            stack.addEnchantment(Enchantment.getEnchantmentByID(20), 3);
+        }
+        super.onCreated(stack, worldIn, playerIn);
+    }
+*/
 
 }

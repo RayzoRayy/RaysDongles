@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "slurpiesdongles:items/emerald_paxel"
+        "layer0": "slurpiesdongles:tools/emerald_paxel"
     }
 }

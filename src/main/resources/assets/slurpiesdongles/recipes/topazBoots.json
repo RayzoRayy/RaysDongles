@@ -1,20 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "XRX",
     "X X",
-    "B B"
+    "X X",
+    " E "
   ],
   "key": {
     "X": {
     "item": "slurpiesdongles:hardened_topaz"
     },
-      "R": {
-          "item": "slurpiesdongles:ruby_boots"
-      },
-      "B": {
-          "item": "slurpiesdongles:hardened_topaz_block"
-      }
+   	  "E": {
+      "item": "minecraft:ender_eye"
+	  }
   },
   "result": {
     "item": "slurpiesdongles:topaz_boots"

@@ -23,6 +23,6 @@ public class ItemLignite extends Item {
     }
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add("Smelts double what Coal smelts, (16 items)");
+        tooltip.add("Smelts double what Coal smelts, (16 items), also can be used to create torches(makes double the amount of Coal)");
     }
 }

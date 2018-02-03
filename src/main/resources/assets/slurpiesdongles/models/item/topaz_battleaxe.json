@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "slurpiesdongles:items/topaz_battleaxe"
+        "layer0": "slurpiesdongles:tools/topaz_battleaxe"
     }
 }

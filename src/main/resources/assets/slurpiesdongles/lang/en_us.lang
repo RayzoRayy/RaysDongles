@@ -29,6 +29,14 @@ item.stone_battleaxe.name=Stone Battleaxe
 item.topaz_battleaxe.name=Topaz Battleaxe
 item.wooden_battleaxe.name=Wooden Battleaxe
 
+#Charms
+item.fire_resistance_charm.name=Fire Resistance Charm
+item.night_vision_charm.name=Night Vision Charm
+item.regen_charm.name=Regeneration Charm
+item.speed_charm.name=Speed Charm
+item.strength_charm.name=Strength Charm
+item.water_breathing_charm.name=Water Breathing Charm
+
 #Blocks
 tile.blender_cyan.name=Blender
 tile.blue_bricks.name=Blue Bricks
@@ -54,6 +62,7 @@ tile.topaz_block.name=Topaz Block
 
 #Drinks
 item.apple_juice.name=Apple Juice
+item.apple_slushie.name=Apple Slushee
 item.black_coffee.name=Black Coffee
 item.carrot_juice.name=Carrot Juice
 item.coffee.name=Coffee
@@ -61,6 +70,9 @@ item.lemonade.name=Lemonade
 item.melon_juice.name=Melon Juice
 item.melon_slushie.name=Melon Slushee
 item.orange_juice.name=Orange Juice (OJ)
+item.orange_slushie.name=Orange Slushee
+item.strawberry_juice.name=Strawberry Juice
+item.strawberry_slushie.name=Strawberry Slushee
 
 #Dusts
 item.blue_glowstone_dust.name=Blue Glowstone Dust
@@ -74,11 +86,15 @@ item.red_glowstone_dust.name=Red Glowstone Dust
 #Food
 item.bacon.name=Bacon
 item.beef_jerky.name=Jimmer's Beef Jerky
+item.beef_chicken_sandwich.name=Steak & Chicken Sandwich
+item.beef_pork_sandwich.name=Steak & Pork Sandwich
+item.beef_sandwich.name=Steak Sandwich
 item.chicken_nugget.name=Chicken Nugget
+item.chicken_sandwich.name=Chicken Sandwich
+item.chicken_pork_sandwich.name= Chicken & Pork Sandwich
 item.corn.name=Corn
 tile.corn_crop.name=Corn Crop
 item.eggs.name=Eggs
-item.holy_bread.name=Holy Bread
 item.lemon.name=Lemon
 tile.lemon_bush.name=Lemon Bush
 tile.lemon_crop.name=Lemon Crop
@@ -86,15 +102,22 @@ item.mixed_seeds.name=Mixed Seeds
 item.orange.name=Orange
 tile.orange_bush.name=Orange Bush
 tile.orange_crop.name=Orange Crop
+item.pork_sandwich.name=Pork Sandwich
 item.raw_bacon.name=Raw Bacon
 item.raw_beef_slice.name=Raw Beef Slice
+item.raw_corn.name=Raw Corn
 item.roasted_apple.name=Roasted Apple
 item.roasted_beetroot_seeds.name=Roasted Beetroot Seeds
 item.roasted_melon_seeds.name=Roasted Melon Seeds
 item.roasted_pumpkin_seeds.name=Roasted Pumpkin Seeds
 item.roasted_seeds.name=Roasted Seeds
+item.strawberry.name=Strawberry
+tile.strawberry_crop.name=Strawberry Crop
+item.sugarcoated_apple.name=Sugar Coated Apple
 item.sugarcoated_lemon.name=Sugar Coated Lemon
 item.sugarcoated_melon.name=Sugar Coated Melon
+item.sugarcoated_orange.name=Sugar Coated Orange
+item.sugarcoated_strawberry.name=Sugar Coated Strawberry
 item.toast.name=Toast
 
 #Gems
@@ -118,6 +141,7 @@ item.hammer.name=Hammer
 item.hot_water.name=Hot Water
 item.knife.name=Knife
 item.pops_sign.name=Pop's Sign
+item.strawberry_seed.name=Strawberry Seed
 item.time_staff.name=Staff of Time
 item.topaz_handle.name=Topaz Handle
 item.vmp_upgrade.name=VMP Upgrade
@@ -154,6 +178,15 @@ item.ruby_pickaxe.name=Ruby Pickaxe
 item.sapphire_pickaxe.name=Sapphire Pickaxe
 item.topaz_pickaxe.name=Topaz Pickaxe
 item.vmpick.name=Mass Mining Pick
+
+#Regen Stuff
+item.diamond_apple.name=Diamond Apple
+item.emerald_apple.name=Emerald Apple
+item.enchanted_diamond_apple.name=Enchanted Diamond Apple
+item.enchanted_emerald_apple.name=Enchanted Emerald Apple
+item.enchanted_iron_apple.name=Enchanted Iron Apple
+item.holy_bread.name=Holy Bread
+item.iron_apple.name=Iron Apple
 
 #Shovels
 item.emerald_shovel.name=Emerald Shovel

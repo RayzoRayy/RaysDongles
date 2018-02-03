@@ -41,6 +41,7 @@ public class SDBlocks {
     public static BlockLemonCrop lemonCrop = new BlockLemonCrop("lemon_crop");
     public static BlockOrangeBush orangeBush = new BlockOrangeBush("orange_bush");
     public static BlockOrangeCrop orangeCrop = new BlockOrangeCrop("orange_crop");
+    public static BlockStrawBerryCrop strawberryCrop = new BlockStrawBerryCrop("strawberry_crop");
 
     //Ores
     public static BlockLigniteOre oreLignite = new BlockLigniteOre("lignite_ore");
@@ -82,29 +83,57 @@ public class SDBlocks {
                 blockSapphire,
                 blockTopaz,
 
-                //Bushes & Crops
+                //Crops
                 cornCrop,
-                lemonBush,
                 lemonCrop,
-                orangeBush,
                 orangeCrop,
-
-                //Ores
-                oreLignite,
-                oreRuby,
-                oreSapphire,
-                oreTopaz,
-                //Nether Ores
-                netherCoalOre,
-                netherDiamondOre,
-                netherEmeraldOre,
-                netherGoldOre,
-                netherIronOre,
-                netherLapisOre,
-                netherRedstoneOre,
+                strawberryCrop,
         };
-
         event.registerAll(blocks);
+        //Food
+             if (ConfigPreInit.disableLemonBush == false) {
+            event.register(lemonBush);
+        }
+            if (ConfigPreInit.disableOrangeBush == false) {
+            event.register(orangeBush);
+        }
+        //Ore
+            if (ConfigPreInit.disableLigniteOre == false) {
+            event.register(oreLignite);
+        }
+            if (ConfigPreInit.disableRubyOre == false) {
+            event.register(oreRuby);
+
+            if (ConfigPreInit.disableSapphireOre == false) {
+                event.register(oreSapphire);
+            }
+
+            if (ConfigPreInit.disableTopazOre == false) {
+                event.register(oreTopaz);
+            }
+            //Nether Ores
+            if (ConfigPreInit.disableNetherCoalOre == false) {
+                event.register(netherCoalOre);
+            }
+            if (ConfigPreInit.disableNetherDiamondOre == false) {
+                event.register(netherDiamondOre);
+            }
+            if (ConfigPreInit.disableNetherEmeraldOre == false) {
+                event.register(netherEmeraldOre);
+            }
+            if (ConfigPreInit.disableNetherGoldOre == false) {
+                event.register(netherGoldOre);
+            }
+            if (ConfigPreInit.disableNetherIronOre == false) {
+                event.register(netherIronOre);
+            }
+            if (ConfigPreInit.disableNetherLapisOre == false) {
+                event.register(netherLapisOre);
+            }
+            if (ConfigPreInit.disableNetherRedstoneOre == false) {
+                event.register(netherRedstoneOre);
+            }
+        }
     }
 
     public static void registerModels() {
@@ -134,26 +163,57 @@ public class SDBlocks {
 
         //Bushes & Crops
         registerRender(cornCrop);
-        registerRender(lemonBush);
         registerRender(lemonCrop);
-        registerRender(orangeBush);
         registerRender(orangeCrop);
+        registerRender(strawberryCrop);
 
+        //Food
+        if (ConfigPreInit.disableLemonBush == false) {
+            registerRender(lemonBush);
+        }
+        if (ConfigPreInit.disableOrangeBush == false) {
+            registerRender(orangeBush);
+        }
         //Ores
-        registerRender(oreLignite);
-        registerRender(oreRuby);
-        registerRender(oreSapphire);
-        registerRender(oreTopaz);
-        //Nether Ores
-        registerRender(netherCoalOre);
-        registerRender(netherDiamondOre);
-        registerRender(netherEmeraldOre);
-        registerRender(netherGoldOre);
-        registerRender(netherIronOre);
-        registerRender(netherLapisOre);
-        registerRender(netherRedstoneOre);
+        if (ConfigPreInit.disableLigniteOre == false) {
+            registerRender(oreLignite);
+        }
+        if (ConfigPreInit.disableRubyOre == false) {
+            registerRender(oreRuby);
 
+            if (ConfigPreInit.disableSapphireOre == false) {
+                registerRender(oreSapphire);
+            }
+
+            if (ConfigPreInit.disableTopazOre == false) {
+
+                registerRender(oreTopaz);
+            }
+            //Nether Ores
+            if (ConfigPreInit.disableNetherCoalOre == false) {
+                registerRender(netherCoalOre);
+            }
+            if (ConfigPreInit.disableNetherDiamondOre == false) {
+                registerRender(netherDiamondOre);
+            }
+            if (ConfigPreInit.disableNetherEmeraldOre == false) {
+                registerRender(netherEmeraldOre);
+            }
+            if (ConfigPreInit.disableNetherGoldOre == false) {
+                registerRender(netherGoldOre);
+            }
+            if (ConfigPreInit.disableNetherIronOre == false) {
+                registerRender(netherIronOre);
+            }
+            if (ConfigPreInit.disableNetherLapisOre == false) {
+                registerRender(netherLapisOre);
+            }
+            if (ConfigPreInit.disableNetherRedstoneOre == false) {
+                registerRender(netherRedstoneOre);
+            }
+        }
     }
+
 
     public static void registerItemBlocks(IForgeRegistry<Item> registry) {
         registry.registerAll(
@@ -183,30 +243,57 @@ public class SDBlocks {
 
                 //Bushes & Crops
                 cornCrop.createItemBlock(),
-                lemonBush.createItemBlock(),
                 lemonCrop.createItemBlock(),
-                orangeBush.createItemBlock(),
                 orangeCrop.createItemBlock(),
+                strawberryCrop.createItemBlock()
 
-
-                //Ores
-                oreLignite.createItemBlock(),
-                oreRuby.createItemBlock(),
-                oreSapphire.createItemBlock(),
-                oreTopaz.createItemBlock(),
-                //Nether Ores
-                netherCoalOre.createItemBlock(),
-                netherDiamondOre.createItemBlock(),
-                netherEmeraldOre.createItemBlock(),
-                netherGoldOre.createItemBlock(),
-                netherIronOre.createItemBlock(),
-                netherLapisOre.createItemBlock(),
-                netherRedstoneOre.createItemBlock()
 
         );
+        //Food
+        if (ConfigPreInit.disableLemonBush == false) {
+            registry.register(lemonBush.createItemBlock());
+        }
+        if (ConfigPreInit.disableOrangeBush == false) {
+            registry.register(orangeBush.createItemBlock());
+        }
+        //Ores
+        if (ConfigPreInit.disableLigniteOre == false) {
+            registry.register(oreLignite.createItemBlock());
+        }
+        if (ConfigPreInit.disableRubyOre == false) {
+            registry.register(oreRuby.createItemBlock());
 
+            if (ConfigPreInit.disableSapphireOre == false) {
+                registry.register(oreSapphire.createItemBlock());
+            }
 
+            if (ConfigPreInit.disableTopazOre == false) {
 
+                registry.register(oreTopaz.createItemBlock());
+            }
+            //Nether Ores
+            if (ConfigPreInit.disableNetherCoalOre == false) {
+                registry.register(netherCoalOre.createItemBlock());
+            }
+            if (ConfigPreInit.disableNetherDiamondOre == false) {
+                registry.register(netherDiamondOre.createItemBlock());
+            }
+            if (ConfigPreInit.disableNetherEmeraldOre == false) {
+                registry.register(netherEmeraldOre.createItemBlock());
+            }
+            if (ConfigPreInit.disableNetherGoldOre == false) {
+                registry.register(netherGoldOre.createItemBlock());
+            }
+            if (ConfigPreInit.disableNetherIronOre == false) {
+                registry.register(netherIronOre.createItemBlock());
+            }
+            if (ConfigPreInit.disableNetherLapisOre == false) {
+                registry.register(netherLapisOre.createItemBlock());
+            }
+            if (ConfigPreInit.disableNetherRedstoneOre == false) {
+                registry.register(netherRedstoneOre.createItemBlock());
+            }
+        }
     }
     public static void registerRender(Block block) {
         Item item = Item.getItemFromBlock(block);
