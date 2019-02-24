@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: ''
+title: "{Not Reviewed}"
 labels: ''
 assignees: ''
 
@@ -14,7 +14,7 @@ A clear and concise description of what the bug is.
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
-3. See issue
+3. What happens '....'
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
@@ -23,11 +23,11 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Please complete the following information**
- -Forge Version
--Minecraft Version
--Slurpie's Dongles Version
+ Forge Version- 
+Minecraft Version- 
+Slurpie's Dongles Version- 
 
-**Please list all mods here that you are currently using with my mod**
+**Please list all mod(s) AND version(s) here that you are currently using with my mod**
 
 **Additional context**
 Add any other context about the problem here.
