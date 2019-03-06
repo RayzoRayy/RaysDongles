@@ -1,8 +1,8 @@
 ---
 name: Bug report
-about: Create a report to help us improve
-title: "{Not Reviewed}"
-labels: ''
+about: Create a report to help me fix the issue
+title: ''
+labels: Needs Review
 assignees: ''
 
 ---
@@ -25,9 +25,9 @@ If applicable, add screenshots to help explain your problem.
 **Please complete the following information**
  Forge Version- 
 Minecraft Version- 
-Slurpie's Dongles Version- 
+Slurpie's Dongles Version(Please indicate exactly which version of my mod you are using)- 
 
-**Please list all mod(s) AND version(s) here that you are currently using with my mod**
+**Please list all mod(s) AND version(s) here that you are currently using along side of my mod**
 
 **Additional context**
 Add any other context about the problem here.
