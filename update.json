@@ -1,6 +1,9 @@
 {
   "promos": {
-    "1.15.1-latest": "2.0.7",
+    "1.15.1-latest": "2.0.8",
     "1.15.1-recommended": "2.0.7"
-  }
+  },
+  "1.15.1":{
+      "2.0.8":"Added Wild Crop spawns, fixed update checker, & some textures"
+   }
 }
