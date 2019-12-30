@@ -1,51 +1,21 @@
-# This is an example mods.toml file. It contains the data relating to the loading mods.
-# There are several mandatory fields (#mandatory), and many more that are optional (#optional).
-# The overall format is standard TOML format, v0.5.0.
-# Note that there are a couple of TOML lists in this file.
-# Find more information on toml format here:  https://github.com/toml-lang/toml
-# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
-modLoader="javafml" #mandatory
-# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[28,)" #mandatory (24 is current forge version)
-# A URL to refer people to when problems occur with this mod
-issueTrackerURL="http://my.issue.tracker/" #optional
-# A list of mods - how many allowed here is determined by the individual mod loader
-[[mods]] #mandatory
-# The modid of the mod
-modId="slurpiesdongles" #mandatory
-# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="2.0.6" #mandatory
- # A display name for the mod
-displayName="Ray's Dongles" #mandatory
-# A URL to query for updates for this mod. See the JSON update specification <here>
-updateJSONURL="https://raw.githubusercontent.com/RayzoRayy/RaysDongles/1.14.4/update.json" #optional
-# A URL for the "homepage" for this mod, displayed in the mod UI
-displayURL="https://github.com/RayzoRayy/RaysDongles/wiki" #optional
-# A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
-# A text field displayed in the mod UI
-credits="Thanks for everyones support with this mod!" #optional
-# A text field displayed in the mod UI
-authors="RayzoRay" #optional
-# The description text for the mod (multi line!) (#mandatory)
+modLoader="javafml"
+loaderVersion="[30,)"
+issueTrackerURL="https://github.com/RayzoRayy/RaysDongles/issues"
+[[mods]]
+modId="slurpiesdongles"
+version="2.0.6"
+displayName="Ray's Dongles"
+updateJSONURL="https://github.com/RayzoRayy/RaysDongles/blob/1.15.x/update.json"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/slurpies-dongles"
+logoFile="logo.png"
+credits="See https://github.com/RayzoRayy/RaysDongles/wiki/Contributors for credits"
+authors="RayzoRayy"
 description='''
 Please see https://www.curseforge.com/minecraft/mc-mods/slurpies-dongles for more info on my mod, however, if you see this message, I hope that you have got my mod from Curse Forge! Any other site
 does NOT have my permission to host my mod, and may contain malware or viruses. I support Curse Forge only.
 '''
-# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
-[[dependencies.examplemod]] #optional
-    # the modid of the dependency
-    modId="forge" #mandatory
-    # Does this dependency have to exist - if not, ordering below must be specified
-    mandatory=true #mandatory
-    # The version range of the dependency
-    versionRange="[28,)" #mandatory
-    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
-    ordering="NONE"
-    # Side this dependency is applied on - BOTH, CLIENT or SERVER
-    side="BOTH"
-# Here's another dependency
-[[dependencies.examplemod]]
+
+[[dependencies.slurpiesdongles]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.15.1]"
