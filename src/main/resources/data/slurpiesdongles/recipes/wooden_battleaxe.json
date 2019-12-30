@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    " SW",
+    "S W"
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick"
+    },
+    "W": {
+    "item": "minecraft:oak_planks"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:wooden_battleaxe"
+  }
+}

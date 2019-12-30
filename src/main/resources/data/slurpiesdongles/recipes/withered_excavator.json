@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TT ",
+    "TH ",
+    "  H"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "T": {
+      "item": "slurpiesdongles:nether_star_chunk"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:withered_excavator"
+  }
+}

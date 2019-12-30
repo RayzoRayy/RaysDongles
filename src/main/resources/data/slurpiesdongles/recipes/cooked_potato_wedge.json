@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:raw_potato_wedge"
+  },
+  "result": "slurpiesdongles:potato_wedge",
+  "experience": 0.35,
+  "cookingtime": 200
+}

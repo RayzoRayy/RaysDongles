@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:peridot_block"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:peridot",
+      "count": 9
+  }
+}

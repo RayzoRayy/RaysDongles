@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX ",
+    "X# ",
+    "X# "
+  ],
+  "key": {
+    "#": {
+    "item": "minecraft:stick"
+    },
+    "X": {
+    "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:emerald_lumber_axe"
+  }
+}

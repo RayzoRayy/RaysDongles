@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    " R ",
+    " S "
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick"
+    },
+    "R": {
+    "item": "slurpiesdongles:amazonite"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:amazonite_sword"
+  }
+}

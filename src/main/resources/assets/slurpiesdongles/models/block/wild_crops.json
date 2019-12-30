@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "slurpiesdongles:blocks/wild_crops"
+    }
+}

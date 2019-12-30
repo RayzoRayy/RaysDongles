@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "ISI",
+    "BSB"
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick"
+    },
+    "I": {
+    "item": "minecraft:iron_ingot"
+    },
+      "B": {
+    "item": "minecraft:blaze_rod"
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:hammer"
+  }
+}

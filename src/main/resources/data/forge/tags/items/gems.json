@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"#forge:gems/peridot",
+		"#forge:gems/amazonite",
+		"#forge:gems/amethyst",
+		"#forge:gems/sapphire",
+		"#forge:gems/topaz",
+		"#forge:gems/ruby"
+	]
+}

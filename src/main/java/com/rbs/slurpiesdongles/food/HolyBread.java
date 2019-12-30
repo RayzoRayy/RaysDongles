@@ -1,71 +1,45 @@
 package com.rbs.slurpiesdongles.food;
 
-import com.rbs.slurpiesdongles.SlurpiesDongles;
+import com.rbs.slurpiesdongles.Reference;
+import com.rbs.slurpiesdongles.init.ModFood;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.MobEffects;
-import net.minecraft.item.EnumRarity;
-import net.minecraft.item.ItemFood;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Rarity;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class HolyBread extends ItemFood {
-    public HolyBread(int amount, float saturation, boolean isWolfFood, String name)
-    {
-        super(amount, saturation, isWolfFood);
-        this.setHasSubtypes(true);
-        this.setAlwaysEdible();
-        this.setMaxStackSize(16);
-        setCreativeTab(SlurpiesDongles.creativeTab);
+public class HolyBread extends Item {
+    public HolyBread(Item.Properties p_i50045_1_, String name) {
+        super(p_i50045_1_);
 
-        setUnlocalizedName(name);
-        setRegistryName(name);
+        this.setRegistryName(Reference.MODID, name);
     }
-
-    @SideOnly(Side.CLIENT)
+   @Override
     public boolean hasEffect(ItemStack stack)
     {
         return true;
     }
 
     /**
-     * Return an item rarity from EnumRarity
+     * Return an item rarity from Rarity
      */
-    public EnumRarity getRarity(ItemStack stack)
+    public Rarity getRarity(ItemStack stack)
     {
-        return stack.getMetadata() == 0 ? EnumRarity.EPIC : EnumRarity.EPIC;
+        return stack.getCount() == 0 ? Rarity.EPIC : Rarity.EPIC;
     }
 
-    public void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
-    {
-        if (!worldIn.isRemote)
-        {
-            if (stack.getMetadata() > 0)
-            {
-                player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 1200, 1));//200 = 10 seconds in game
-                player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 6000, 0));
-                player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 0));
-                player.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, 2400, 3));
-            }
-            else
-            {
-                player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 400, 1));//200 = 10 seconds in game
-                player.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, 2400, 3));
-                player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, 6000, 0));
-                player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, 6000, 0));
-            }
-        }
-    }
-    @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn)
-    {
-        tooltip.add("This is the new craftable God Apple, but it's bread!");
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        tooltip.add(new StringTextComponent(TextFormatting.YELLOW + "Craftable God Apple, but bread instead"));
     }
 
 }

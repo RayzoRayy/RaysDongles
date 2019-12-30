@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "H T",
+    "IAI",
+    "PLP"
+  ],
+  "key": {
+    "H": {
+    "item": "slurpiesdongles:hammer"
+    },
+    "T": {
+    "item": "minecraft:ghast_tear"
+    },
+    "I": {
+    "item": "minecraft:iron_ingot"
+    },
+    "A": {
+    "item": "minecraft:anvil",
+    "data": 0
+    },
+    "P": {
+    "item": "minecraft:blaze_powder"
+    },
+    "L": {
+    "item": "minecraft:lava_bucket"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:repair"
+  }
+}

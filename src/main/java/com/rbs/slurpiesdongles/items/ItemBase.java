@@ -1,20 +1,15 @@
 package com.rbs.slurpiesdongles.items;
-import com.rbs.slurpiesdongles.SlurpiesDongles;
+
+import com.rbs.slurpiesdongles.Reference;
+import com.rbs.slurpiesdongles.init.ModItems;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
-/**
- * Created by Consular on 7/19/2017.
- */
 public class ItemBase extends Item {
+    public ItemBase(Properties properties, String name) {
+        super(properties);
 
-    protected String name;
-
-    public ItemBase(String name) {
-
-        setCreativeTab(SlurpiesDongles.creativeTab);
-
-        this.name = name;
-        setUnlocalizedName(name);
-        setRegistryName(name);
+        this.setRegistryName(Reference.MODID, name);
     }
+
 }

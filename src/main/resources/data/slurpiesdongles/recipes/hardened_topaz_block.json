@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "slurpiesdongles:hardened_topaz"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:hardened_topaz_block"
+  }
+}

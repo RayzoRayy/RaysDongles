@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "slurpiesdongles:block/cabbage0" },
+        "age=1": { "model": "slurpiesdongles:block/cabbage0" },
+        "age=2": { "model": "slurpiesdongles:block/cabbage1" },
+        "age=3": { "model": "slurpiesdongles:block/cabbage1" },
+        "age=4": { "model": "slurpiesdongles:block/cabbage2" },
+        "age=5": { "model": "slurpiesdongles:block/cabbage2" },
+        "age=6": { "model": "slurpiesdongles:block/cabbage2" },
+        "age=7": { "model": "slurpiesdongles:block/cabbage3" }
+    }
+}

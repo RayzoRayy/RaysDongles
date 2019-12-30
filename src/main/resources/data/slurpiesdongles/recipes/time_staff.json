@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CE",
+    " H ",
+    "H  "
+  ],
+  "key": {
+    "C": {
+    "item": "minecraft:clock"
+    },
+    "E": {
+    "item": "minecraft:ender_eye"
+    },
+    "H": {
+    "item": "slurpiesdongles:topaz_handle"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:time_staff"
+  }
+}

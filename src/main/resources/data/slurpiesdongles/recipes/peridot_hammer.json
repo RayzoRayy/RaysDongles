@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "THT",
+    " H "
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "slurpiesdongles:peridot"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:peridot_hammer"
+  }
+}

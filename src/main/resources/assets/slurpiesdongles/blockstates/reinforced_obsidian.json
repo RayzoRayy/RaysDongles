@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "slurpiesdongles:reinforced_obsidian" }
+        "": { "model": "slurpiesdongles:block/reinforced_obsidian" }
     }
 }

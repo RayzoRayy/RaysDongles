@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"#forge:ores/peridot",
+		"#forge:ores/amazonite",
+		"#forge:ores/amethyst",
+		"#forge:ores/sapphire",
+		"#forge:ores/topaz",
+		"#forge:ores/ruby"
+	]
+}

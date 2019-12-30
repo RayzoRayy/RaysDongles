@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:nether_emerald_ore"
+  },
+  "result": "minecraft:emerald",
+  "experience": 1.2,
+  "cookingtime": 200
+}

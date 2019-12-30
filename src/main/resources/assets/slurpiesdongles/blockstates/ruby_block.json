@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "slurpiesdongles:ruby_block" }
+        "": { "model": "slurpiesdongles:block/ruby_block" }
     }
 }

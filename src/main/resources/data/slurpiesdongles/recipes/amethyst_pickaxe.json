@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick",
+    "data": 0
+    },
+    "R": {
+    "item": "slurpiesdongles:amethyst"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:amethyst_pickaxe"
+  }
+}

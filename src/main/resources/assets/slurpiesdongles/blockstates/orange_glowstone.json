@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "slurpiesdongles:orange_glowstone" }
+        "": { "model": "slurpiesdongles:block/orange_glowstone" }
     }
 }

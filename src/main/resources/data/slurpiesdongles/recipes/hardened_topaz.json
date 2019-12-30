@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:hardened_topaz_block"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:hardened_topaz",
+      "count": 9
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "slurpiesdongles:block/tomato0" },
+        "age=1": { "model": "slurpiesdongles:block/tomato1" },
+        "age=2": { "model": "slurpiesdongles:block/tomato2" },
+        "age=3": { "model": "slurpiesdongles:block/tomato3" },
+        "age=4": { "model": "slurpiesdongles:block/tomato4" },
+        "age=5": { "model": "slurpiesdongles:block/tomato5" },
+        "age=6": { "model": "slurpiesdongles:block/tomato6" },
+        "age=7": { "model": "slurpiesdongles:block/tomato7" }
+    }
+}

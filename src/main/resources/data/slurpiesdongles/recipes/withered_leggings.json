@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XWX",
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "slurpiesdongles:nether_star_chunk"
+    },
+    "W": {
+      "item": "minecraft:wither_skeleton_skull"
+    }
+    },
+    "result": {
+      "item": "slurpiesdongles:withered_leggings"
+    }
+  }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "slurpiesdongles:nether_redstone_ore"
+  },
+  "result": "minecraft:redstone_ore",
+  "experience": 1.0,
+  "cookingtime": 100
+}

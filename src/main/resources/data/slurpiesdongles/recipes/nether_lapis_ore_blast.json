@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "slurpiesdongles:nether_lapis_ore"
+  },
+  "result": "minecraft:lapis_ore",
+  "experience": 1.0,
+  "cookingtime": 100
+}

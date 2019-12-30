@@ -1,12 +1,12 @@
 {
     "variants": {
-        "age=0": { "model": "slurpiesdongles:orange_stage_0" },
-        "age=1": { "model": "slurpiesdongles:orange_stage_0" },
-        "age=2": { "model": "slurpiesdongles:orange_stage_1" },
-        "age=3": { "model": "slurpiesdongles:orange_stage_1" },
-        "age=4": { "model": "slurpiesdongles:orange_stage_2" },
-        "age=5": { "model": "slurpiesdongles:orange_stage_2" },
-        "age=6": { "model": "slurpiesdongles:orange_stage_2" },
-        "age=7": { "model": "slurpiesdongles:orange_stage_3" }
+        "age=0": { "model": "slurpiesdongles:block/orange_stage_0" },
+        "age=1": { "model": "slurpiesdongles:block/orange_stage_0" },
+        "age=2": { "model": "slurpiesdongles:block/orange_stage_1" },
+        "age=3": { "model": "slurpiesdongles:block/orange_stage_1" },
+        "age=4": { "model": "slurpiesdongles:block/orange_stage_2" },
+        "age=5": { "model": "slurpiesdongles:block/orange_stage_2" },
+        "age=6": { "model": "slurpiesdongles:block/orange_stage_2" },
+        "age=7": { "model": "slurpiesdongles:block/orange_stage_3" }
     }
 }

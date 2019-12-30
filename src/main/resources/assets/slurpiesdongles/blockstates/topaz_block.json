@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "slurpiesdongles:topaz_block" }
+        "": { "model": "slurpiesdongles:block/topaz_block" }
     }
 }

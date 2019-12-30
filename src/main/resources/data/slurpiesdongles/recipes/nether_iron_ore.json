@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:nether_iron_ore"
+  },
+  "result": "minecraft:iron_ingot",
+  "experience": 0.4,
+  "cookingtime": 200
+}

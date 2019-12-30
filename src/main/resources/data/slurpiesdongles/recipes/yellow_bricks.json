@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:bricks"
+    },
+	{
+	  "item": "minecraft:dandelion_yellow"
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:yellow_bricks"
+  }
+}

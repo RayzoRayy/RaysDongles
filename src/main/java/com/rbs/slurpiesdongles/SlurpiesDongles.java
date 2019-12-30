@@ -1,103 +1,97 @@
 package com.rbs.slurpiesdongles;
 
-import com.rbs.slurpiesdongles.events.EventPigDrops;
-import com.rbs.slurpiesdongles.events.FuelHandler;
-import com.rbs.slurpiesdongles.events.OreDictHandler;
-import com.rbs.slurpiesdongles.events.SeedsDropFromGrass;
-import com.rbs.slurpiesdongles.gui.GuiHandler;
-import com.rbs.slurpiesdongles.init.*;
-import com.rbs.slurpiesdongles.proxy.CommonProxy;
-import com.rbs.slurpiesdongles.world.WorldGen;
+import com.rbs.slurpiesdongles.config.CoreConfig;
+import com.rbs.slurpiesdongles.events.PigDrops;
+import com.rbs.slurpiesdongles.init.ModBlocks;
+import com.rbs.slurpiesdongles.update.Configuration;
+import com.rbs.slurpiesdongles.world.OreGenerator;
+import com.rbs.slurpiesdongles.world.WildCropsWorldGen;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
+import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
+import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLPaths;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.io.File;
+import javax.annotation.Nonnull;
 import java.util.Random;
 
-/**
- * Created by Consular on 7/19/2017.
- */
-@Mod(modid = SlurpiesDongles.modId, name = SlurpiesDongles.name, version = SlurpiesDongles.version, acceptedMinecraftVersions = SlurpiesDongles.MC_VERSION)
+// The value here should match an entry in the META-INF/mods.toml file
+@Mod(value = Reference.MODID)
 public class SlurpiesDongles {
 
-
-
     public static Random random = new Random();
-    public static final SDTab creativeTab = new SDTab();
-
-    public static Configuration Armor;
-    public static Configuration Charms;
-    public static Configuration Config;
-    public static Configuration OreAndFood;
-    public static Configuration Worldgen;
-
-        public static final String modId = "slurpiesdongles";
-        public static final String name = "Slurpies Dongles";
-        public static final String version = "2.1.5.2";
-        public static final String MC_VERSION = "1.12, 1.12.1, 1.12.2";
 
 
-        @SidedProxy(serverSide = "com.rbs.slurpiesdongles.proxy.CommonProxy", clientSide = "com.rbs.slurpiesdongles.proxy.ClientProxy")
-        public static CommonProxy proxy;
-
-        @Mod.Instance(modId)
     public static SlurpiesDongles instance;
 
-        @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event) {
-            Armor = new Configuration(new File("config/SlurpiesDongles/Armor Materials.cfg"));
-            Charms = new Configuration(new File("config/SlurpiesDongles/Charms.cfg"));
-            Config = new Configuration(new File("config/SlurpiesDongles/Tool Materials.cfg"));
-            OreAndFood = new Configuration(new File("config/SlurpiesDongles/Ore.cfg"));
-            Worldgen = new Configuration(new File("config/SlurpiesDongles/World Generation.cfg"));
+    // Directly reference a log4j logger.
+    private static final Logger LOGGER = LogManager.getLogger();
 
-            ConfigFile.SyncConfig();
+    public SlurpiesDongles() {
+        //Config Stuff
+        ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, CoreConfig.SPEC, "Ray's Dongles-General.toml");
+        CoreConfig.loadConfig(CoreConfig.SPEC, FMLPaths.CONFIGDIR.get().resolve("Ray's Dongles-General.toml".toString()));
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(WildCropsWorldGen::registerAll);
+        // Register the setup method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        // Register the enqueueIMC method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
+        // Register the processIMC method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+        // Register the doClientStuff method for modloading
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        // Register ourselves for server, registry and other game events we are interested in
+        MinecraftForge.EVENT_BUS.register(this);
+        Configuration.init();
 
-            MinecraftForge.EVENT_BUS.register(new EventPigDrops());
-            MinecraftForge.EVENT_BUS.register(new RegistrationHandler());
-            MinecraftForge.EVENT_BUS.register(new FuelHandler());
-            MinecraftForge.EVENT_BUS.register(new SmeltingRecipies());
-            SeedsDropFromGrass.getSeedDrops();
-
-
-
-        }
-
-        @Mod.EventHandler
-    public void init(FMLInitializationEvent event) {
-            OreDictHandler.registerOreDict();
-            MinecraftForge.EVENT_BUS.register(instance);
-            NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
-            proxy.registerRenders();
-            SmeltingRecipies.registerSmeltingRecipes();
-            GameRegistry.registerWorldGenerator(new WorldGen(), 0);
-            GameRegistry.registerFuelHandler(new FuelHandler());
-        }
-
-        @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent event) {
-
-        }
-
-    @Mod.EventHandler
-    public void serverLoad(FMLServerStartingEvent event) {
 
     }
+
+    private void setup(final FMLCommonSetupEvent event) {
+        // some preinit code
+        MinecraftForge.EVENT_BUS.register(new PigDrops());
+        OreGenerator.setupOreGen();
+
+    }
+
+    private void doClientStuff(final FMLClientSetupEvent event) {
+        // do something that can only be done on the client
+        RenderTypeLookup.setRenderLayer(ModBlocks.wild_crops, RenderType.func_228643_e_());
+    }
+
+    private void enqueueIMC(final InterModEnqueueEvent event) {
+        // some example code to dispatch IMC to another mod
+    }
+
+    private void processIMC(final InterModProcessEvent event) {
+        // some example code to receive and process InterModComms from other mods
+
+    }
+
+    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
-    public void onConfigChanged (ConfigChangedEvent.OnConfigChangedEvent event) {
-        if (event.getModID().equals(SlurpiesDongles.modId)) {
-            ConfigFile.SyncConfig();
-        }
+    public static void onServerStarting(FMLServerStartingEvent event) {
+        // do something when the server starts
+
     }
 
+    @Nonnull
+    public static ResourceLocation getId(String path)
+    {
+        return new ResourceLocation(Reference.MODID, path);
+    }
 }
+
+

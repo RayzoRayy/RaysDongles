@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:nether_redstone_ore"
+  },
+  "result": "minecraft:redstone_ore",
+  "experience": 0.5,
+  "cookingtime": 200
+}

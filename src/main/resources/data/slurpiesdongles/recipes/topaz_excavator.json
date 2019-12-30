@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TT ",
+    "TH ",
+    "  H"
+  ],
+  "key": {
+    "H": {
+      "item": "slurpiesdongles:topaz_handle"
+    },
+    "T": {
+      "item": "slurpiesdongles:topaz"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:topaz_excavator"
+  }
+}

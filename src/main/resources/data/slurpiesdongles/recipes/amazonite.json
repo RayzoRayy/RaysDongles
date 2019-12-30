@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:amazonite_block"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:amazonite",
+      "count": 9
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XAX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:obsidian"
+    },
+      "A": {
+          "item": "minecraft:anvil",
+          "data" : 1
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:reinforced_obsidian",
+      "count" : 4
+  }
+}

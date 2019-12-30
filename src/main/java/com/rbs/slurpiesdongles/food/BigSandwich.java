@@ -1,58 +1,30 @@
 package com.rbs.slurpiesdongles.food;
 
-import com.rbs.slurpiesdongles.SlurpiesDongles;
+import com.rbs.slurpiesdongles.Reference;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.item.EnumAction;
-import net.minecraft.item.ItemFood;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.*;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Hand;
+import net.minecraft.util.SoundEvents;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class BigSandwich extends ItemFood {
-    public BigSandwich(String name) {
-        super(20, 1.0F, false);
-        this.setMaxDamage(0);
-        this.setMaxStackSize(64);
-        canRepair = false;
-        setCreativeTab(SlurpiesDongles.creativeTab);
+public class BigSandwich extends Item {
 
-        this.setUnlocalizedName(name);
-        this.setRegistryName(name);
-    }
+    public BigSandwich(Properties properties, String name) {
+        super(properties);
 
-    @Nonnull
-    @Override
-    public ItemStack onItemUseFinish(@Nonnull ItemStack stack, @Nonnull World world, EntityLivingBase entityLiving) {
-        if(!(entityLiving instanceof EntityPlayer))
-            return stack;
-
-        EntityPlayer player = (EntityPlayer) entityLiving;
-
-        stack.shrink(1);
-        player.getFoodStats().addStats(20, 1.0F);
-        world.playSound(null, player.getPosition(), SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
-        this.onFoodEaten(stack, world, player);
-        return stack;
-    }
-
-    /**
-     * How long it takes to use or consume an item
-     */
-    @Override
-    public int getMaxItemUseDuration(ItemStack par1ItemStack) {
-        return 64;
+    this.setRegistryName(Reference.MODID, name);
     }
 
     /**
@@ -61,9 +33,22 @@ public class BigSandwich extends ItemFood {
      */
     @Nonnull
     @Override
-    public EnumAction getItemUseAction(ItemStack stack) {
-        return EnumAction.EAT;
+    public ItemStack onItemUseFinish(@Nonnull ItemStack stack, @Nonnull World world, LivingEntity entityLiving) {
+        if (!(entityLiving instanceof PlayerEntity))
+            return stack;
+
+        PlayerEntity player = (PlayerEntity) entityLiving;
+
+        stack.shrink(1);
+        player.getFoodStats().addStats(20, 1.0F);
+        world.playSound((PlayerEntity) entityLiving, player.getPosition(), SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 1.0F, world.rand.nextFloat() * 0.1F + 0.9F);
+        return stack;
     }
+
+
+
+
+
 
     /**
      * Called whenever this item is equipped and the right mouse button is
@@ -71,18 +56,27 @@ public class BigSandwich extends ItemFood {
      */
     @Nonnull
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, @Nonnull EnumHand hand) {
+    public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity player, @Nonnull Hand hand) {
         ItemStack stack = player.getHeldItem(hand);
 
-        if(player.canEat(false)) {
+        if (player.canEat(false)) {
             player.setActiveHand(hand);
-            return new ActionResult<>(EnumActionResult.SUCCESS, stack);
+            return new ActionResult<>(ActionResultType.SUCCESS, stack);
         }
 
-        return new ActionResult<>(EnumActionResult.FAIL, stack);
+        return new ActionResult<>(ActionResultType.FAIL, stack);
     }
-    @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        tooltip.add("This is a big sandwich, heals alot, but takes twice as long to eat");
+
+    @Override
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
+        tooltip.add(new StringTextComponent(TextFormatting.YELLOW + "This is a big sandwich, heals alot, but takes twice as long to eat"));
+    }
+
+    /**
+     * How long it takes to use or consume an item
+     */
+    @Override
+    public int getUseDuration(ItemStack par1ItemStack) {
+        return 64;
     }
 }

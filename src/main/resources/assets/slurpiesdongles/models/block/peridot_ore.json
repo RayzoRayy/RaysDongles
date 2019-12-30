@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "slurpiesdongles:blocks/peridot_ore"
+    }
+}

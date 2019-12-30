@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "slurpiesdongles:nether_coal_ore" }
+        "": { "model": "slurpiesdongles:block/nether_coal_ore" }
     }
 }

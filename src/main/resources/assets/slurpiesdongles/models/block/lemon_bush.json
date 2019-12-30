@@ -1,6 +1,6 @@
 {
-    "parent": "block/cube_all",
+    "parent": "block/tinted_cross",
     "textures": {
-        "all": "slurpiesdongles:blocks/lemon_bush"
+        "cross": "slurpiesdongles:blocks/lemon_bush"
     }
 }

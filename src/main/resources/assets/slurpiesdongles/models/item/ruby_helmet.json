@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:items/ruby_helmet"
+        "layer0": "slurpiesdongles:armor/ruby_helmet"
     }
 }

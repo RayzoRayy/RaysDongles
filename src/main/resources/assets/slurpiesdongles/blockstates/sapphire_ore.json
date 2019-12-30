@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "slurpiesdongles:sapphire_ore" }
+        "": { "model": "slurpiesdongles:block/sapphire_ore" }
     }
 }

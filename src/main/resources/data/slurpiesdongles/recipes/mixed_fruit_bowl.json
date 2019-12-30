@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:strawberry"
+    },
+	{
+	  "item": "minecraft:bowl" 
+	}, 
+    {
+      "item": "slurpiesdongles:orange"
+    },
+	{
+	  "item": "minecraft:melon"
+	  },
+	  {
+	  "item": "minecraft:apple"
+	  }
+  ],
+  "result": {
+    "item": "slurpiesdongles:mixed_fruit_bowl"
+  }
+}

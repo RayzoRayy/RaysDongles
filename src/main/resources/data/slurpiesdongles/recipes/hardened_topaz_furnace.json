@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:topaz"
+  },
+  "result": "slurpiesdongles:hardened_topaz",
+  "experience": 0.70,
+  "cookingtime": 200
+}

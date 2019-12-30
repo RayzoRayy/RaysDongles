@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "slurpiesdongles:rainbow_bricks" }
+        "": { "model": "slurpiesdongles:block/rainbow_bricks" }
     }
 }

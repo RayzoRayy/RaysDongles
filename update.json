@@ -1,6 +1,6 @@
 {
   "promos": {
-    "1.12.x-latest": "2.17.6",
-    "1.12.x-recommended": "2.17.6"
+    "1.15.x-latest": "2.0.6",
+    "1.15.x-recommended": "2.0.6"
   }
 }

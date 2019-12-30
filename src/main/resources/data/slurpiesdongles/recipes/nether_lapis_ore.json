@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:nether_lapis_ore"
+  },
+  "result": "minecraft:lapis_ore",
+  "experience": 0.45,
+  "cookingtime": 200
+}

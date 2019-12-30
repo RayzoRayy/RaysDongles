@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:bacon"
+    },
+	{
+	  "item": "slurpiesdongles:eggs" 
+	},
+      {
+	  "item": "slurpiesdongles:toast" 
+	},
+	{
+		"item": "slurpiesdongles:toast"
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:toasted_bacon_egg_sandwitch"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:raw_bacon"
+  },
+  "result": "slurpiesdongles:bacon",
+  "experience": 0.35,
+  "cookingtime": 200
+}

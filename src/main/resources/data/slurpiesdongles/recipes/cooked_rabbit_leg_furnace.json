@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:rabbit_leg"
+  },
+  "result": "slurpiesdongles:cooked_rabbit_leg",
+  "experience": 0.35,
+  "cookingtime": 200
+}

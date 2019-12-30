@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "minecraft:carrot"
+  },
+  "result": "slurpiesdongles:cooked_carrot",
+  "experience": 0.35,
+  "cookingtime": 200
+}

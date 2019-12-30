@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "slurpiesdongles:nether_coal_ore"
+  },
+  "result": "minecraft:coal",
+  "experience": 1.0,
+  "cookingtime": 100
+}

@@ -1,5 +1,5 @@
 {
     "variants": {
-        "normal": { "model": "slurpiesdongles:nether_lapis_ore" }
+        "": { "model": "slurpiesdongles:block/nether_lapis_ore" }
     }
 }

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ADP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick",
+    "data": 0
+    },
+    "A": {
+    "item": "slurpiesdongles:peridot_axe"
+    },
+      "D": {
+    "item": "slurpiesdongles:peridot_shovel"
+      },
+      "P": {
+          "item": "slurpiesdongles:peridot_pickaxe"
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:peridot_paxel"
+  }
+}

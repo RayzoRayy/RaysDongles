@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:beef"
+    },
+	{
+	  "item": "slurpiesdongles:knife" 
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:raw_beef_slice"
+  }
+}

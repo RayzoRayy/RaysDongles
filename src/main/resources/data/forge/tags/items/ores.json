@@ -1,0 +1,18 @@
+{
+	"replace": false,
+	"values": [
+		"#forge:ores/nether_coal_ore",
+		"#forge:ores/nether_diamond_ore",
+		"#forge:ores/nether_emerald_ore",
+		"#forge:ores/nether_iron_ore",
+		"#forge:ores/nether_gold_ore",
+		"#forge:ores/nether_lapis_ore",
+		"#forge:ores/nether_redstone_ore",
+		"#forge:ores/amazonite",
+		"#forge:ores/amethyst",
+		"#forge:ores/peridot",
+		"#forge:ores/sapphire",
+		"#forge:ores/ruby",
+		"#forge:ores/topaz"
+	]
+}

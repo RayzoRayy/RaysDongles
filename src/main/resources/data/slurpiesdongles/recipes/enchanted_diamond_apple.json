@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DAD",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+    "item": "minecraft:diamond_block"
+    },
+    "A": {
+    "item": "minecraft:apple"
+     }
+  },
+  "result": {
+    "item": "slurpiesdongles:enchanted_diamond_apple"
+  }
+}

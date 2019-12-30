@@ -1,12 +1,12 @@
 {
     "variants": {
-        "age=0": { "model": "slurpiesdongles:corn0" },
-        "age=1": { "model": "slurpiesdongles:corn1" },
-        "age=2": { "model": "slurpiesdongles:corn2" },
-        "age=3": { "model": "slurpiesdongles:corn3" },
-        "age=4": { "model": "slurpiesdongles:corn4" },
-        "age=5": { "model": "slurpiesdongles:corn5" },
-        "age=6": { "model": "slurpiesdongles:corn6" },
-        "age=7": { "model": "slurpiesdongles:corn7" }
+        "age=0": { "model": "slurpiesdongles:block/corn0" },
+        "age=1": { "model": "slurpiesdongles:block/corn1" },
+        "age=2": { "model": "slurpiesdongles:block/corn2" },
+        "age=3": { "model": "slurpiesdongles:block/corn3" },
+        "age=4": { "model": "slurpiesdongles:block/corn4" },
+        "age=5": { "model": "slurpiesdongles:block/corn5" },
+        "age=6": { "model": "slurpiesdongles:block/corn6" },
+        "age=7": { "model": "slurpiesdongles:block/corn7" }
     }
 }

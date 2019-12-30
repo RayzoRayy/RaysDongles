@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX ",
+    "X# ",
+    "X# "
+  ],
+  "key": {
+    "#": {
+    "item": "slurpiesdongles:topaz_handle"
+    },
+    "X": {
+    "item": "slurpiesdongles:topaz"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:topaz_lumber_axe"
+  }
+}

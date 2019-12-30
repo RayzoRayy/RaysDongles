@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "minecraft:water_bucket"
+  },
+  "result": "slurpiesdongles:hot_water",
+  "experience": 0.35,
+  "cookingtime": 200
+}
