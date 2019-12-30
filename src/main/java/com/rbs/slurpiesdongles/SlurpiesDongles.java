@@ -68,6 +68,13 @@ public class SlurpiesDongles {
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
+        //This renders the crops when planted so that the textures can load properly
+        RenderTypeLookup.setRenderLayer(ModBlocks.cabbage_crop, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(ModBlocks.corn_crop, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(ModBlocks.lemon_crop, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(ModBlocks.orange_crop, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(ModBlocks.strawberry_crop, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(ModBlocks.tomato_crop, RenderType.func_228643_e_());
         RenderTypeLookup.setRenderLayer(ModBlocks.wild_crops, RenderType.func_228643_e_());
     }
 

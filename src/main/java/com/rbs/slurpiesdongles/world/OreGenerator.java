@@ -9,15 +9,9 @@ import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placement.CountRangeConfig;
 import net.minecraft.world.gen.placement.FrequencyConfig;
-import net.minecraft.world.gen.placement.IPlacementConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraftforge.registries.ForgeRegistries;
-import sun.security.krb5.Config;
 
-import static net.minecraft.world.biome.DefaultBiomeFeatures.field_226826_u_;
-import static net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType.NATURAL_STONE;
-import static net.minecraft.world.gen.feature.OreFeatureConfig.FillerBlockType.NETHERRACK;
-import static net.minecraft.world.gen.placement.Placement.COUNT_RANGE;
 
 public class OreGenerator {
 
