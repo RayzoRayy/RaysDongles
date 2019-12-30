@@ -3,7 +3,7 @@ loaderVersion="[30,)"
 issueTrackerURL="https://github.com/RayzoRayy/RaysDongles/issues"
 [[mods]]
 modId="slurpiesdongles"
-version="3.0.1"
+version="3.0.1a"
 displayName="Ray's Dongles"
 updateJSONURL="https://raw.githubusercontent.com/RayzoRayy/RaysDongles/1.15.x/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/slurpies-dongles"
