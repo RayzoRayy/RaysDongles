@@ -12,35 +12,35 @@ import java.util.function.Supplier;
 public enum ToolMaterials implements IItemTier{
 
     //Battleaxe Materials
-    AMAZONITE_BATTLEAXE(0, 1949, 0.0F, 5, 37, () -> {
+    AMAZONITE_BATTLEAXE(0, 1949, 0.0F, 4, 37, () -> {
         return Ingredient.fromItems(ModItems.amazonite);
     }),
 
-    AMETHYST_BATTLEAXE(0, 873, 0.0F, 5, 31, () -> {
+    AMETHYST_BATTLEAXE(0, 873, 0.0F, 4, 31, () -> {
         return Ingredient.fromItems(ModItems.amethyst);
     }),
 
-    EMERALD_BATTLEAXE(0, 2149, 0.0F, 5, 17, () -> {
+    EMERALD_BATTLEAXE(0, 2149, 0.0F, 3, 17, () -> {
         return Ingredient.fromItems(Items.EMERALD);
     }),
 
-    PERIDOT_BATTLEAXE(0, 492, 0.0F, 3, 27, () -> {
+    PERIDOT_BATTLEAXE(0, 492, 0.0F, 2, 27, () -> {
         return Ingredient.fromItems(ModItems.peridot);
     }),
 
-    RUBY_BATTLEAXE(0, 721, 0.0F, 4, 24, () -> {
+    RUBY_BATTLEAXE(0, 721, 0.0F, 3, 24, () -> {
         return Ingredient.fromItems(ModItems.ruby);
     }),
 
-    SAPPHIRE_BATTLEAXE(0, 561, 0.0F, 4, 26, () -> {
+    SAPPHIRE_BATTLEAXE(0, 561, 0.0F, 3, 26, () -> {
         return Ingredient.fromItems(ModItems.sapphire);
     }),
 
-    TOPAZ_BATTLEAXE(0, 0, 0.0F, 7, 20, () -> {
+    TOPAZ_BATTLEAXE(0, 0, 0.0F, 6, 20, () -> {
         return Ingredient.fromItems(ModItems.topaz);
     }),
 
-    WITHERED_BATTLEAXE(0, 0, 0.0F, 8, 17, () -> {
+    WITHERED_BATTLEAXE(0, 0, 0.0F, 7, 17, () -> {
         return Ingredient.fromItems(Items.NETHER_STAR);
     }),
 
@@ -72,11 +72,11 @@ public enum ToolMaterials implements IItemTier{
     }),
     //Paxel Materials
 
-    AMAZONITE_PAXEL(3, 5847, 9.0F, 4, 37, () -> {
+    AMAZONITE_PAXEL(3, 5847, 9.0F, 3, 37, () -> {
         return Ingredient.fromItems(ModItems.amazonite);
     }),
 
-    AMETHYST_PAXEL(3, 2619, 7.0F, 4, 31, () -> {
+    AMETHYST_PAXEL(3, 2619, 7.0F, 3, 31, () -> {
         return Ingredient.fromItems(ModItems.amethyst);
     }),
 
@@ -84,7 +84,7 @@ public enum ToolMaterials implements IItemTier{
         return Ingredient.fromItems(Items.DIAMOND);
     }),
 
-    EMERALD_PAXEL(3, 6447, 10.0F, 4, 17, () -> {
+    EMERALD_PAXEL(3, 6447, 10.0F, 3, 17, () -> {
         return Ingredient.fromItems(Items.EMERALD);
     }),
 
@@ -104,7 +104,7 @@ public enum ToolMaterials implements IItemTier{
         return Ingredient.fromItems(ModItems.peridot);
     }),
 
-    RUBY_PAXEL(3, 2163, 7.0F, 4, 24, () -> {
+    RUBY_PAXEL(3, 2163, 7.0F, 3, 24, () -> {
         return Ingredient.fromItems(ModItems.ruby);
     }),
 
@@ -112,11 +112,11 @@ public enum ToolMaterials implements IItemTier{
         return Ingredient.fromItems(ModItems.sapphire);
     }),
 
-    TOPAZ_PAXEL(4, 0, 14.0F, 6, 20, () -> {
+    TOPAZ_PAXEL(4, 0, 14.0F, 5, 20, () -> {
         return Ingredient.fromItems(ModItems.topaz);
     }),
 
-    WITHERED_PAXEL(4, 0, 20.0F, 7, 17, () -> {
+    WITHERED_PAXEL(4, 0, 20.0F, 6, 17, () -> {
         return Ingredient.fromItems(Items.NETHER_STAR);
     }),
 
@@ -130,15 +130,15 @@ public enum ToolMaterials implements IItemTier{
     }),
 
     //Sword Materials
-    AMAZONITE_SWORD(0, 1949, 0.0F, 4, 37, () -> {
+    AMAZONITE_SWORD(0, 1949, 0.0F, 3, 37, () -> {
         return Ingredient.fromItems(ModItems.amazonite);
     }),
 
-    AMETHYST_SWORD(0, 873, 0.0F, 4, 31, () -> {
+    AMETHYST_SWORD(0, 873, 0.0F, 3, 31, () -> {
         return Ingredient.fromItems(ModItems.amethyst);
     }),
 
-    EMERALD_SWORD(0, 2149, 0.0F, 4, 17, () -> {
+    EMERALD_SWORD(0, 2149, 0.0F, 3, 17, () -> {
         return Ingredient.fromItems(Items.EMERALD);
     }),
 
@@ -146,7 +146,7 @@ public enum ToolMaterials implements IItemTier{
         return Ingredient.fromItems(ModItems.peridot);
     }),
 
-    RUBY_SWORD(0, 721, 0.0F, 4, 24, () -> {
+    RUBY_SWORD(0, 721, 0.0F, 3, 24, () -> {
         return Ingredient.fromItems(ModItems.ruby);
     }),
 
@@ -154,11 +154,11 @@ public enum ToolMaterials implements IItemTier{
         return Ingredient.fromItems(ModItems.sapphire);
     }),
 
-    TOPAZ_SWORD(0, 0, 0.0F, 6, 20, () -> {
+    TOPAZ_SWORD(0, 0, 0.0F, 5, 20, () -> {
         return Ingredient.fromItems(ModItems.topaz);
     }),
 
-    WITHERED_SWORD(0, 0, 0.0F, 7, 17, () -> {
+    WITHERED_SWORD(0, 0, 0.0F, 6, 17, () -> {
         return Ingredient.fromItems(Items.NETHER_STAR);
     });
 
