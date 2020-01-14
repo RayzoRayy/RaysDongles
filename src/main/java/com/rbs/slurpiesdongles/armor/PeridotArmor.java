@@ -25,4 +25,8 @@ public class PeridotArmor extends ArmorItem {
             return "slurpiesdongles:textures/models/armor/peridot_layer_2.png";
         }
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
+    }
 }

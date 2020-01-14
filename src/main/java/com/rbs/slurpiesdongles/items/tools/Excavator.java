@@ -51,4 +51,8 @@ public class Excavator extends ShovelItem implements SDTool {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         tooltip.add(new StringTextComponent(TextFormatting.YELLOW  + "Excavator that mines in a 3x3x1 from the block you mine"));
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
+    }
 }

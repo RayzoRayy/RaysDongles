@@ -4,6 +4,7 @@ import com.rbs.slurpiesdongles.Reference;
 import com.rbs.slurpiesdongles.init.ModTools;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 
 public class CustomSword extends SwordItem {
@@ -12,5 +13,9 @@ public class CustomSword extends SwordItem {
 
         this.setRegistryName(Reference.MODID, name);
 
+    }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
     }
 }

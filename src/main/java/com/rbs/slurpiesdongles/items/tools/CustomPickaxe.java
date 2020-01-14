@@ -5,6 +5,7 @@ import com.rbs.slurpiesdongles.helpers.HarvestLevelHelper;
 import com.rbs.slurpiesdongles.init.ModTools;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.PickaxeItem;
 
 public class CustomPickaxe extends PickaxeItem {
@@ -12,5 +13,9 @@ public class CustomPickaxe extends PickaxeItem {
         super(tier, attackDamageIn, attackSpeedIn, builder);
 
         this.setRegistryName(Reference.MODID, name);
+    }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
     }
 }

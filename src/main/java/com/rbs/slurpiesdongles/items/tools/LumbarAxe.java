@@ -130,4 +130,8 @@ public class LumbarAxe extends AxeItem {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         tooltip.add(new StringTextComponent(TextFormatting.YELLOW + "Cuts an entire tree down upon breaking the bottom log"));
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
+    }
 }

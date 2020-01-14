@@ -26,4 +26,8 @@ public class VMPick extends PickaxeItem {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         tooltip.add(new StringTextComponent(TextFormatting.YELLOW + "This pick was made for use with the mod VeinMiner, so you can veinmine for a while before needing another pick"));
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
+    }
 }

@@ -34,4 +34,8 @@ public class WitheredSword extends CustomSword {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         tooltip.add(new StringTextComponent(TextFormatting.YELLOW + "Upon hitting an enemy, a 5 second Wither debuff is applied to them"));
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
+    }
 }

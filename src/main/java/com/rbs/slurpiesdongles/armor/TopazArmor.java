@@ -33,4 +33,5 @@ public class TopazArmor extends ArmorItem {
         return stack.getCount() == 0 ? Rarity.RARE : Rarity.RARE;
 
     }
+
 }

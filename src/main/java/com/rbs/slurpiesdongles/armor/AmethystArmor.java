@@ -24,4 +24,8 @@ public class AmethystArmor extends ArmorItem {
             return "slurpiesdongles:textures/models/armor/amethyst_layer_2.png";
         }
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
+    }
 }

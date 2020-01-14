@@ -141,5 +141,9 @@ public class Paxel extends ToolItem {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         tooltip.add(new StringTextComponent(TextFormatting.YELLOW + "Right click Grass to make a path, shift right click Grass to till it, and right click Logs to strip them"));
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
+    }
     }
 

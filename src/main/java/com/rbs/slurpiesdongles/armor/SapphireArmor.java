@@ -27,4 +27,8 @@ public class SapphireArmor extends ArmorItem {
             return "slurpiesdongles:textures/models/armor/sapphire_layer_2.png";
         }
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
+    }
 }

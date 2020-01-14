@@ -6,11 +6,16 @@ import com.rbs.slurpiesdongles.init.ModTools;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class CustomAxe extends AxeItem {
     public CustomAxe(IItemTier tier, int attackDamageIn, float attackSpeedIn, Item.Properties builder , String name) {
         super(tier, attackDamageIn, attackSpeedIn, builder);
 
         this.setRegistryName(Reference.MODID, name);
+    }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return true;
     }
 }
