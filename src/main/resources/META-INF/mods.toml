@@ -3,7 +3,7 @@ loaderVersion="[30,)"
 issueTrackerURL="https://github.com/RayzoRayy/RaysDongles/issues"
 [[mods]]
 modId="slurpiesdongles"
-version="3.0.3"
+version="3.0.4"
 displayName="Ray's Dongles"
 updateJSONURL="https://raw.githubusercontent.com/RayzoRayy/RaysDongles/1.15.x/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/slurpies-dongles"
@@ -18,6 +18,6 @@ does NOT have my permission to host my mod, and may contain malware or viruses. 
 [[dependencies.slurpiesdongles]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.1]"
+    versionRange="[1.15.2]"
     ordering="NONE"
     side="BOTH"
