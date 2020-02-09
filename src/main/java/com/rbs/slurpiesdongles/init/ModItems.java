@@ -24,16 +24,16 @@ import java.util.List;
 public class ModItems {
    //Charms
    public static Item absorption_charm = null;
- public static Item absorption_charm_tier_2 = null;
- public static Item fire_resistance_charm = null;
- public static Item night_vision_charm = null;
- public static Item regen_charm = null;
- public static Item regen_charm_tier_2 = null;
- public static Item speed_charm = null;
- public static Item speed_charm_tier_2 = null;
- public static Item strength_charm = null;
- public static Item strength_charm_tier_2 = null;
- public static Item water_breathing_charm = null;
+   public static Item absorption_charm_tier_2 = null;
+   public static Item fire_resistance_charm = null;
+   public static Item night_vision_charm = null;
+   public static Item regen_charm = null;
+   public static Item regen_charm_tier_2 = null;
+   public static Item speed_charm = null;
+   public static Item speed_charm_tier_2 = null;
+   public static Item strength_charm = null;
+   public static Item strength_charm_tier_2 = null;
+   public static Item water_breathing_charm = null;
     //Dusts
     public static final Item blue_glowstone_dust = null;
     public static final Item gray_glowstone_dust = null;
@@ -43,12 +43,9 @@ public class ModItems {
     public static final Item purple_glowstone_dust = null;
     public static final Item red_glowstone_dust = null;
     //Gems
-    public static final Item amazonite = null;
     public static final Item amethyst = null;
     public static final Item hardened_topaz = null;
-    public static final Item peridot = null;
     public static final Item ruby = null;
-    public static final Item sapphire = null;
     public static final Item topaz = null;
     //Actual Items
     public static final Item blender = null;
@@ -74,12 +71,9 @@ public class ModItems {
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "purple_glowstone_dust"),
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "red_glowstone_dust"),
                 //Gems
-                new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "amazonite"),
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst"),
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "hardened_topaz"),
-                new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "peridot"),
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby"),
-                new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "sapphire"),
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz"),
                 //Actual Items
                 new ContainerItem(new Item.Properties().group(Reference.tabSlurpiesDongles), "blender"),
@@ -105,13 +99,10 @@ public class ModItems {
                 createItemBlockForBlock(ModBlocks.pink_glowstone, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.purple_glowstone, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.red_glowstone, new Item.Properties().group(Reference.tabSlurpiesDongles)),
-                createItemBlockForBlock(ModBlocks.amazonite_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.amethyst_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.hardened_topaz_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
-                createItemBlockForBlock(ModBlocks.peridot_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.reinforced_obsidian, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.ruby_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
-                createItemBlockForBlock(ModBlocks.sapphire_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.topaz_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 //Crops
                 createItemBlockForBlock(ModBlocks.cabbage_crop, new Item.Properties().group(Reference.tabSlurpiesDongles)),
@@ -122,11 +113,8 @@ public class ModItems {
                 createItemBlockForBlock(ModBlocks.tomato_crop, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.wild_crops, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 //Ores
-                createItemBlockForBlock(ModBlocks.amazonite_ore, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.amethyst_ore, new Item.Properties().group(Reference.tabSlurpiesDongles)),
-                createItemBlockForBlock(ModBlocks.peridot_ore, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.ruby_ore, new Item.Properties().group(Reference.tabSlurpiesDongles)),
-                createItemBlockForBlock(ModBlocks.sapphire_ore, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.topaz_ore, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 //Nether Ores
                 createItemBlockForBlock(ModBlocks.nether_coal_ore, new Item.Properties().group(Reference.tabSlurpiesDongles)),

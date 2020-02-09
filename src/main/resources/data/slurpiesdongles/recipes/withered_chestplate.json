@@ -1,19 +1,28 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X X",
-    "XXX",
-    "XWX"
+    "CAC",
+    "CXC",
+    "CWC"
   ],
   "key": {
     "X": {
-      "item": "slurpiesdongles:nether_star_chunk"
+      "item": "minecraft:nether_star"
     },
     "W": {
       "item": "minecraft:wither_skeleton_skull"
-    }
     },
-    "result": {
-      "item": "slurpiesdongles:withered_chestplate"
-    }
+    "C": {
+      "item": "minecraft:coal"
+    },
+  "A": {
+    "item": "slurpiesdongles:topaz_chestplate"
   }
+  },
+      "result": {
+        "item": "slurpiesdongles:withered_chestplate"
+      }
+    }
+
+
+

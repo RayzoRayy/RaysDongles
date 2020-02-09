@@ -1,6 +1,7 @@
 package com.rbs.slurpiesdongles.handlers;
 
 import com.rbs.slurpiesdongles.Reference;
+import com.rbs.slurpiesdongles.SlurpiesDongles;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.OreBlock;
@@ -15,9 +16,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.DrawHighlightEvent;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nonnull;
@@ -202,12 +207,12 @@ public interface SDTool {
         }
     }
 
-    /*@Mod.EventBusSubscriber(modid = Reference.MODID, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = Reference.MODID, value = Dist.CLIENT)
     final class HighlightHandler {
         private HighlightHandler() {}
 
         @SubscribeEvent
-        public static void onDrawBlockHighlight(DrawBlockHighlightEvent event) {
+        public static void onDrawBlockHighlight(DrawHighlightEvent event) {
             ActiveRenderInfo info = event.getInfo();
             Entity entity = info.getRenderViewEntity();
             if (!(entity instanceof PlayerEntity)) return;
@@ -216,7 +221,7 @@ public interface SDTool {
 
             RayTraceResult rt = event.getTarget();
 
-            if (event.getSubID() == 0 && rt.getType() == RayTraceResult.Type.BLOCK) {
+            if (/*event.getSubID() == 0 &&*/ rt.getType() == RayTraceResult.Type.BLOCK) {
                 ItemStack stack = player.getHeldItemMainhand();
 
                 if (stack.getItem() instanceof SDTool) {
@@ -224,11 +229,12 @@ public interface SDTool {
                     SDTool item = (SDTool) stack.getItem();
 
                     for (BlockPos pos : item.getExtraBlocks(world, (BlockRayTraceResult) rt, player, stack)) {
-                        event.getContext().drawSelectionBox(info, new BlockRayTraceResult(Vec3d.ZERO, Direction.UP, pos, false), 0);
+                        // FIXME
+//                        event.getContext().drawSelectionBox(info, new BlockRayTraceResult(Vec3d.ZERO, Direction.UP, pos, false), 0);
                     }
                 }
             }
         }
-    }*/
+    }
 }
 

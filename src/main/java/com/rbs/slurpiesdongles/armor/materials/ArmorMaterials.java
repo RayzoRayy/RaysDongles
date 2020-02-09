@@ -17,19 +17,11 @@ import java.util.function.Supplier;
 
 public enum ArmorMaterials implements IArmorMaterial{
 
-    AMAZONITE ("amazonite_armor", 28, new int[]{3, 6, 7, 4}, 37, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.amazonite),
+    AMETHYST ("amethyst_armor", 34, new int[]{3, 6, 7, 4}, 31, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.amethyst),
 
-    AMETHYST ("amethyst_armor", 23, new int[]{3, 6, 7, 4}, 31, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.amethyst),
-
-
-    PERIDOT ("peridot_armor", 20, new int[]{2, 5, 5, 2}, 27, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, ModItems.peridot),
-
-    RUBY ("ruby_armor", 26, new int[]{2, 6, 6, 2}, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, ModItems.ruby),
-
-    SAPPHIRE ("sapphire_armor", 20, new int[]{2, 5, 6, 2}, 26, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, ModItems.sapphire),
+    RUBY ("ruby_armor", 16, new int[]{2, 6, 6, 2}, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, ModItems.ruby),
 
     TOPAZ ("topaz_armor", 0, new int[]{4, 7, 6, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.topaz),
-
 
     WITHERED ("withered_armor", 0, new int[]{5, 8, 7, 4}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, Items.WITHER_SKELETON_SKULL),;
 

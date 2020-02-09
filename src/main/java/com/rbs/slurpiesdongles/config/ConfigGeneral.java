@@ -148,21 +148,12 @@ public class ConfigGeneral {
 
         //Armor
         builder.comment("Enable or disable armor sets").push("Armor");
-        disableAmazoniteArmor = builder
-                .comment("Setting this to false will disable Amazonite Armor [true / false default: true]")
-                .define("Enable Amazonite Armor", true);
         disableAmethystArmor = builder
                 .comment("Setting this to false will disable Amethyst Armor [true / false default: true]")
                 .define("Enable Amethyst Armor", true);
-        disablePeridotArmor = builder
-                .comment("Setting this to false will disable Peridot Armor [true / false default: true]")
-                .define("Enable Peridot Armor", true);
         disableRubyArmor = builder
                 .comment("Setting this to false will disable Ruby Armor [true / false default: true]")
                 .define("Enable Ruby Armor", true);
-        disableSapphireArmor = builder
-                .comment("Setting this to false will disable Sapphire Armor [true / false default: true]")
-                .define("Enable Sapphire Armor", true);
         disableTopazArmor = builder
                 .comment("Setting this to false will disable Topaz Armor [true / false default: true]")
                 .define("Enable Topaz Armor", true);
@@ -249,22 +240,6 @@ public class ConfigGeneral {
 
         //Ores
         builder.comment("Ore tweaks").push("Ores");
-
-        amazoniteOreGeneration = builder
-                .comment("Generation of Amazonite Ore [true / false default: true]")
-                .define("Amazonite Ore generation", true);
-        amazoniteOreChance = builder
-                .comment("Chance of the Amazonite Ore to spawn per chunk [0-100 default: 4]")
-                .defineInRange("Amazonite Ore chance to spawn", 4, 0, 100);
-        amazoniteOreSize = builder
-                .comment("Size of Amazonite Ore Vein [0-100 default: 6")
-                .defineInRange("Amazonite Ore size", 6, 0, 100);
-        amazoniteMinHeight = builder
-                .comment("Minimum height for Amazonite Ore to spawn [0-255 default: 1")
-                .defineInRange("Min height for Amazonite Ore", 1, 0, 255);
-        amazoniteMaxHeight = builder
-                .comment("Max height for Amazonite Ore to spawn [0-255 default: 32")
-                .defineInRange("Max height for Amazonite Ore", 32, 0, 255);
         amethystOreGeneration = builder
                 .comment("Generation of Amethyst Ore [true / false default: true]")
                 .define("Amethyst Ore generation", true);
@@ -280,21 +255,6 @@ public class ConfigGeneral {
         amethystMaxHeight = builder
                 .comment("Max height for Amethyst Ore to spawn [0-255 default: 32")
                 .defineInRange("Max height for Amethyst Ore", 32, 0, 255);
-        peridotOreGeneration = builder
-                .comment("Generation of Peridot Ore [true / false default: true]")
-                .define("Peridot Ore generation", true);
-        peridotOreChance = builder
-                .comment("Chance of the Peridot Ore to spawn per chunk [0-100 default: 7]")
-                .defineInRange("Peridot Ore chance to spawn", 7, 0, 100);
-        peridotOreSize = builder
-                .comment("Size of Peridot Ore Vein [0-100 default: 6")
-                .defineInRange("Peridot Ore size", 6, 0, 100);
-        peridotMinHeight = builder
-                .comment("Minimum height for Peridot Ore to spawn [0-255 default: 1")
-                .defineInRange("Min height for Peridot Ore", 1, 0, 255);
-        peridotMaxHeight = builder
-                .comment("Max height for Peridot Ore to spawn [0-255 default: 128")
-                .defineInRange("Max height for Peridot Ore", 128, 0, 255);
         rubyOreGeneration = builder
                 .comment("Generation of Ruby Ore [true / false default: true]")
                 .define("Ruby Ore generation", true);
@@ -310,21 +270,6 @@ public class ConfigGeneral {
         rubyMaxHeight = builder
                 .comment("Max height for Ruby Ore to spawn [0-255 default: 48")
                 .defineInRange("Max height for Ruby Ore", 48, 0, 255);
-        sapphireOreGeneration = builder
-                .comment("Generation of Sapphire Ore [true / false default: true]")
-                .define("Sapphire Ore generation", true);
-        sapphireOreChance = builder
-                .comment("Chance of the Sapphire Ore to spawn per chunk [0-100 default: 7]")
-                .defineInRange("Sapphire Ore chance to spawn", 7, 0, 100);
-        sapphireOreSize = builder
-                .comment("Size of Sapphire Ore Vein [0-100 default: 6")
-                .defineInRange("Sapphire Ore size", 6, 0, 100);
-        sapphireMinHeight = builder
-                .comment("Minimum height for Sapphire Ore to spawn [0-255 default: 1")
-                .defineInRange("Min height for Sapphire Ore", 1, 0, 255);
-        sapphireMaxHeight = builder
-                .comment("Max height for Sapphire Ore to spawn [0-255 default: 32")
-                .defineInRange("Max height for Sapphire Ore", 128, 0, 255);
         topazOreGeneration = builder
                 .comment("Generation of Topaz Ore [true / false default: true]")
                 .define("Topaz Ore generation", true);
@@ -454,21 +399,12 @@ public class ConfigGeneral {
         builder.pop();
         //Tools
         builder.comment("Enable or disable tool sets").push("Tools");
-        disableAmazoniteTools = builder
-                .comment("Setting this to false will disable the entire Amazonite tool set [true / false default: true")
-                .define("Enable Amazonite tools", true);
         disableAmethystTools = builder
                 .comment("Setting this to false will disable the entire Amethyst tool set [true / false default: true")
                 .define("Enable Amethyst tools", true);
-        disablePeridotTools = builder
-                .comment("Setting this to false will disable the entire Peridot tool set [true / false default: true")
-                .define("Enable Peridot tools", true);
         disableRubyTools = builder
                 .comment("Setting this to false will disable the entire Ruby tool set [true / false default: true")
                 .define("Enable Ruby tools", true);
-        disableSapphireTools = builder
-                .comment("Setting this to false will disable the entire Sapphire tool set [true / false default: true")
-                .define("Enable Sapphire tools", true);
         disableTopazTools = builder
                 .comment("Setting this to false will disable the entire Topaz tool set [true / false default: true")
                 .define("Enable Topaz tools", true);

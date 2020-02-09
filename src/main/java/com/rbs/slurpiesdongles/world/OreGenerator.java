@@ -16,16 +16,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class OreGenerator {
 
     //countIn, minHeightIn, minHeight, maxHeightIn
-    private static final CountRangeConfig amazoniteOre = new CountRangeConfig(ConfigGeneral.amazoniteOreChance.get(), ConfigGeneral.amazoniteMinHeight.get(), 0,ConfigGeneral.amazoniteMaxHeight.get());
-    public static final int amazoniteOreVeinSize = ConfigGeneral.amazoniteOreSize.get();
     private static final CountRangeConfig amethystOre = new CountRangeConfig(ConfigGeneral.amethystOreChance.get(), ConfigGeneral.amethystMinHeight.get(), 0,ConfigGeneral.amethystMaxHeight.get());
-    public static final int amethystOreVeinSize = ConfigGeneral.amethystOreSize.get();
-    private static final CountRangeConfig peridotOre = new CountRangeConfig(ConfigGeneral.peridotOreChance.get(), ConfigGeneral.peridotMinHeight.get(), 0,ConfigGeneral.peridotMaxHeight.get());
-    public static final int peridotOreVeinSize = ConfigGeneral.peridotOreSize.get();
+    public static final int amethystOreVeinSize = ConfigGeneral.amethystOreSize.get();;
     private static final CountRangeConfig rubyOre = new CountRangeConfig(ConfigGeneral.rubyOreChance.get(), ConfigGeneral.rubyMinHeight.get(), 0,ConfigGeneral.rubyMaxHeight.get());
     public static final int rubyOreVeinSize = ConfigGeneral.rubyOreSize.get();
-    private static final CountRangeConfig sapphireOre = new CountRangeConfig(ConfigGeneral.sapphireOreChance.get(), ConfigGeneral.sapphireMinHeight.get(), 0,ConfigGeneral.sapphireMaxHeight.get());
-    public static final int sapphireOreVeinSize = ConfigGeneral.sapphireOreSize.get();
     private static final CountRangeConfig topazOre = new CountRangeConfig(ConfigGeneral.topazOreChance.get(), ConfigGeneral.topazMinHeight.get(), 0,ConfigGeneral.topazMaxHeight.get());
     public static final int topazOreVeinSize = ConfigGeneral.topazOreSize.get();
     //Nether Ores
@@ -54,20 +48,11 @@ public class OreGenerator {
             }
 
             //Overworld Ores
-            if (ConfigGeneral.amazoniteOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.amazonite_ore.getDefaultState(), amazoniteOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( amazoniteOre)));
-
             if (ConfigGeneral.amethystOreGeneration.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.amethyst_ore.getDefaultState(), amethystOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( amethystOre)));
 
-            if (ConfigGeneral.peridotOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.peridot_ore.getDefaultState(), peridotOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( peridotOre)));
-
             if (ConfigGeneral.rubyOreGeneration.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.ruby_ore.getDefaultState(), rubyOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( rubyOre)));
-
-            if (ConfigGeneral.sapphireOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.sapphire_ore.getDefaultState(), sapphireOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( sapphireOre)));
 
             if (ConfigGeneral.topazOreGeneration.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.topaz_ore.getDefaultState(), topazOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( topazOre)));

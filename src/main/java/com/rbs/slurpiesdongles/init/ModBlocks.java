@@ -58,11 +58,8 @@ public class ModBlocks {
     public static final Block tomato_crop = null;
     public static final Block wild_crops = null;
     //Ores
-    public static final Block amazonite_ore = null;
     public static final Block amethyst_ore = null;
-    public static final Block peridot_ore = null;
     public static final Block ruby_ore = null;
-    public static final Block sapphire_ore = null;
     public static final Block topaz_ore = null;
     //Nether Ores
     public static final Block nether_coal_ore = null;
@@ -90,13 +87,10 @@ public class ModBlocks {
                 new CustomGlowstone(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.3F, 0.3F).lightValue(15).sound(SoundType.GLASS), HarvestLevelHelper.WOOD, "pink_glowstone"),
                 new CustomGlowstone(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.3F, 0.3F).lightValue(15).sound(SoundType.GLASS), HarvestLevelHelper.WOOD, "purple_glowstone"),
                 new CustomGlowstone(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.3F, 0.3F).lightValue(15).sound(SoundType.GLASS), HarvestLevelHelper.WOOD, "red_glowstone"),
-                new BlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 6.0F), HarvestLevelHelper.DIAMOND, "amazonite_block"),
                 new BlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 6.0F), HarvestLevelHelper.DIAMOND, "amethyst_block"),
                 new BlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(10.0F, 25.0F), HarvestLevelHelper.DIAMOND, "hardened_topaz_block"),
-                new BlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 6.0F), HarvestLevelHelper.STONE, "peridot_block"),
                 new ReinforcedObsidian(Block.Properties.create(Material.ROCK).hardnessAndResistance(100.0F, 2400.0F), HarvestLevelHelper.DIAMOND, "reinforced_obsidian"),
                 new BlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 6.0F), HarvestLevelHelper.IRON, "ruby_block"),
-                new BlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 6.0F), HarvestLevelHelper.IRON, "sapphire_block"),
                 new StoneTorch(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.0F, 0.0F).lightValue(12), SoundType.STONE, "stone_torch"),
                 new WallStoneTorch(Block.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.0F, 0.0F).lightValue(12), SoundType.STONE, "wall_stone_torch"),
                 new BlockBase(Block.Properties.create(Material.ROCK).hardnessAndResistance(5.0F, 6.0F), HarvestLevelHelper.DIAMOND, "topaz_block"),
@@ -109,11 +103,8 @@ public class ModBlocks {
                 new TomatoCrop(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP).hardnessAndResistance(0.0F), "tomato_crop"),
                 new WildCrops(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().sound(SoundType.PLANT).hardnessAndResistance(0), "wild_crops" ),
                 //Ores
-                new AmazoniteOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F), HarvestLevelHelper.IRON, "amazonite_ore"),
                 new AmethystOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F), HarvestLevelHelper.IRON, "amethyst_ore"),
-                new PeridotOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F), HarvestLevelHelper.STONE, "peridot_ore"),
                 new RubyOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F), HarvestLevelHelper.IRON, "ruby_ore"),
-                new SapphireOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F), HarvestLevelHelper.IRON, "sapphire_ore"),
                 new TopazOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F), HarvestLevelHelper.DIAMOND, "topaz_ore"),
                 //Nether Ores
                 new NetherCoalOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0F, 3.0F), HarvestLevelHelper.WOOD, "nether_coal_ore"),
