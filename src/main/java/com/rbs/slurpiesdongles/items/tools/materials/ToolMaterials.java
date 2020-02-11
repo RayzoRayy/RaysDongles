@@ -13,28 +13,28 @@ import java.util.function.Supplier;
 public enum ToolMaterials implements IItemTier{
 
     //Battleaxe Materials
-    AMETHYST_BATTLEAXE(0, 873, 0.0F, 4, 31, ModItems.amethyst),
+    AMETHYST_BATTLEAXE(0, 1739, 0.0F, 4, 10, ModItems.amethyst),
 
-    RUBY_BATTLEAXE(0, 721, 0.0F, 3, 24, ModItems.ruby),
+    RUBY_BATTLEAXE(0, 721, 0.0F, 3, 14, ModItems.ruby),
 
-    TOPAZ_BATTLEAXE(0, 0, 0.0F, 6, 20, ModItems.topaz),
+    TOPAZ_BATTLEAXE(0, 1893, 0.0F, 6, 20, ModItems.topaz),
 
-    WITHERED_BATTLEAXE(0, 0, 0.0F, 7, 17, Items.NETHER_STAR),
+    WITHERED_BATTLEAXE(0, 0, 0.0F, 7, 25, Items.NETHER_STAR),
 
     //General Tool Materials
-    AMETHYST(3, 873, 7.0F, 1, 31, ModItems.amethyst),
+    AMETHYST(3, 1739, 8.0F, 1, 10, ModItems.amethyst),
 
-    RUBY(2, 721, 7.0F, 1, 24, ModItems.ruby),
+    RUBY(2, 721, 6.0F, 1, 14, ModItems.ruby),
 
-    TOPAZ(4, 0, 14.0F, 1, 20, ModItems.topaz),
+    TOPAZ(4, 1893, 9.0F, 1, 20, ModItems.topaz),
 
-    WITHERED(4, 0, 20.0F, 1, 17, Items.NETHER_STAR),
+    WITHERED(4, 0, 10.0F, 1, 25, Items.NETHER_STAR),
 
     //Paxel Materials
 
-    AMETHYST_PAXEL(3, 2619, 7.0F, 3, 31, ModItems.amethyst),
+    AMETHYST_PAXEL(3, 5217, 8.0F, 3, 10, ModItems.amethyst),
 
-    DIAMOND_PAXEL(3, 4683, 8.0F, 3, 31, Items.DIAMOND),
+    DIAMOND_PAXEL(3, 4683, 8.0F, 3, 10, Items.DIAMOND),
 
     GOLD_PAXEL(0, 96, 12.0F, 0, 22, Items.GOLD_INGOT),
 
@@ -42,27 +42,25 @@ public enum ToolMaterials implements IItemTier{
 
     STONE_PAXEL(1, 393, 4.0F, 1, 5, Items.COBBLESTONE),
 
-    RUBY_PAXEL(3, 2163, 7.0F, 3, 24, ModItems.ruby),
+    RUBY_PAXEL(3, 2163, 6.0F, 3, 14, ModItems.ruby),
 
-    TOPAZ_PAXEL(4, 0, 14.0F, 5, 20, ModItems.topaz),
+    TOPAZ_PAXEL(4, 5679, 9.0F, 5, 20, ModItems.topaz),
 
-    WITHERED_PAXEL(4, 0, 20.0F, 6, 17, Items.NETHER_STAR),
+    WITHERED_PAXEL(4, 0, 10.0F, 6, 25, Items.NETHER_STAR),
 
     WOODEN_PAXEL(0, 177, 2.0F, 0, 15, Items.OAK_PLANKS),
 
     //Pickaxe Materials
-    VMPICK(1, 18200, 4.0F, 1, 10, Items.IRON_INGOT),
+    VMPICK(1, 18200, 4.0F, 1, 5, Items.IRON_INGOT),
 
     //Sword Materials
-    AMETHYST_SWORD(0, 873, 0.0F, 3, 31, ModItems.amethyst),
+    AMETHYST_SWORD(0, 1739, 0.0F, 3, 10, ModItems.amethyst),
 
-    EMERALD_SWORD(0, 2149, 0.0F, 3, 17, Items.EMERALD),
+    RUBY_SWORD(0, 721, 0.0F, 3, 14, ModItems.ruby),
 
-    RUBY_SWORD(0, 721, 0.0F, 3, 24, ModItems.ruby),
+    TOPAZ_SWORD(0, 1893, 0.0F, 5, 20, ModItems.topaz),
 
-    TOPAZ_SWORD(0, 0, 0.0F, 5, 20, ModItems.topaz),
-
-    WITHERED_SWORD(0, 0, 0.0F, 6, 17, Items.NETHER_STAR);
+    WITHERED_SWORD(0, 0, 0.0F, 6, 25, Items.NETHER_STAR);
 
     public final int harvestLevel;
     public final int maxUses;

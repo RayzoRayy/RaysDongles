@@ -17,13 +17,13 @@ import java.util.function.Supplier;
 
 public enum ArmorMaterials implements IArmorMaterial{
 
-    AMETHYST ("amethyst_armor", 34, new int[]{3, 6, 7, 4}, 31, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.amethyst),
+    AMETHYST ("amethyst_armor", 34, new int[]{3, 6, 7, 4}, 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.amethyst),
 
-    RUBY ("ruby_armor", 16, new int[]{2, 6, 6, 2}, 24, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 1.0F, ModItems.ruby),
+    RUBY ("ruby_armor", 16, new int[]{2, 6, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 0.0F, ModItems.ruby),
 
-    TOPAZ ("topaz_armor", 0, new int[]{4, 7, 6, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.topaz),
+    TOPAZ ("topaz_armor", 35, new int[]{4, 6, 8, 4}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.topaz),
 
-    WITHERED ("withered_armor", 0, new int[]{5, 8, 7, 4}, 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 3.0F, Items.WITHER_SKELETON_SKULL),;
+    WITHERED ("withered_armor", 0, new int[]{4, 6, 7, 4}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, Items.WITHER_SKELETON_SKULL),;
 
 
 

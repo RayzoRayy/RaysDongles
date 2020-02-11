@@ -70,16 +70,15 @@ public class SlurpiesDongles {
         // do something that can only be done on the client
         //This renders items when placed so that the textures can load properly
         //Crops
-        RenderTypeLookup.setRenderLayer(ModBlocks.cabbage_crop, RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(ModBlocks.corn_crop, RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(ModBlocks.lemon_crop, RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(ModBlocks.orange_crop, RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(ModBlocks.strawberry_crop, RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(ModBlocks.tomato_crop, RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(ModBlocks.wild_crops, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(ModBlocks.corn_crop, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.lemon_crop, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.orange_crop, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.strawberry_crop, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.tomato_crop, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.wild_crops, RenderType.cutout());
         //Items
-        RenderTypeLookup.setRenderLayer(ModBlocks.stone_torch, RenderType.func_228643_e_());
-        RenderTypeLookup.setRenderLayer(ModBlocks.wall_stone_torch, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(ModBlocks.stone_torch, RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.wall_stone_torch, RenderType.cutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

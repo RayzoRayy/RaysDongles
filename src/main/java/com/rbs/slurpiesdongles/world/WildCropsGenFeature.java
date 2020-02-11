@@ -32,9 +32,9 @@ public class WildCropsGenFeature extends Feature<NoFeatureConfig> {
         int place1 = (int) ((Math.random() * 4) + 1);
 
 
-        if (world.getBlockState(pos.north(place0).down()).getBlock().isIn(BlockTags.field_226152_ab_) && world.getBlockState(pos.north(place0)).getMaterial().isReplaceable())
+        if (world.getBlockState(pos.north(place0).down()).getBlock().isIn(BlockTags.CROPS) && world.getBlockState(pos.north(place0)).getMaterial().isReplaceable())
             WildCrops.generateBush(world, pos.north(place0), random);
-        if (world.getBlockState(pos.south(place1).down()).getBlock().isIn(BlockTags.field_226152_ab_) && world.getBlockState(pos.south(place1)).getMaterial().isReplaceable())
+        if (world.getBlockState(pos.south(place1).down()).getBlock().isIn(BlockTags.CROPS) && world.getBlockState(pos.south(place1)).getMaterial().isReplaceable())
             WildCrops.generateBush(world, pos.south(place1), random);
 
 

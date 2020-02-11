@@ -43,40 +43,40 @@ public class OreGenerator {
         for (Biome biome : ForgeRegistries.BIOMES) {
             //Crops
             if (WildCropsWorldGen.wild_crops !=null) {
-                BlockClusterFeatureConfig featureConfigGrass = (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider()).func_227407_a_(ModBlocks.wild_crops.getDefaultState(), 1), new SimpleBlockPlacer())).func_227315_a_(ConfigGeneral.wildCropsChance.get()).func_227322_d_();
-                biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.field_227247_y_.func_225566_b_(featureConfigGrass).func_227228_a_(Placement.COUNT_HEIGHTMAP_DOUBLE.func_227446_a_(new FrequencyConfig(2))));
+                BlockClusterFeatureConfig featureConfigGrass = (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider()).func_227407_a_(ModBlocks.wild_crops.getDefaultState(), 1), new SimpleBlockPlacer())).tries(ConfigGeneral.wildCropsChance.get()).build();
+                biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.FLOWER.withConfiguration(featureConfigGrass).withPlacement(Placement.COUNT_HEIGHTMAP_DOUBLE.configure(new FrequencyConfig(2))));
             }
 
             //Overworld Ores
             if (ConfigGeneral.amethystOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.amethyst_ore.getDefaultState(), amethystOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( amethystOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.amethyst_ore.getDefaultState(), amethystOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( amethystOre)));
 
             if (ConfigGeneral.rubyOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.ruby_ore.getDefaultState(), rubyOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( rubyOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.ruby_ore.getDefaultState(), rubyOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( rubyOre)));
 
             if (ConfigGeneral.topazOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.topaz_ore.getDefaultState(), topazOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( topazOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.topaz_ore.getDefaultState(), topazOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( topazOre)));
             //Nether Ores
             if (ConfigGeneral.netherCoalOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_coal_ore.getDefaultState(), netherCoalOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( netherCoalOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_coal_ore.getDefaultState(), netherCoalOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( netherCoalOre)));
 
             if (ConfigGeneral.netherDiamondOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_diamond_ore.getDefaultState(), netherDiamondOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( netherDiamondOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_diamond_ore.getDefaultState(), netherDiamondOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( netherDiamondOre)));
 
             if (ConfigGeneral.netherEmeraldOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_emerald_ore.getDefaultState(), netherEmeraldOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( netherEmeraldOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_emerald_ore.getDefaultState(), netherEmeraldOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( netherEmeraldOre)));
 
             if (ConfigGeneral.netherGoldOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_gold_ore.getDefaultState(), netherGoldOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( netherGoldOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_gold_ore.getDefaultState(), netherGoldOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( netherGoldOre)));
 
             if (ConfigGeneral.netherIronOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_iron_ore.getDefaultState(), netherIronOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( netherIronOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_iron_ore.getDefaultState(), netherIronOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( netherIronOre)));
 
             if (ConfigGeneral.netherLapisOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_lapis_ore.getDefaultState(), netherLapisOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( netherLapisOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_lapis_ore.getDefaultState(), netherLapisOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( netherLapisOre)));
 
             if (ConfigGeneral.netherRedstoneOreGeneration.get())
-                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_redstone_ore.getDefaultState(), netherRedstoneOreVeinSize)).func_227228_a_( Placement.COUNT_RANGE.func_227446_a_( netherRedstoneOre)));
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NETHERRACK, ModBlocks.nether_redstone_ore.getDefaultState(), netherRedstoneOreVeinSize)).withPlacement( Placement.COUNT_RANGE.configure( netherRedstoneOre)));
 
         }
     }

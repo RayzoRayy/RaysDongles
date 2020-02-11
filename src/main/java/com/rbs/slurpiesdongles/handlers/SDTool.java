@@ -100,7 +100,6 @@ public interface SDTool {
                     break;
             }
         }
-//        SilentGear.log.debug("{}", positions);
         return positions;
     }
 
@@ -157,7 +156,6 @@ public interface SDTool {
                             state.getBlock().onPlayerDestroy(world, pos2, state);
                     } else {
                         int xp = ForgeHooks.onBlockBreakEvent(world, ((ServerPlayerEntity) player).interactionManager.getGameType(), (ServerPlayerEntity) player, pos2);
-                        //state.getBlock().onBlockHarvested(world, pos2, state, player);
                         tool.getItem().onBlockDestroyed(tool, world, state, pos2, player);
                         if (state.getBlock().removedByPlayer(state, world, pos2, player, true, state.getFluidState())) {
                             state.getBlock().onPlayerDestroy(world, pos2, state);
@@ -229,7 +227,7 @@ public interface SDTool {
                     SDTool item = (SDTool) stack.getItem();
 
                     for (BlockPos pos : item.getExtraBlocks(world, (BlockRayTraceResult) rt, player, stack)) {
-                        // FIXME
+                        //
 //                        event.getContext().drawSelectionBox(info, new BlockRayTraceResult(Vec3d.ZERO, Direction.UP, pos, false), 0);
                     }
                 }

@@ -69,9 +69,9 @@ public class CornCrop extends CropsBlock {
     }
 
     public void func_225534_a_(BlockState p_225534_1_, ServerWorld p_225534_2_, BlockPos p_225534_3_, Random p_225534_4_) {
-        super.func_225534_a_(p_225534_1_, p_225534_2_, p_225534_3_, p_225534_4_);
+        super.tick(p_225534_1_, p_225534_2_, p_225534_3_, p_225534_4_);
         if (!p_225534_2_.isAreaLoaded(p_225534_3_, 1)) return; // Forge: prevent loading unloaded chunks when checking neighbor's light
-        if (p_225534_2_.func_226659_b_(p_225534_3_, 0) >= 9) {
+        if (p_225534_2_.getLightSubtracted(p_225534_3_, 0) >= 9) {
             int i = this.getAge(p_225534_1_);
             if (i < this.getMaxAge()) {
                 float f = getGrowthChance(this, p_225534_2_, p_225534_3_);
@@ -140,7 +140,7 @@ public class CornCrop extends CropsBlock {
     }
 
     public boolean isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos) {
-        return (worldIn.func_226659_b_(pos, 0) >= 8 || worldIn.canBlockSeeSky(pos)) && super.isValidPosition(state, worldIn, pos);
+        return (worldIn.getLightSubtracted(pos, 0) >= 8 || worldIn.canBlockSeeSky(pos)) && super.isValidPosition(state, worldIn, pos);
     }
     @OnlyIn(Dist.CLIENT)
     protected IItemProvider getSeedsItem() {

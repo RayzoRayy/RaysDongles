@@ -44,7 +44,6 @@ public class ModItems {
     public static final Item red_glowstone_dust = null;
     //Gems
     public static final Item amethyst = null;
-    public static final Item hardened_topaz = null;
     public static final Item ruby = null;
     public static final Item topaz = null;
     //Actual Items
@@ -72,7 +71,6 @@ public class ModItems {
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "red_glowstone_dust"),
                 //Gems
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst"),
-                new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "hardened_topaz"),
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby"),
                 new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz"),
                 //Actual Items
@@ -100,7 +98,6 @@ public class ModItems {
                 createItemBlockForBlock(ModBlocks.purple_glowstone, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.red_glowstone, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.amethyst_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
-                createItemBlockForBlock(ModBlocks.hardened_topaz_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.reinforced_obsidian, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.ruby_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
                 createItemBlockForBlock(ModBlocks.topaz_block, new Item.Properties().group(Reference.tabSlurpiesDongles)),
@@ -132,9 +129,6 @@ public class ModItems {
      }
      if (ConfigGeneral.disablePopsSign.get()) {
       event.getRegistry().register(pops_sign = new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "pops_sign"));
-     }
-     if (ConfigGeneral.disableTopazHandle.get()) {
-      event.getRegistry().register(topaz_handle = new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_handle"));
      }
         if (ConfigGeneral.disableStoneRod.get()) {
         event.getRegistry().register(stone_rod = new ItemBase(new Item.Properties().group(Reference.tabSlurpiesDongles), "stone_rod"));
