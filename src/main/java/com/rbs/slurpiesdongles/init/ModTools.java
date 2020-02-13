@@ -113,7 +113,7 @@ public class ModTools {
             event.getRegistry().register(amethyst_hammer = new AmethystHammer(ToolMaterials.AMETHYST, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst_hammer"));
             event.getRegistry().register(amethyst_hoe = new AmethystHoe(ToolMaterials.AMETHYST, 1, new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst_hoe"));
             event.getRegistry().register(amethyst_lumber_axe = new AmethystLumbarAxe(ToolMaterials.AMETHYST, 2, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst_lumber_axe"));
-            event.getRegistry().register(amethyst_paxel = new AmethystPaxel(ToolMaterials.AMETHYST_PAXEL, 3, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst_paxel"));
+            event.getRegistry().register(amethyst_paxel = new AmethystPaxel(ToolMaterials.AMETHYST_PAXEL, 3, -3.0F, null, new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst_paxel"));
             event.getRegistry().register(amethyst_pickaxe = new AmethystPickaxe(ToolMaterials.AMETHYST, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst_pickaxe"));
             event.getRegistry().register(amethyst_shovel = new AmethystShovel(ToolMaterials.AMETHYST, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst_shovel"));
             event.getRegistry().register(amethyst_sword = new AmethystSword(ToolMaterials.AMETHYST_SWORD, 3, -2.4F, new Item.Properties().group(Reference.tabSlurpiesDongles), "amethyst_sword"));
@@ -125,7 +125,7 @@ public class ModTools {
             event.getRegistry().register(ruby_hammer = new RubyHammer(ToolMaterials.RUBY, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby_hammer"));
             event.getRegistry().register(ruby_hoe = new RubyHoe(ToolMaterials.RUBY, 1, new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby_hoe"));
             event.getRegistry().register(ruby_lumber_axe = new RubyLumbarAxe(ToolMaterials.RUBY, 4, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby_lumber_axe"));
-            event.getRegistry().register(ruby_paxel = new RubyPaxel(ToolMaterials.RUBY_PAXEL, 2, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby_paxel"));
+            event.getRegistry().register(ruby_paxel = new RubyPaxel(ToolMaterials.RUBY_PAXEL, 2, -3.0F,null, new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby_paxel"));
             event.getRegistry().register(ruby_pickaxe = new RubyPickaxe(ToolMaterials.RUBY, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby_pickaxe"));
             event.getRegistry().register(ruby_shovel = new RubyShovel(ToolMaterials.RUBY, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby_shovel"));
             event.getRegistry().register(ruby_sword = new RubySword(ToolMaterials.RUBY_SWORD, 2, -2.4F, new Item.Properties().group(Reference.tabSlurpiesDongles), "ruby_sword"));
@@ -137,7 +137,7 @@ public class ModTools {
             event.getRegistry().register(topaz_hammer = new TopazHammer(ToolMaterials.TOPAZ, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_hammer"));
             event.getRegistry().register(topaz_hoe = new TopazHoe(ToolMaterials.TOPAZ, 1, new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_hoe"));
             event.getRegistry().register(topaz_lumber_axe = new TopazLumbarAxe(ToolMaterials.TOPAZ, 4, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_lumber_axe"));
-            event.getRegistry().register(topaz_paxel = new TopazPaxel(ToolMaterials.TOPAZ_PAXEL, 2, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_paxel"));
+            event.getRegistry().register(topaz_paxel = new TopazPaxel(ToolMaterials.TOPAZ_PAXEL, 2, -3.0F,null, new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_paxel"));
             event.getRegistry().register(topaz_pickaxe = new TopazPickaxe(ToolMaterials.TOPAZ, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_pickaxe"));
             event.getRegistry().register(topaz_shovel = new TopazShovel(ToolMaterials.TOPAZ, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_shovel"));
             event.getRegistry().register(topaz_sword = new TopazSword(ToolMaterials.TOPAZ_SWORD, 2, -2.4F, new Item.Properties().group(Reference.tabSlurpiesDongles), "topaz_sword"));
@@ -149,7 +149,7 @@ public class ModTools {
             event.getRegistry().register(withered_hammer = new WitheredHammer(ToolMaterials.WITHERED, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "withered_hammer"));
             event.getRegistry().register(withered_hoe = new WitheredHoe(ToolMaterials.WITHERED, 1, new Item.Properties().group(Reference.tabSlurpiesDongles), "withered_hoe"));
             event.getRegistry().register(withered_lumber_axe = new WitheredLumbarAxe(ToolMaterials.WITHERED, 8, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "withered_lumber_axe"));
-            event.getRegistry().register(withered_paxel = new WitheredPaxel(ToolMaterials.WITHERED_PAXEL, 2, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles), "withered_paxel"));
+            event.getRegistry().register(withered_paxel = new WitheredPaxel(ToolMaterials.WITHERED_PAXEL, 2, -3.0F,null, new Item.Properties().group(Reference.tabSlurpiesDongles), "withered_paxel"));
             event.getRegistry().register(withered_pickaxe = new WitheredPickaxe(ToolMaterials.WITHERED, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "withered_pickaxe"));
             event.getRegistry().register(withered_shovel = new WitheredShovel(ToolMaterials.WITHERED, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "withered_shovel"));
             event.getRegistry().register(withered_sword = new WitheredSword(ToolMaterials.WITHERED_SWORD, 2, -2.4F, new Item.Properties().group(Reference.tabSlurpiesDongles), "withered_sword"));
@@ -160,35 +160,35 @@ public class ModTools {
             event.getRegistry().register(diamond_excavator = new DiamondExcavator(ItemTier.DIAMOND, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "diamond_excavator"));
             event.getRegistry().register(diamond_hammer = new DiamondHammer(ItemTier.DIAMOND, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "diamond_hammer"));
             event.getRegistry().register(diamond_lumber_axe = new DiamondLumbarAxe(ItemTier.DIAMOND, 3, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "diamond_lumber_axe"));
-            event.getRegistry().register(diamond_paxel = new DiamondPaxel(ToolMaterials.DIAMOND_PAXEL, 3, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles),"diamond_paxel"));
+            event.getRegistry().register(diamond_paxel = new DiamondPaxel(ToolMaterials.DIAMOND_PAXEL, 3, -3.0F,null, new Item.Properties().group(Reference.tabSlurpiesDongles),"diamond_paxel"));
         }
         if (ConfigGeneral.disableGoldToolsExtras.get()) {
             event.getRegistry().register(gold_battleaxe = new GoldenBA(ItemTier.GOLD, 4, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "gold_battleaxe"));
             event.getRegistry().register(gold_excavator = new GoldenExcavator(ItemTier.GOLD, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "gold_excavator"));
             event.getRegistry().register(gold_hammer = new GoldenHammer(ItemTier.GOLD, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "gold_hammer"));
             event.getRegistry().register(gold_lumber_axe = new GoldenLumbarAxe(ItemTier.GOLD, 3, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "gold_lumber_axe"));
-            event.getRegistry().register(gold_paxel = new GoldenPaxel(ToolMaterials.GOLD_PAXEL, 3, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles),"gold_paxel"));
+            event.getRegistry().register(gold_paxel = new GoldenPaxel(ToolMaterials.GOLD_PAXEL, 3, -3.0F,null, new Item.Properties().group(Reference.tabSlurpiesDongles),"gold_paxel"));
         }
         if (ConfigGeneral.disableIronToolsExtras.get()) {
             event.getRegistry().register(iron_battleaxe = new IronBA(ItemTier.IRON, 4, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "iron_battleaxe"));
             event.getRegistry().register(iron_excavator = new IronExcavator(ItemTier.IRON, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "iron_excavator"));
             event.getRegistry().register(iron_hammer = new IronHammer(ItemTier.IRON, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "iron_hammer"));
             event.getRegistry().register(iron_lumber_axe = new IronLumbarAxe(ItemTier.IRON, 3, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "iron_lumber_axe"));
-            event.getRegistry().register(iron_paxel = new IronPaxel(ToolMaterials.IRON_PAXEL, 3, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles), "iron_paxel"));
+            event.getRegistry().register(iron_paxel = new IronPaxel(ToolMaterials.IRON_PAXEL, 3, -3.0F,null, new Item.Properties().group(Reference.tabSlurpiesDongles), "iron_paxel"));
         }
         if (ConfigGeneral.disableStoneToolsExtras.get()) {
             event.getRegistry().register(stone_battleaxe = new StoneBA(ItemTier.STONE, 4, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "stone_battleaxe"));
             event.getRegistry().register(stone_excavator = new StoneExcavator(ItemTier.STONE, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "stone_excavator"));
             event.getRegistry().register(stone_hammer = new StoneHammer(ItemTier.STONE, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "stone_hammer"));
             event.getRegistry().register(stone_lumber_axe = new StoneLumbarAxe(ItemTier.STONE, 1, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "stone_lumber_axe"));
-            event.getRegistry().register(stone_paxel = new StonePaxel(ToolMaterials.STONE_PAXEL, 2, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles), "stone_paxel"));
+            event.getRegistry().register(stone_paxel = new StonePaxel(ToolMaterials.STONE_PAXEL, 2, -3.0F,null, new Item.Properties().group(Reference.tabSlurpiesDongles), "stone_paxel"));
         }
         if (ConfigGeneral.disableWoodenToolsExtras.get()) {
             event.getRegistry().register(wooden_battleaxe = new WoodenBA(ItemTier.WOOD, 4, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "wooden_battleaxe"));
             event.getRegistry().register(wooden_excavator = new WoodenExcavator(ItemTier.WOOD, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "wooden_excavator"));
             event.getRegistry().register(wooden_hammer = new WoodenHammer(ItemTier.WOOD, 1, -2.8F, new Item.Properties().group(Reference.tabSlurpiesDongles), "wooden_hammer"));
             event.getRegistry().register(wooden_lumber_axe = new WoodenLumbarAxe(ItemTier.WOOD, 1, -3.1F, new Item.Properties().group(Reference.tabSlurpiesDongles), "wooden_lumber_axe"));
-            event.getRegistry().register(wooden_paxel = new WoodenPaxel(ToolMaterials.WOODEN_PAXEL, 3, -3.0F,  new Item.Properties().group(Reference.tabSlurpiesDongles),"wooden_paxel"));
+            event.getRegistry().register(wooden_paxel = new WoodenPaxel(ToolMaterials.WOODEN_PAXEL, 3, -3.0F,null, new Item.Properties().group(Reference.tabSlurpiesDongles),"wooden_paxel"));
         }
         if (ConfigGeneral.disableVMTools.get()) {
             event.getRegistry().register(vm_excavator = new VMExcavator(ToolMaterials.VMPICK, 1, -2.6F, new Item.Properties().group(Reference.tabSlurpiesDongles), "vm_excavator"));

@@ -39,13 +39,9 @@ public class ModBlocks {
     public static final Block pink_glowstone = null;
     public static final Block purple_glowstone = null;
     public static final Block red_glowstone = null;
-    public static final Block amazonite_block = null;
     public static final Block amethyst_block = null;
-    public static final Block hardened_topaz_block = null;
-    public static final Block peridot_block = null;
     public static final Block reinforced_obsidian = null;
     public static final Block ruby_block = null;
-    public static final Block sapphire_block = null;
     public static final Block stone_torch = null;
     public static final Block wall_stone_torch = null;
     public static final Block topaz_block = null;
