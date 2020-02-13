@@ -2,6 +2,7 @@ package com.rbs.slurpiesdongles.armor;
 
 import com.rbs.slurpiesdongles.Reference;
 import com.rbs.slurpiesdongles.init.ModArmor;
+import com.rbs.slurpiesdongles.init.ModItems;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -32,6 +33,10 @@ public class TopazArmor extends ArmorItem {
     public Rarity getRarity(ItemStack stack) {
         return stack.getCount() == 0 ? Rarity.RARE : Rarity.RARE;
 
+    }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return repair.getItem() == ModItems.topaz;
     }
 
 }

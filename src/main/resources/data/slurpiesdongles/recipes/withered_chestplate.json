@@ -1,28 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "CAC",
-    "CXC",
-    "CWC"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:nether_star"
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:topaz_chestplate"
     },
-    "W": {
-      "item": "minecraft:wither_skeleton_skull"
+    {
+      "item": "minecraft:elytra"
     },
-    "C": {
+    {
       "item": "minecraft:coal"
-    },
-  "A": {
-    "item": "slurpiesdongles:topaz_chestplate"
-  }
-  },
-      "result": {
-        "item": "slurpiesdongles:withered_chestplate"
-      }
     }
-
-
+  ],
+  "result": {
+    "item": "slurpiesdongles:withered_chestplate"
+  }
+}
 

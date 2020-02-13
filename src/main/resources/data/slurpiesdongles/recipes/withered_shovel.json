@@ -1,19 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " T ",
-    " H ",
-    " H "
-  ],
-  "key": {
-    "H": {
-      "item": "minecraft:coal"
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:topaz_shovel"
     },
-    "T": {
-      "item": "slurpiesdongles:nether_star_chunk"
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "minecraft:coal"
     }
-  },
+  ],
   "result": {
     "item": "slurpiesdongles:withered_shovel"
   }
 }
+

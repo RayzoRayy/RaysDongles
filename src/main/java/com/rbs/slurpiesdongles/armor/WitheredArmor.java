@@ -2,7 +2,10 @@ package com.rbs.slurpiesdongles.armor;
 
 import com.rbs.slurpiesdongles.Reference;
 import com.rbs.slurpiesdongles.init.ModArmor;
+import com.rbs.slurpiesdongles.init.ModItems;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 
 import net.minecraft.entity.player.PlayerEntity;
@@ -11,6 +14,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 
@@ -64,9 +69,27 @@ public class WitheredArmor extends ArmorItem {
         return stack.getCount() == 0 ? Rarity.EPIC : Rarity.EPIC;
 
     }
+    @Override
+    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
+        return repair.getItem() == Items.COAL;
+    }
 
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         tooltip.add(new StringTextComponent(TextFormatting.GREEN + "Wearing this armor as a set grants Flight"));
+    }
+    @Override
+    public boolean isBookEnchantable(ItemStack stack, ItemStack book)
+    {
+        return true;
+    }
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        return true;
+    }
+    @Override
+    public void onCreated(ItemStack par1ItemStack, World par2World, PlayerEntity par3EntityPlayer)
+    {
+        par1ItemStack.addEnchantment(Enchantments.PROTECTION, 4);
     }
 }

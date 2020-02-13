@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "WXW",
-    "W W",
-    " A "
-  ],
-  "key": {
-    "X": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:topaz_helmet"
+    },
+    {
       "item": "minecraft:nether_star"
     },
-    "W": {
+    {
       "item": "minecraft:coal"
-    },
-    "A": {
-      "item": "slurpiesdongles:topaz_helmet"
     }
-    },
-    "result": {
-      "item": "slurpiesdongles:withered_helmet"
-    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:withered_helmet"
   }
+}
 

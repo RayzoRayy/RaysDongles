@@ -23,7 +23,7 @@ public enum ArmorMaterials implements IArmorMaterial{
 
     TOPAZ ("topaz_armor", 35, new int[]{4, 6, 8, 4}, 20, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, ModItems.topaz),
 
-    WITHERED ("withered_armor", 0, new int[]{4, 6, 7, 4}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, Items.WITHER_SKELETON_SKULL),;
+    WITHERED ("withered_armor", 0, new int[]{4, 6, 7, 4}, 25, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2.0F, Items.COAL),;
 
 
 

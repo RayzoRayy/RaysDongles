@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "X X",
-    "W W",
-    " A "
-  ],
-  "key": {
-    "X": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:topaz_boots"
+    },
+    {
       "item": "minecraft:nether_star"
     },
-    "W": {
-      "item": "minecraft:wither_skeleton_skull"
-    },
-    "A": {
-      "item": "slurpiesdongles:topaz_boots"
+    {
+      "item": "minecraft:coal"
     }
-    },
-    "result": {
-      "item": "slurpiesdongles:withered_boots"
-    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:withered_boots"
   }
+}
 

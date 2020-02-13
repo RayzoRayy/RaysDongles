@@ -1,25 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "ADP",
-    " S ",
-    " S "
-  ],
-  "key": {
-    "S": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:topaz_paxel"
+    },
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
       "item": "minecraft:coal"
-    },
-    "A": {
-      "item": "slurpiesdongles:withered_axe"
-    },
-    "D": {
-      "item": "slurpiesdongles:withered_shovel"
-    },
-    "P": {
-      "item": "slurpiesdongles:withered_pickaxe"
     }
-  },
+  ],
   "result": {
     "item": "slurpiesdongles:withered_paxel"
   }
 }
+

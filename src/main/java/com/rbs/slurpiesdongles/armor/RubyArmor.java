@@ -2,6 +2,7 @@ package com.rbs.slurpiesdongles.armor;
 
 import com.rbs.slurpiesdongles.Reference;
 import com.rbs.slurpiesdongles.init.ModArmor;
+import com.rbs.slurpiesdongles.init.ModItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -29,7 +30,7 @@ public class RubyArmor extends ArmorItem {
     }
     @Override
     public boolean getIsRepairable(ItemStack toRepair, ItemStack repair) {
-        return true;
+        return repair.getItem() == ModItems.ruby;
     }
 
 }

@@ -1,23 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XWX",
-    "XAX",
-    "X X"
-  ],
-  "key": {
-    "X": {
-      "item": "minecraft:coal"
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:topaz_leggings"
     },
-    "W": {
+    {
       "item": "minecraft:nether_star"
     },
-    "A": {
-      "item": "slurpiesdongles:topaz_leggings"
+    {
+      "item": "minecraft:coal"
     }
-    },
-    "result": {
-      "item": "slurpiesdongles:withered_leggings"
-    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:withered_leggings"
   }
+}
 

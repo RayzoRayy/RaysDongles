@@ -19,7 +19,7 @@ public enum ToolMaterials implements IItemTier{
 
     TOPAZ_BATTLEAXE(0, 1893, 0.0F, 6, 20, ModItems.topaz),
 
-    WITHERED_BATTLEAXE(0, 0, 0.0F, 7, 25, Items.NETHER_STAR),
+    WITHERED_BATTLEAXE(0, 2103, 0.0F, 7, 25, Items.COAL),
 
     //General Tool Materials
     AMETHYST(3, 1739, 8.0F, 1, 10, ModItems.amethyst),
@@ -28,7 +28,7 @@ public enum ToolMaterials implements IItemTier{
 
     TOPAZ(4, 1893, 9.0F, 1, 20, ModItems.topaz),
 
-    WITHERED(4, 0, 10.0F, 1, 25, Items.NETHER_STAR),
+    WITHERED(4, 2103, 10.0F, 1, 25, Items.COAL),
 
     //Paxel Materials
 
@@ -46,12 +46,12 @@ public enum ToolMaterials implements IItemTier{
 
     TOPAZ_PAXEL(4, 5679, 9.0F, 5, 20, ModItems.topaz),
 
-    WITHERED_PAXEL(4, 0, 10.0F, 6, 25, Items.NETHER_STAR),
+    WITHERED_PAXEL(4, 6309, 10.0F, 6, 25, Items.COAL),
 
     WOODEN_PAXEL(0, 177, 2.0F, 0, 15, Items.OAK_PLANKS),
 
     //Pickaxe Materials
-    VMPICK(1, 18200, 4.0F, 1, 5, Items.IRON_INGOT),
+    VMPICK(1, 18200, 4.0F, 1, 5, Items.COBBLESTONE),
 
     //Sword Materials
     AMETHYST_SWORD(0, 1739, 0.0F, 3, 10, ModItems.amethyst),
@@ -60,13 +60,10 @@ public enum ToolMaterials implements IItemTier{
 
     TOPAZ_SWORD(0, 1893, 0.0F, 5, 20, ModItems.topaz),
 
-    WITHERED_SWORD(0, 0, 0.0F, 6, 25, Items.NETHER_STAR);
+    WITHERED_SWORD(0, 2103, 0.0F, 6, 25, Items.COAL);
 
-    public final int harvestLevel;
-    public final int maxUses;
-    public final float efficiency;
-    public final float attackDamage;
-    public final int enchantability;
+    public int harvestLevel, maxUses, enchantability;
+    public float efficiency, attackDamage;
     private Item repairItem;
 
     ToolMaterials(int harvestLevel, int maxUses, float efficiency, float attackDamage, int enchantability, Item repairItem) {

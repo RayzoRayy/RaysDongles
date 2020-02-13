@@ -1,19 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XX ",
-    "X# ",
-    "X# "
-  ],
-  "key": {
-    "#": {
-    "item": "minecraft:coal"
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:topaz_lumber_axe"
     },
-    "X": {
-    "item": "slurpiesdongles:nether_star_chunk"
+    {
+      "item": "minecraft:nether_star"
+    },
+    {
+      "item": "minecraft:coal"
     }
-  },
+  ],
   "result": {
     "item": "slurpiesdongles:withered_lumber_axe"
   }
 }
+

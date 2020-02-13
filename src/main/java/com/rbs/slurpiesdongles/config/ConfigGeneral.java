@@ -149,8 +149,8 @@ public class ConfigGeneral {
         //Armor
         builder.comment("Enable or disable armor sets").push("Armor");
         disableAmethystArmor = builder
-                .comment("Setting this to false will disable Amethyst Armor [true / false default: true]")
-                .define("Enable Amethyst Armor", true);
+                .comment("Setting this to false will disable amethyst Armor [true / false default: true]")
+                .define("Enable amethyst Armor", true);
         disableRubyArmor = builder
                 .comment("Setting this to false will disable Ruby Armor [true / false default: true]")
                 .define("Enable Ruby Armor", true);
@@ -241,20 +241,20 @@ public class ConfigGeneral {
         //Ores
         builder.comment("Ore tweaks").push("Ores");
         amethystOreGeneration = builder
-                .comment("Generation of Amethyst Ore [true / false default: true]")
-                .define("Amethyst Ore generation", true);
+                .comment("Generation of amethyst Ore [true / false default: true]")
+                .define("amethyst Ore generation", true);
         amethystOreChance = builder
-                .comment("Chance of the Amethyst Ore to spawn per chunk [0-100 default: 5]")
-                .defineInRange("Amethyst Ore chance to spawn", 5, 0, 100);
+                .comment("Chance of the amethyst Ore to spawn per chunk [0-100 default: 5]")
+                .defineInRange("amethyst Ore chance to spawn", 5, 0, 100);
         amethystOreSize = builder
-                .comment("Size of Amethyst Ore Vein [0-100 default: 3")
-                .defineInRange("Amethyst Ore size", 3, 0, 100);
+                .comment("Size of amethyst Ore Vein [0-100 default: 3")
+                .defineInRange("amethyst Ore size", 3, 0, 100);
         amethystMinHeight = builder
-                .comment("Minimum height for Amethyst Ore to spawn [0-255 default: 1")
-                .defineInRange("Min height for Amethyst Ore", 1, 0, 255);
+                .comment("Minimum height for amethyst Ore to spawn [0-255 default: 1")
+                .defineInRange("Min height for amethyst Ore", 1, 0, 255);
         amethystMaxHeight = builder
-                .comment("Max height for Amethyst Ore to spawn [0-255 default: 32")
-                .defineInRange("Max height for Amethyst Ore", 32, 0, 255);
+                .comment("Max height for amethyst Ore to spawn [0-255 default: 32")
+                .defineInRange("Max height for amethyst Ore", 32, 0, 255);
         rubyOreGeneration = builder
                 .comment("Generation of Ruby Ore [true / false default: true]")
                 .define("Ruby Ore generation", true);
@@ -400,8 +400,8 @@ public class ConfigGeneral {
         //Tools
         builder.comment("Enable or disable tool sets").push("Tools");
         disableAmethystTools = builder
-                .comment("Setting this to false will disable the entire Amethyst tool set [true / false default: true")
-                .define("Enable Amethyst tools", true);
+                .comment("Setting this to false will disable the entire amethyst tool set [true / false default: true")
+                .define("Enable amethyst tools", true);
         disableRubyTools = builder
                 .comment("Setting this to false will disable the entire Ruby tool set [true / false default: true")
                 .define("Enable Ruby tools", true);
