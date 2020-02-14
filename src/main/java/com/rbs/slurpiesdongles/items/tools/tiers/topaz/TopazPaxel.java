@@ -28,6 +28,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.common.util.Constants;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Map;
@@ -91,25 +92,47 @@ public class TopazPaxel extends ToolItem {
         this.setRegistryName(Reference.MODID, name);
     }
 
-    public boolean canHarvestBlock(BlockState blockIn) {
-        int i = this.getTier().getHarvestLevel();
-        return i >= blockIn.getHarvestLevel();
+    @Override
+    public boolean canHarvestBlock(BlockState state) {
+        ToolType harvestTool = state.getHarvestTool();
+        if (harvestTool == ToolType.AXE || harvestTool == ToolType.PICKAXE || harvestTool == ToolType.SHOVEL) {
+            if (getHarvestLevel() >= state.getHarvestLevel()) {
+                //If the required tool type is one of the tools we "support" then return that we can harvest it if
+                // we have an equal or higher harvest level
+                return true;
+            }
+        }
+        Block block = state.getBlock();
+        if (block == Blocks.SNOW || block == Blocks.SNOW_BLOCK) {
+            //Extra hardcoded shovel checks
+            return true;
+        }
+        //Extra hardcoded pickaxe checks
+        Material material = state.getMaterial();
+        return material == Material.ROCK || material == Material.IRON || material == Material.ANVIL;
+    }
+    public int getHarvestLevel() {
+        return getTier().getHarvestLevel();
     }
 
+    @Override
+    public float getDestroySpeed(@Nonnull ItemStack stack, BlockState state) {
+        Material material = state.getMaterial();
+        boolean pickaxeShortcut = material == Material.IRON || material == Material.ANVIL || material == Material.ROCK;
+        boolean axeShortcut = material == Material.WOOD || material == Material.PLANTS || material == Material.TALL_PLANTS || material == Material.BAMBOO;
+        if (pickaxeShortcut || axeShortcut || getToolTypes(stack).stream().anyMatch(state::isToolEffective) || EFFECTIVE_ON.contains(state.getBlock())) {
+            return this.efficiency;
+        }
+        return 1;
+    }
     public boolean hitEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         stack.damageItem(1, target, (p_220045_0_) -> {
             p_220045_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
         });
         return true;
     }
-
-    public float getDestroySpeed(ItemStack stack, BlockState state) {
-        Material material = state.getMaterial();
-        return material != Material.IRON && material != Material.ANVIL && material != Material.ROCK
-                && material != Material.WOOD && material != Material.PLANTS ? super.getDestroySpeed(stack, state)
-                : this.efficiency;
-    }
-
+    @Nonnull
+    @Override
     public ActionResultType onItemUse(ItemUseContext useContext) {
 
         World world = useContext.getWorld();
@@ -188,6 +211,7 @@ public class TopazPaxel extends ToolItem {
 
         return ActionResultType.PASS;
     }
+
     @Override
     public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
         if (EnchantmentHelper.getEnchantments(book).containsKey(Enchantments.SHARPNESS)) {
