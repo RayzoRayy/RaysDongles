@@ -9,6 +9,9 @@ import com.rbs.slurpiesdongles.init.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -184,6 +187,20 @@ public class GoldenPaxel extends ToolItem {
 
 
         return ActionResultType.PASS;
+    }
+    @Override
+    public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
+        if (EnchantmentHelper.getEnchantments(book).containsKey(Enchantments.SHARPNESS)) {
+            return true;
+        }
+        return super.isBookEnchantable(stack, book);
+    }
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack, Enchantment enchantment) {
+        if (enchantment == Enchantments.SHARPNESS) {
+            return true;
+        }
+        return super.canApplyAtEnchantingTable(stack, enchantment);
     }
 
     @Override
