@@ -2,10 +2,6 @@ package com.rbs.slurpiesdongles.core.init;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
 import com.rbs.slurpiesdongles.common.blocks.*;
-import com.rbs.slurpiesdongles.core.itemgroup.RDItemGroup;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.core.Registry;
-import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -13,10 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,7 +19,6 @@ import java.util.function.Supplier;
 
 import static com.rbs.slurpiesdongles.core.itemgroup.RDItemGroup.*;
 import static net.minecraft.world.level.block.Blocks.*;
-//@Mod.EventBusSubscriber(modid = SlurpiesDongles.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SlurpiesDongles.MOD_ID);

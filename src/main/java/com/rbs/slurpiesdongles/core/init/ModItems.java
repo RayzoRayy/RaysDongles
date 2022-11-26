@@ -1,13 +1,10 @@
 package com.rbs.slurpiesdongles.core.init;
 
-import com.google.common.base.Supplier;
 import com.rbs.slurpiesdongles.SlurpiesDongles;
 import com.rbs.slurpiesdongles.common.items.ContainerItem;
-import com.rbs.slurpiesdongles.common.items.DrinkItem;
 import com.rbs.slurpiesdongles.common.items.armor.WitheredArmor;
 import com.rbs.slurpiesdongles.common.items.armor.material.SlurpiesArmorMaterials;
 import com.rbs.slurpiesdongles.common.items.charms.*;
-import com.rbs.slurpiesdongles.common.items.foods.*;
 import com.rbs.slurpiesdongles.common.items.tools.*;
 import com.rbs.slurpiesdongles.common.items.tools.material.SlurpiesToolMaterials;
 import com.rbs.slurpiesdongles.core.config.ConfigGeneral;
