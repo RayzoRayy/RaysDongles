@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "slurpiesdongles:carrot_stick"
+  },
+  "result": "slurpiesdongles:cooked_carrot_stick",
+  "experience": 0.35,
+  "cookingtime": 100
+}

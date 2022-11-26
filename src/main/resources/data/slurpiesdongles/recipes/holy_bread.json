@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NGN",
+    "GBG",
+    "NGN"
+  ],
+  "key": {
+    "N": {
+    "item": "minecraft:gold_nugget"
+    },
+    "G": {
+    "item": "minecraft:gold_block"
+    },
+    "B": {
+    "item": "minecraft:bread"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:holy_bread"
+  }
+}

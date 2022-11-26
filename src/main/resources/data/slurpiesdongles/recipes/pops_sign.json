@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ILI",
+    "IWI",
+    "CIC"
+  ],
+  "key": {
+    "I": {
+    "item": "minecraft:iron_ingot"
+    },
+    "L": {
+    "item": "minecraft:lapis_block"
+    },
+    "W": {
+    "item": "minecraft:oak_planks"
+    },
+    "C": {
+    "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:pops_sign"
+  }
+}

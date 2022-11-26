@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ADP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick",
+    "data": 0
+    },
+    "A": {
+    "item": "slurpiesdongles:amethyst_axe"
+    },
+      "D": {
+    "item": "slurpiesdongles:amethyst_shovel"
+      },
+      "P": {
+          "item": "slurpiesdongles:amethyst_pickaxe"
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:amethyst_paxel"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "minecraft:egg"
+  },
+  "result": "slurpiesdongles:eggs",
+  "experience": 0.35,
+  "cookingtime": 100
+}

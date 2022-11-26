@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:tomato"
+    },
+    {
+      "item": "slurpiesdongles:blender"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:tomato_juice"
+  }
+}

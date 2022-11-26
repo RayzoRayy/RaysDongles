@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "slurpiesdongles:bacon_egg_sandwitch"
+  },
+  "result": "slurpiesdongles:toasted_bacon_egg_sandwitch",
+  "experience": 0.35,
+  "cookingtime": 200
+}

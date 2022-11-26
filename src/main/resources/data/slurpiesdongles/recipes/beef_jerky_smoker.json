@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "slurpiesdongles:raw_beef_slice"
+  },
+  "result": "slurpiesdongles:beef_jerky",
+  "experience": 0.35,
+  "cookingtime": 100
+}

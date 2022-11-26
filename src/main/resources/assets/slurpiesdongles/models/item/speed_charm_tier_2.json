@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "slurpiesdongles:charms/speed_charm_tier_2"
+  }
+}

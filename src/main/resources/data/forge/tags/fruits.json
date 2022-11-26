@@ -1,0 +1,11 @@
+{
+	"replace": false,
+	"values": [
+		"#forge:fruits/cabbage",
+		"#forge:fruits/corn",
+		"#forge:fruits/lemon",
+		"#forge:fruits/orange",
+		"#forge:fruits/strawberry",
+		"#forge:fruits/tomato"
+	]
+}

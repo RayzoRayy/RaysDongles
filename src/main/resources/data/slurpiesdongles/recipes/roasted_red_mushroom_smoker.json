@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "slurpiesdongles:red_mushroom"
+  },
+  "result": "slurpiesdongles:roasted_red_mushroom",
+  "experience": 0.35,
+  "cookingtime": 100
+}
