@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "IAI",
+    "III"
+  ],
+  "key": {
+    "I": {
+    "item": "minecraft:iron_block"
+    },
+    "A": {
+    "item": "minecraft:apple"
+     }
+  },
+  "result": {
+    "item": "slurpiesdongles:enchanted_iron_apple"
+  }
+}

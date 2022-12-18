@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    " B ",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bread"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:pizza",
+    "count": 4
+  }
+}

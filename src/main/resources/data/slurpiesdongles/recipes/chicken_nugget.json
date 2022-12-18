@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:cooked_chicken"
+    },
+	{
+	  "item": "slurpiesdongles:knife" 
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:chicken_nugget",
+      "count": 9
+  }
+}

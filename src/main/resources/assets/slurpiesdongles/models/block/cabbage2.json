@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "slurpiesdongles:block/cabbage2"
+    },
+    "render_type": "cutout"
+}

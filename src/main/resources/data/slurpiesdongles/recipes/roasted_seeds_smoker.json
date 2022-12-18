@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "minecraft:wheat_seeds"
+  },
+  "result": "slurpiesdongles:roasted_seeds",
+  "experience": 0.35,
+  "cookingtime": 100
+}

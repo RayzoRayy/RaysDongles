@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:bacon"
+    },
+	{
+	  "item": "minecraft:baked_potato" 
+	},
+      {
+	  "item": "minecraft:cooked_chicken" 
+	},
+      {
+	  "item": "minecraft:bowl" 
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:bacon_potato_chicken_stew"
+  }
+}

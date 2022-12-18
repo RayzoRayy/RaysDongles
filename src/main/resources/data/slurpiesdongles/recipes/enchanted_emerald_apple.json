@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EAE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+    "item": "minecraft:emerald_block"
+    },
+    "A": {
+    "item": "minecraft:apple"
+     }
+  },
+  "result": {
+    "item": "slurpiesdongles:enchanted_emerald_apple"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:roasted_beetroot_seeds"
+    },
+	{
+	  "item": "slurpiesdongles:roasted_pumpkin_seeds" 
+	},
+      {
+	  "item": "slurpiesdongles:roasted_melon_seeds" 
+	},
+      {
+	  "item": "slurpiesdongles:roasted_seeds" 
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:mixed_seeds"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "SNS",
+    "RSR"
+  ],
+  "key": {
+    "R": {
+    "item": "minecraft:sugar"
+    },
+    "N": {
+    "item": "minecraft:nether_star"
+    },
+    "S": {
+    "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:speed_charm"
+  }
+}

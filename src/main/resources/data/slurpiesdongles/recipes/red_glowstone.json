@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:red_glowstone_dust"
+    },
+	{
+	  "item": "slurpiesdongles:red_glowstone_dust" 
+	},
+      {
+    
+        "item": "slurpiesdongles:red_glowstone_dust"  
+      },
+      {
+        "item": "slurpiesdongles:red_glowstone_dust" 
+      }
+  ],
+  "result": {
+    "item": "slurpiesdongles:red_glowstone"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "slurpiesdongles:item/wooden_lumber_axe"
+  }
+}

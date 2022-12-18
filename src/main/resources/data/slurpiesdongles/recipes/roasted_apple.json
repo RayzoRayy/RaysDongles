@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "minecraft:apple"
+  },
+  "result": "slurpiesdongles:roasted_apple",
+  "experience": 0.35,
+  "cookingtime": 200
+}
