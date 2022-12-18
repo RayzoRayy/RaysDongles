@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "slurpiesdongles:raw_topaz"
-  },
-  "result": "slurpiesdongles:topaz",
-  "experience": 1.0,
-  "cookingtime": 100
-}

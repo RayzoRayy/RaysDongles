@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "item": "minecraft:red_mushroom"
-  },
-  "result": "slurpiesdongles:roasted_red_mushroom",
-  "experience": 0.35,
-  "cookingtime": 200
-}
