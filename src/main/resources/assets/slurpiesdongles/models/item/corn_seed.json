@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:items/corn_seed"
+        "layer0": "slurpiesdongles:item/corn_seed"
     }
 }

@@ -25,6 +25,8 @@ import net.minecraftforge.event.level.BlockEvent;
 
 import java.util.stream.Stream;
 
+
+// CREDIT TO SILENTCHAOS512 FOR THE BLOCK BREAKER CODE
 public class BlockBreaker {
 
     private BlockBreaker() {

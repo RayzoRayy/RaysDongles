@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:items/blender"
+        "layer0": "slurpiesdongles:item/blender"
     }
 }

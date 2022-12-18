@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:charms/water_breathing_charm"
+        "layer0": "slurpiesdongles:item/water_breathing_charm"
 	}	
 }

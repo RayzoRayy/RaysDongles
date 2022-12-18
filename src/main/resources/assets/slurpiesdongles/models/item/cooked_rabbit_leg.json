@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:food/cooked_rabbit_leg"
+        "layer0": "slurpiesdongles:item/cooked_rabbit_leg"
 	}	
 }

@@ -1,20 +1,40 @@
 package com.rbs.slurpiesdongles.common.items.tools;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.ToolAction;
+import net.minecraftforge.common.ToolActions;
 
-public class HammerItem extends PickaxeItem {
+import javax.annotation.Nonnull;
 
-    public HammerItem(Tier p_42961_, int p_42962_, float p_42963_, Properties p_42964_) {
-        super(p_42961_, p_42962_, p_42963_, p_42964_);
+import static net.minecraftforge.common.TierSortingRegistry.isCorrectTierForDrops;
+
+public class HammerItem extends DiggerItem {
+
+    public HammerItem(float attackDamageModifier, float attackSpeedModifier, Tier tier, Properties properties) {
+        super(attackDamageModifier, attackSpeedModifier, tier, SDBlockTags.Blocks.MINEABLE_WITH_HAMMER, properties);
+    }
+    @Override
+    public float getDestroySpeed(ItemStack itemStack, BlockState blockState) {
+        return getTier().getSpeed();
+
     }
 
+    @Override
+    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
+        return isCorrectTierForDrops(getTier(), state);
+    }
 
-
+    @Override
+    public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
+        return ToolActions.DEFAULT_PICKAXE_ACTIONS.contains(toolAction);
+    }
     @Override
     public boolean canAttackBlock(BlockState p_41441_, Level level, BlockPos pos, Player player) {
         int radius = 1;

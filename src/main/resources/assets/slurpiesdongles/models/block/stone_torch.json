@@ -1,7 +1,7 @@
 {
   "parent": "block/template_torch",
   "textures": {
-    "torch": "slurpiesdongles:blocks/stone_torch"
+    "torch": "slurpiesdongles:block/stone_torch"
   },
   "render_type": "cutout"
 }

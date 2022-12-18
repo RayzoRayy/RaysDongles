@@ -1,7 +1,7 @@
 {
     "parent": "block/crop",
     "textures": {
-        "crop": "slurpiesdongles:blocks/corn1"
+        "crop": "slurpiesdongles:block/corn1"
     },
     "render_type": "cutout"
 }

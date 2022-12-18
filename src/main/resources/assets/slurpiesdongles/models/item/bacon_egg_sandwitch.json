@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:food/bacon_egg_sandwitch"
+        "layer0": "slurpiesdongles:item/bacon_egg_sandwitch"
 	}	
 }

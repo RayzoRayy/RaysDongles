@@ -2,6 +2,8 @@ package com.rbs.slurpiesdongles.core.init;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
 import com.rbs.slurpiesdongles.common.blocks.*;
+import com.rbs.slurpiesdongles.core.util.ModTab;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -17,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static com.rbs.slurpiesdongles.core.itemgroup.RDItemGroup.*;
+import static com.rbs.slurpiesdongles.core.init.ModItems.tabItems;
 import static net.minecraft.world.level.block.Blocks.*;
 public class ModBlocks {
 
@@ -88,8 +90,7 @@ public class ModBlocks {
                     .sound(SoundType.STONE)
                     .lightLevel(state -> 8)
                     .lootFrom(STONE_TORCH::get),
-                    ParticleTypes.FLAME),
-                    tabSlurpiesDongles);
+                    ParticleTypes.FLAME));
 
     //Crops
     public static final RegistryObject<Block> CABBAGE_CROP = register("cabbage_crop",
@@ -130,12 +131,12 @@ public class ModBlocks {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         return toReturn;
     }
-    private static <T extends Block> RegistryObject<T> registerBlockNoItem(String name, Supplier<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistryObject<T> registerBlockNoItem(String name, Supplier<T> block) {
         RegistryObject<T> tooReturn = BLOCKS.register(name, block);
         return tooReturn;
     }
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, Function<RegistryObject<T>, Supplier<? extends BlockItem>> item) {
-        RegistryObject<T> ret = registerBlock(name, block, tabSlurpiesDongles);
+        RegistryObject<T> ret = registerBlock(name, block, ModTab.tabSlurpiesDongles);
         ModItems.ITEMS.register(name, item.apply(ret));
         return ret;
     }
@@ -143,7 +144,7 @@ public class ModBlocks {
         return register(name, block, ModBlocks::defaultItem);
     }
     private static <T extends Block> Supplier<BlockItem> defaultItem(RegistryObject<T> block) {
-        return () -> new BlockItem(block.get(), new Item.Properties().tab(tabSlurpiesDongles));
+        return () -> new BlockItem(block.get(), new Item.Properties());
     }
 
         private static Supplier<BlockItem> getStoneTorchItem () {

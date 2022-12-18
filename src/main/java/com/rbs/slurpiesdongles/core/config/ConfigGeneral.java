@@ -66,6 +66,10 @@ import net.minecraftforge.common.ForgeConfigSpec;
         public static ForgeConfigSpec.BooleanValue disableCookedRabbitLeg;
         public static ForgeConfigSpec.BooleanValue disableCorn;
         public static ForgeConfigSpec.BooleanValue disableEggs;
+        public static ForgeConfigSpec.BooleanValue disableGoldenBacon;
+        public static ForgeConfigSpec.BooleanValue disableGoldenBakedPotato;
+        public static ForgeConfigSpec.BooleanValue disableGoldenMelonSlice;
+        public static ForgeConfigSpec.BooleanValue disableGoldenPotato;
         public static ForgeConfigSpec.BooleanValue disableMelonSlice;
         public static ForgeConfigSpec.BooleanValue disableMixedFruitBowl;
         public static ForgeConfigSpec.BooleanValue disableMixedSeeds;
@@ -119,11 +123,11 @@ import net.minecraftforge.common.ForgeConfigSpec;
         public static ForgeConfigSpec.BooleanValue disableEmeraldToolsExtras;
         public static ForgeConfigSpec.BooleanValue disableGoldToolsExtras;
         public static ForgeConfigSpec.BooleanValue disableIronToolsExtras;
+        public static ForgeConfigSpec.BooleanValue disableNetheriteToolsExtras;
         public static ForgeConfigSpec.BooleanValue disableStoneToolsExtras;
         public static ForgeConfigSpec.BooleanValue disableWoodenToolsExtras;
 
         public static void init(ForgeConfigSpec.Builder builder) {
-
             //Actual Items
             builder.comment("Config section for Actual Item tweaks").push("Actual Items");
             disableNetherStarChunk = builder
@@ -310,6 +314,18 @@ import net.minecraftforge.common.ForgeConfigSpec;
             disableEggs = builder
                     .comment("Enable or Disable Eggs [true / false default: true")
                     .define("Enable Eggs", true);
+            disableGoldenBacon = builder
+                    .comment("Enable or Disable Golden Bacon [true / false default: true")
+                    .define("Enable Golden Bacon", true);
+            disableGoldenBakedPotato = builder
+                    .comment("Enable or Disable Golden Baked Potato [true / false default: true")
+                    .define("Enable Golden Baked Potato", true);
+            disableGoldenMelonSlice = builder
+                    .comment("Enable or Disable Golden Melon Slice [true / false default: true")
+                    .define("Enable Golden Melon Slice", true);
+            disableGoldenPotato = builder
+                    .comment("Enable or Disable Golden Potato [true / false default: true")
+                    .define("Enable Golden Potato", true);
             disableMelonSlice = builder
                     .comment("Enable or Disable Melon Slice [true / false default: true")
                     .define("Enable Melon Slice", true);
@@ -477,6 +493,9 @@ import net.minecraftforge.common.ForgeConfigSpec;
             disableIronToolsExtras = builder
                     .comment("Setting this to false will disable the extra Iron tools [true / false default: true")
                     .define("Enable extra Iron tools", true);
+            disableNetheriteToolsExtras = builder
+                    .comment("Setting this to false will disable the extra Netherite tools [true / false default: true")
+                    .define("Enable extra Netherite tools", true);
             disableStoneToolsExtras = builder
                     .comment("Setting this to false will disable the extra Stone tools [true / false default: true")
                     .define("Enable extra Stone tools", true);

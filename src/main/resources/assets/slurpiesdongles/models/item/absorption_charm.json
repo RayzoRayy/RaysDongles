@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "slurpiesdongles:charms/absorption_charm"
+    "layer0": "slurpiesdongles:item/absorption_charm"
   }
 }

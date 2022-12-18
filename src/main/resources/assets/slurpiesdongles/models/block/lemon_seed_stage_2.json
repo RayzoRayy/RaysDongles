@@ -1,7 +1,7 @@
 {
     "parent": "block/crop",
     "textures": {
-        "crop": "slurpiesdongles:blocks/lemon_seed_stage_2"
+        "crop": "slurpiesdongles:block/lemon_seed_stage_2"
     },
     "render_type": "cutout"
 }

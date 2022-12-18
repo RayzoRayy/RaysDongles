@@ -4,22 +4,24 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.HitResult;
+
+import javax.annotation.Nullable;
 
 public class ExcavatorItem extends ShovelItem {
 
     public ExcavatorItem(Tier p_43114_, float p_43115_, float p_43116_, Properties p_43117_) {
         super(p_43114_, p_43115_, p_43116_, p_43117_);
     }
-
     @Override
     public boolean canAttackBlock(BlockState p_41441_, Level level, BlockPos pos, Player player) {
         int radius = 1;
         if (player.isShiftKeyDown()) {
             radius = 0;
         }
-
         float originHardness = level.getBlockState(pos).getDestroySpeed(level, pos);
 
         // only do a 3x3 break if the player's tool is effective on the block they are breaking
@@ -32,7 +34,6 @@ public class ExcavatorItem extends ShovelItem {
                 return isEffective && verifyHardness;
             });
         }
-
         return true;
     }
 }

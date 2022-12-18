@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "slurpiesdongles:blocks/ruby_block"
+        "all": "slurpiesdongles:block/ruby_block"
     }
 }

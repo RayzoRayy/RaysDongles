@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:food/roasted_red_mushroom"
+        "layer0": "slurpiesdongles:item/roasted_red_mushroom"
 	}	
 }

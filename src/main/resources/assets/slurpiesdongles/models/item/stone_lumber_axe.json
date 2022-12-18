@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "slurpiesdongles:tools/stone_lumber_axe"
+    "layer0": "slurpiesdongles:item/stone_lumber_axe"
   }
 }

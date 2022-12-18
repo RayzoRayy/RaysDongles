@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "slurpiesdongles:tools/ruby_sword"
+        "layer0": "slurpiesdongles:item/ruby_sword"
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:items/pops_sign"
+        "layer0": "slurpiesdongles:item/pops_sign"
     }
 }

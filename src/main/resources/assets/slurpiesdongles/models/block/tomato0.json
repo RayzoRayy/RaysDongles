@@ -1,7 +1,7 @@
 {
     "parent": "block/crop",
     "textures": {
-        "crop": "slurpiesdongles:blocks/tomato0"
+        "crop": "slurpiesdongles:block/tomato0"
     },
     "render_type": "cutout"
 }

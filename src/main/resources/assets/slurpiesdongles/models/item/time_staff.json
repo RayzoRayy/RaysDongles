@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:items/time_staff"
+        "layer0": "slurpiesdongles:item/time_staff"
     }
 }

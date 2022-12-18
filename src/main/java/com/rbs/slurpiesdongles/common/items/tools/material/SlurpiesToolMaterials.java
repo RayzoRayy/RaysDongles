@@ -35,6 +35,7 @@ public enum SlurpiesToolMaterials implements Tier {
     GOLD_PAXEL(0, 96, 12.0F, 0, 22, () -> Ingredient.of(Items.GOLD_INGOT)),
 
     IRON_PAXEL(2, 750, 6.0F, 2, 14, () -> Ingredient.of(Items.IRON_INGOT)),
+    NETHERITE_PAXEL(4, 6093, 9.0F, 4, 15, () -> Ingredient.of(Items.IRON_INGOT)),
 
     STONE_PAXEL(1, 393, 4.0F, 1, 5, () -> Ingredient.of(Items.COBBLESTONE)),
 

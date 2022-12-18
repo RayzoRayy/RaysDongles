@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:food/holy_bread"
+        "layer0": "slurpiesdongles:item/holy_bread"
 	}	
 }

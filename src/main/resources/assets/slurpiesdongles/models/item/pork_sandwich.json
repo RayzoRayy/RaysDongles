@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:food/pork_sandwich"
+        "layer0": "slurpiesdongles:item/pork_sandwich"
 	}	
 }

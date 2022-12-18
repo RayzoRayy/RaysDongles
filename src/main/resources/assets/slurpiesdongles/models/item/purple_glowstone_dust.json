@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:items/purple_glowstone_dust"
+        "layer0": "slurpiesdongles:item/purple_glowstone_dust"
     }
 }

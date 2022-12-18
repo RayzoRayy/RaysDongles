@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "slurpiesdongles:blocks/topaz_block"
+        "all": "slurpiesdongles:block/topaz_block"
     }
 }

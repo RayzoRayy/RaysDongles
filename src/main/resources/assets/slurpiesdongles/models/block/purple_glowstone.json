@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "slurpiesdongles:blocks/purple_glowstone"
+        "all": "slurpiesdongles:block/purple_glowstone"
     }
 }

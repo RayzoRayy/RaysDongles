@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:food/raw_beef_slice"
+        "layer0": "slurpiesdongles:item/raw_beef_slice"
 	}	
 }

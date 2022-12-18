@@ -1,7 +1,7 @@
 {
     "parent": "block/cross",
     "textures": {
-        "cross": "slurpiesdongles:blocks/wild_crops"
+        "cross": "slurpiesdongles:block/wild_crops"
     },
     "render_type": "cutout"
 }

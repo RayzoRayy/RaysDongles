@@ -29,7 +29,7 @@ public class BigSandwitch extends Item {
         p_41423_.add(Component.translatable("This is a big sandwitch, longer to eat, but will fill you up!"));
     }
     @Override
-    public int getUseDuration(ItemStack par1ItemStack) {
+    public int getUseDuration(ItemStack par1ItemStack) {//How long it takes to consume the food
         return 64;
     }
 

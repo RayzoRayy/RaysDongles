@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:items/lemon_seed_stage_1"
+        "layer0": "slurpiesdongles:item/lemon_seed_stage_1"
 	},
 	"display": {
         "thirdperson": {

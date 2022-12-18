@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "slurpiesdongles:food/carrot_juice"
+        "layer0": "slurpiesdongles:item/carrot_juice"
 	}	
 }

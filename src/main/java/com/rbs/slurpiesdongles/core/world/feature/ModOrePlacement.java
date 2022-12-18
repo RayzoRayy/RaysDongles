@@ -16,7 +16,7 @@ public class ModOrePlacement {
 
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, SlurpiesDongles.MOD_ID);
 
-    public static final RegistryObject<PlacedFeature> RUBY_ORE = PLACED_FEATURES.register("ruby_ore_placed",
+    public static final RegistryObject<PlacedFeature> RUBY_ORE = PLACED_FEATURES.register("ruby_ore_placed.json",
             ()-> new PlacedFeature(OreGeneration.RUBY_ORE.getHolder().get(), commonOrePlacement(ConfigGeneral.rubyOreVeinsPerChunk.get(), //Veins Per Chunk
                     HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-ConfigGeneral.rubyLowY.get()), VerticalAnchor.aboveBottom(ConfigGeneral.rubyHighY.get())))));
 
@@ -40,4 +40,7 @@ public class ModOrePlacement {
     public static List<PlacementModifier> rareOrePlacement(int p_195350_, PlacementModifier p_195351_) {
         return orePlacement(RarityFilter.onAverageOnceEvery(p_195350_), p_195351_);
     }
+
+
+
 }

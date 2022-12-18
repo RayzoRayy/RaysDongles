@@ -50,6 +50,10 @@ public class FoodStats {
     public static final FoodProperties COOKED_RABBIT_LEG = (new FoodProperties.Builder().nutrition(3).saturationMod(0.3F).build());
     public static final FoodProperties CORN = (new FoodProperties.Builder().nutrition(6).saturationMod(1.0F).build());
     public static final FoodProperties EGGS = (new FoodProperties.Builder().nutrition(4).saturationMod(0.4F).build());
+    public static final FoodProperties GOLDEN_BACON = (new FoodProperties.Builder().nutrition(12).saturationMod(1.0F).build());
+    public static final FoodProperties GOLDEN_BAKED_POTATO = (new FoodProperties.Builder().nutrition(10).saturationMod(1.2F).build());
+    public static final FoodProperties GOLDEN_MELON_SLICE = (new FoodProperties.Builder().nutrition(4).saturationMod(0.6F).build());
+    public static final FoodProperties GOLDEN_POTATO = (new FoodProperties.Builder().nutrition(2).saturationMod(0.6F).build());
     public static final FoodProperties LEMON = (new FoodProperties.Builder().nutrition(2).saturationMod(0.2F).build());
     public static final FoodProperties MELON_SLICE = (new FoodProperties.Builder().nutrition(1).saturationMod(0.2F).build());
     public static final FoodProperties MIXED_FRUIT_BOWL = (new FoodProperties.Builder().nutrition(11).saturationMod(0.8F).build());
@@ -59,8 +63,8 @@ public class FoodStats {
     public static final FoodProperties PORK_SANDWICH = (new FoodProperties.Builder().nutrition(10).saturationMod(0.6F).build());
     public static final FoodProperties POTATO_WEDGE = (new FoodProperties.Builder().nutrition(3).saturationMod(0.3F).build());
     public static final FoodProperties RABBIT_LEG = (new FoodProperties.Builder().nutrition(1).saturationMod(0.1F).build());
-    public static final FoodProperties RAW_BACON = (new FoodProperties.Builder().nutrition(2).saturationMod(0.2F).effect(new MobEffectInstance(MobEffects.SATURATION, 200, 1), 1.0F).build());
-    public static final FoodProperties RAW_BEEF_SLICE = (new FoodProperties.Builder().nutrition(1).saturationMod(0.2F).effect(new MobEffectInstance(MobEffects.SATURATION, 200, 1), 1.0F).build());
+    public static final FoodProperties RAW_BACON = (new FoodProperties.Builder().nutrition(2).saturationMod(0.2F).effect(new MobEffectInstance(MobEffects.POISON, 200, 1), 1.0F).build());
+    public static final FoodProperties RAW_BEEF_SLICE = (new FoodProperties.Builder().nutrition(1).saturationMod(0.2F).effect(new MobEffectInstance(MobEffects.POISON, 200, 1), 1.0F).build());
     public static final FoodProperties RAW_POTATO_WEDGE = (new FoodProperties.Builder().nutrition(1).saturationMod(0.2F).build());
     public static final FoodProperties ROASTED_APPLE = (new FoodProperties.Builder().nutrition(6).saturationMod(0.7F).build());
     public static final FoodProperties ROASTED_BEETROOT_SEEDS = (new FoodProperties.Builder().nutrition(2).saturationMod(0.3F).build());

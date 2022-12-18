@@ -5,8 +5,8 @@ import com.rbs.slurpiesdongles.core.events.ModMobDrops;
 import com.rbs.slurpiesdongles.core.init.ModBlocks;
 import com.rbs.slurpiesdongles.core.init.ModFood;
 import com.rbs.slurpiesdongles.core.init.ModItems;
-import com.rbs.slurpiesdongles.core.world.OreGeneration;
-import com.rbs.slurpiesdongles.core.world.feature.ModOrePlacement;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -21,6 +21,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(SlurpiesDongles.MOD_ID)
 public class SlurpiesDongles
 {
+
     public static final String MOD_ID = "slurpiesdongles";
     public static final Logger LOGGER = LogManager.getLogger();
 
@@ -31,19 +32,16 @@ public class SlurpiesDongles
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-
         ModBlocks.BLOCKS.register(bus);
         ModFood.register(bus);
         ModItems.register(bus);
-
-
-        OreGeneration.CONFIGURED_FEATURE.register(bus);
-        ModOrePlacement.PLACED_FEATURES.register(bus);
 
         MinecraftForge.EVENT_BUS.register(ModMobDrops.class);
         bus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -51,6 +49,7 @@ public class SlurpiesDongles
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents {
         }
+
     }
 
 

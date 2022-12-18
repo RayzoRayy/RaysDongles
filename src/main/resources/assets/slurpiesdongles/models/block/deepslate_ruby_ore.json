@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "slurpiesdongles:blocks/deepslate_ruby_ore"
+        "all": "slurpiesdongles:block/deepslate_ruby_ore"
     }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "slurpiesdongles:items/raw_topaz"
+    "layer0": "slurpiesdongles:item/raw_topaz"
   }
 }

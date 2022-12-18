@@ -29,11 +29,15 @@ import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraftforge.common.ToolAction;
+import net.minecraftforge.common.ToolActions;
 
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
+
+import static net.minecraftforge.common.TierSortingRegistry.isCorrectTierForDrops;
 
 public class PaxelItem extends DiggerItem {
 
@@ -47,7 +51,7 @@ public class PaxelItem extends DiggerItem {
 
 
     public PaxelItem(float p_150810_, float p_150811_, Tier p_150812_, Properties p_150814_) {
-        super(p_150810_, p_150811_, p_150812_, SDBlockTags.PAXEL_MINEABLE, p_150814_);
+        super(p_150810_, p_150811_, p_150812_, SDBlockTags.Blocks.MINEABLE_WITH_PAXEL, p_150814_);
         this.attackDamage = (float)p_150810_ + p_150812_.getAttackDamageBonus();
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", (double)this.attackDamage, AttributeModifier.Operation.ADDITION));
@@ -55,21 +59,29 @@ public class PaxelItem extends DiggerItem {
         this.defaultModifiers = builder.build();
     }
 
+    @Override
+    public float getDestroySpeed(ItemStack itemStack, BlockState blockState) {
+        return getTier().getSpeed();
+
+    }
+
+    @Override
+    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
+        return isCorrectTierForDrops(getTier(), state);
+    }
+
+    @Override
+    public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
+        return ToolActions.DEFAULT_PICKAXE_ACTIONS.contains(toolAction) ||
+                ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) ||
+                ToolActions.DEFAULT_HOE_ACTIONS.contains(toolAction) ||
+                ToolActions.DEFAULT_SHOVEL_ACTIONS.contains(toolAction);
+    }
 
     public boolean hurtEnemy(ItemStack p_43278_, LivingEntity p_43279_, LivingEntity p_43280_) {
         p_43278_.hurtAndBreak(1, p_43280_, (p_43296_) -> {
             p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
         });
-        return true;
-    }
-
-    public boolean mineBlock(ItemStack p_43282_, Level p_43283_, BlockState p_43284_, BlockPos p_43285_, LivingEntity p_43286_) {
-        if (p_43284_.getDestroySpeed(p_43283_, p_43285_) != 0.0F) {
-            p_43282_.hurtAndBreak(2, p_43286_, (p_43276_) -> {
-                p_43276_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
-            });
-        }
-
         return true;
     }
 
@@ -166,15 +178,6 @@ public class PaxelItem extends DiggerItem {
     @javax.annotation.Nullable
     public static BlockState getShovelPathingState(BlockState originalState) {
         return FLATTENABLES.get(originalState.getBlock());
-    }
-
-    @Override
-    public boolean canPerformAction(ItemStack stack, net.minecraftforge.common.ToolAction toolAction) {
-        return net.minecraftforge.common.ToolActions.DEFAULT_SHOVEL_ACTIONS.contains(toolAction) ||
-                net.minecraftforge.common.ToolActions.DEFAULT_SWORD_ACTIONS.contains(toolAction) ||
-                net.minecraftforge.common.ToolActions.DEFAULT_HOE_ACTIONS.contains(toolAction) ||
-                net.minecraftforge.common.ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) ||
-                net.minecraftforge.common.ToolActions.DEFAULT_PICKAXE_ACTIONS.contains(toolAction);
     }
 
     public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot p_43274_) {
