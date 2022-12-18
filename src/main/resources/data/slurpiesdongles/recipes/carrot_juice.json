@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:carrot"
+    },
+	{
+	  "item": "slurpiesdongles:blender" 
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:carrot_juice"
+  }
+}

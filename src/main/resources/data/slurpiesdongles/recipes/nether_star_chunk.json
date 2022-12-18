@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:nether_star"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:nether_star_chunk",
+    "count": 9
+  }
+}

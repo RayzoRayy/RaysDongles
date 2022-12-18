@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "ENE",
+    "XEX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:ghast_tear"
+    },
+    "N": {
+      "item": "slurpiesdongles:absorption_charm"
+    },
+    "E": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:absorption_charm_tier_2"
+  }
+}

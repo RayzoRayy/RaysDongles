@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:vmh_upgrade"
+    },
+    {
+      "item": "slurpiesdongles:stone_hammer"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:vm_hammer"
+  }
+}

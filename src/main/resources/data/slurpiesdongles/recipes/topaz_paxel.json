@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ADP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick"
+    },
+    "A": {
+    "item": "slurpiesdongles:topaz_axe"
+    },
+      "D": {
+    "item": "slurpiesdongles:topaz_shovel"
+      },
+      "P": {
+          "item": "slurpiesdongles:topaz_pickaxe"
+      }
+  },
+  "result": {
+    "item": "slurpiesdongles:topaz_paxel"
+  }
+}

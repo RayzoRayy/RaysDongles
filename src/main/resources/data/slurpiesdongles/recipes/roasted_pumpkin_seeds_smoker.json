@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "minecraft:pumpkin_seeds"
+  },
+  "result": "slurpiesdongles:roasted_pumpkin_seeds",
+  "experience": 0.35,
+  "cookingtime": 100
+}

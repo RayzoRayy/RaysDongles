@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TT ",
+    "TH ",
+    "  H"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:dark_oak_planks"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:wooden_excavator"
+  }
+}

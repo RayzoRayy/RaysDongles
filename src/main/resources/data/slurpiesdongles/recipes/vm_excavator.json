@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "slurpiesdongles:vme_upgrade"
+    },
+    {
+      "item": "slurpiesdongles:stone_excavator"
+    }
+  ],
+  "result": {
+    "item": "slurpiesdongles:vm_excavator"
+  }
+}

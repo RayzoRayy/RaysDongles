@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "I I",
+    "SQS"
+  ],
+  "key": {
+    "I": {
+    "item": "minecraft:iron_ingot"
+    },
+    "Q": {
+    "item": "minecraft:quartz"
+    },
+    "S": {
+    "item": "minecraft:stone"
+    }
+  },
+  "result": {
+    "item": "slurpiesdongles:blender"
+  }
+}

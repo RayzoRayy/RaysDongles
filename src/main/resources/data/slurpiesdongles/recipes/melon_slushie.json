@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "slurpiesdongles:sugarcoated_melon"
+    },
+	{
+	  "item": "slurpiesdongles:blender" 
+	}
+  ],
+  "result": {
+    "item": "slurpiesdongles:melon_slushie"
+  }
+}
