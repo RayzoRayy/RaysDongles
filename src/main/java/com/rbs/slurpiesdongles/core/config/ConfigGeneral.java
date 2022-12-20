@@ -45,7 +45,6 @@ public class ConfigGeneral {
     public static BooleanValue disableWitheredArmor;
     //Blocks
     public static BooleanValue disableBlenderBlock;
-    public static BooleanValue disableStoneTorch;
     public static BooleanValue disableReinforcedObsidian;
     //Blocks but Crops
     public static BooleanValue disableWildCrops;
@@ -198,9 +197,6 @@ public class ConfigGeneral {
             disableReinforcedObsidian = builder
                     .comment("Setting this to false will disable the Reinforced Obsidian Block [true / false default:true")
                     .define("Enable Reinforced Obsidian Block", true);
-            disableStoneTorch = builder
-                    .comment("Setting this to false will disable the Stone Torch [true / false default:true")
-                    .define("Enable Stone Torch", true);
             //Blocks but Crops
             disableWildCrops = builder
                     .comment("Setting this to false will disable the Wild Crops [true / false default:true")

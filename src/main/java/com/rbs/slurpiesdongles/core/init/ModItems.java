@@ -1,13 +1,12 @@
 package com.rbs.slurpiesdongles.core.init;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
-import com.rbs.slurpiesdongles.common.items.ContainerItem;
 import com.rbs.slurpiesdongles.common.items.armor.WitheredArmor;
+import com.rbs.slurpiesdongles.common.items.ContainerItem;
 import com.rbs.slurpiesdongles.common.items.armor.material.SlurpiesArmorMaterials;
 import com.rbs.slurpiesdongles.common.items.charms.*;
 import com.rbs.slurpiesdongles.common.items.tools.*;
 import com.rbs.slurpiesdongles.common.items.tools.material.SlurpiesToolMaterials;
-import com.rbs.slurpiesdongles.core.config.ConfigGeneral;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -187,7 +186,7 @@ public class ModItems {
             RegistryObject<Item> AMETHYST_PAXEL = ITEMS.register("amethyst_paxel",
                     () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.AMETHYST_PAXEL, props()));
             RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe",
-                    () -> new PickaxeItem(SlurpiesToolMaterials.AMETHYST, 1, -2.8F, props()));
+                    () -> new ModPickaxeItem(SlurpiesToolMaterials.AMETHYST, 1, -2.8F, props()));
             RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel",
                     () -> new ShovelItem(SlurpiesToolMaterials.AMETHYST, 1.5F, -3.0F, props()));
             RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword",
@@ -209,7 +208,7 @@ public class ModItems {
             RegistryObject<Item> RUBY_PAXEL = ITEMS.register("ruby_paxel",
                     () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.RUBY_PAXEL, props()));
             RegistryObject<Item> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe",
-                    () -> new PickaxeItem(SlurpiesToolMaterials.RUBY, 1, -2.8F, props()));
+                    () -> new ModPickaxeItem(SlurpiesToolMaterials.RUBY, 1, -2.8F, props()));
             RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
                     () -> new ShovelItem(SlurpiesToolMaterials.RUBY, 1.5F, -3.0F, props()));
             RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword",
@@ -231,7 +230,7 @@ public class ModItems {
             RegistryObject<Item> TOPAZ_PAXEL = ITEMS.register("topaz_paxel",
                     () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.TOPAZ_PAXEL, props()));
             RegistryObject<Item> TOPAZ_PICKAXE = ITEMS.register("topaz_pickaxe",
-                    () -> new PickaxeItem(SlurpiesToolMaterials.TOPAZ, 1, -2.8F, props()));
+                    () -> new ModPickaxeItem(SlurpiesToolMaterials.TOPAZ, 1, -2.8F, props()));
             RegistryObject<Item> TOPAZ_SHOVEL = ITEMS.register("topaz_shovel",
                     () -> new ShovelItem(SlurpiesToolMaterials.TOPAZ, 1.5F, -3.0F, props()));
             RegistryObject<Item> TOPAZ_SWORD = ITEMS.register("topaz_sword",
@@ -253,7 +252,7 @@ public class ModItems {
             RegistryObject<Item> WITHERED_PAXEL = ITEMS.register("withered_paxel",
                     () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.WITHERED_PAXEL, props()));
             RegistryObject<Item> WITHERED_PICKAXE = ITEMS.register("withered_pickaxe",
-                    () -> new PickaxeItem(SlurpiesToolMaterials.WITHERED, 1, -2.8F, props()));
+                    () -> new ModPickaxeItem(SlurpiesToolMaterials.WITHERED, 1, -2.8F, props()));
             RegistryObject<Item> WITHERED_SHOVEL = ITEMS.register("withered_shovel",
                     () -> new ShovelItem(SlurpiesToolMaterials.WITHERED, 1.5F, -3.0F, props()));
             RegistryObject<Item> WITHERED_SWORD = ITEMS.register("withered_sword",
@@ -338,7 +337,7 @@ public class ModItems {
                                     RegistryObject<Item> VM_HAMMER = ITEMS.register("vm_hammer",
                                             () -> new HammerItem(1, -2.8F, SlurpiesToolMaterials.VMPICK, props()));
                                     RegistryObject<Item> VM_PICKAXE = ITEMS.register("vmpick",
-                                            () -> new PickaxeItem(SlurpiesToolMaterials.VMPICK, 1, -2.8F, props()));
+                                            () -> new ModPickaxeItem(SlurpiesToolMaterials.VMPICK, 1, -2.8F, props()));
                                 }
                             }
     private static Item.Properties props () {

@@ -2,7 +2,6 @@ package com.rbs.slurpiesdongles.core.init;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
 import com.rbs.slurpiesdongles.common.blocks.*;
-import com.rbs.slurpiesdongles.common.items.charms.AbsorptionCharm;
 import com.rbs.slurpiesdongles.core.config.ConfigGeneral;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -22,9 +21,6 @@ import static net.minecraft.world.level.block.Blocks.*;
 public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SlurpiesDongles.MOD_ID);
-
-    public static RegistryObject<TorchBlock> STONE_TORCH = null;
-    public static RegistryObject<WallTorchBlock> WALL_STONE_TORCH = null;
     public static final RegistryObject<Block> BLUE_BRICKS = register("blue_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(BRICKS)
                     .requiresCorrectToolForDrops()));
@@ -66,11 +62,28 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5.0F, 6.0F)
                     .requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> TOPAZ_BLOCK = register("topaz_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5.0F, 6.0F)
                     .requiresCorrectToolForDrops()));
+    //Blocks but items
+        public static final RegistryObject<TorchBlock> STONE_TORCH = register("stone_torch",
+                () -> new TorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                        .noCollission()
+                        .strength(0)
+                        .lightLevel(state -> 8)
+                        .sound(SoundType.STONE),
+                        ParticleTypes.FLAME),
+                bro -> getStoneTorchItem());
+       public static final RegistryObject<WallTorchBlock> WALL_STONE_TORCH = registerBlockNoItem("wall_stone_torch",
+                () -> new WallTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                        .noCollission()
+                        .strength(0)
+                        .sound(SoundType.STONE)
+                        .lightLevel(state -> 8)
+                        .lootFrom(STONE_TORCH::get),
+                        ParticleTypes.FLAME));
+
 
     //Crops
     public static final RegistryObject<Block> CABBAGE_CROP = register("cabbage_crop",
@@ -92,37 +105,16 @@ public class ModBlocks {
     }
     private static <T extends Block> RegistryObject<T> registerBlockNoItem(String name, Supplier<T> block) {
         RegistryObject<T> tooReturn = BLOCKS.register(name, block);
-
         //Blocks
         if (ConfigGeneral.disableBlenderBlock.get()) {
             RegistryObject<Block> BLENDER_BLOCK = register("blender_block",
-                    () -> new BlenderBlock(BlockBehaviour.Properties.copy(WHITE_CONCRETE)));
+                    () -> new BlenderBlock(BlockBehaviour.Properties.copy(WHITE_CONCRETE).requiresCorrectToolForDrops()));
         }
         if (ConfigGeneral.disableReinforcedObsidian.get()) {
             RegistryObject<Block> REINFORCED_OBSIDIAN = register("reinforced_obsidian",
                     () -> new ReinforcedObsidian(BlockBehaviour.Properties.of(Material.STONE)
                             .strength(100.0F, 2400.0F)
                             .requiresCorrectToolForDrops()));
-        }
-        if (ConfigGeneral.disableStoneTorch.get()) {
-            STONE_TORCH = register("stone_torch",
-                    () -> new TorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
-                            .noCollission()
-                            .strength(0)
-                            .lightLevel(state -> 8)
-                            .sound(SoundType.STONE),
-                            ParticleTypes.FLAME),
-                    bro -> getStoneTorchItem());
-        }
-        if (ConfigGeneral.disableStoneTorch.get()) {
-            WALL_STONE_TORCH = registerBlockNoItem("wall_stone_torch",
-                    () -> new WallTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
-                            .noCollission()
-                            .strength(0)
-                            .sound(SoundType.STONE)
-                            .lightLevel(state -> 8)
-                            .lootFrom(STONE_TORCH::get),
-                            ParticleTypes.FLAME));
         }
         //Blocks but Crops
         if (ConfigGeneral.disableWildCrops.get()) {
@@ -159,9 +151,11 @@ public class ModBlocks {
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, Function<RegistryObject<T>, Supplier<? extends BlockItem>> item) {
         RegistryObject<T> ret = registerBlock(name, block);
         ModItems.ITEMS.register(name, item.apply(ret));
+
         return ret;
     }
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
+
         return register(name, block, ModBlocks::defaultItem);
     }
     private static <T extends Block> Supplier<BlockItem> defaultItem(RegistryObject<T> block) {

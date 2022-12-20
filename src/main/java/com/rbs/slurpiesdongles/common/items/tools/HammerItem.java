@@ -15,16 +15,6 @@ public class HammerItem extends DiggerItem {
         super(atkDmg, atkSpd, tier, SDBlockTags.Blocks.MINEABLE_WITH_HAMMER, properties);
     }
     @Override
-    public float getDestroySpeed(ItemStack itemStack, BlockState blockState) {
-        return getTier().getSpeed();
-
-    }
-    @Override
-    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
-        return isCorrectTierForDrops(getTier(), state);
-    }
-
-    @Override
     public boolean canAttackBlock(BlockState p_41441_, Level level, BlockPos pos, Player player) {
         int radius = 1;
         if (player.isShiftKeyDown()) {
