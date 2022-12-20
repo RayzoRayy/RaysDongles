@@ -2,10 +2,11 @@ package com.rbs.slurpiesdongles.core.init;
 
 import com.rbs.slurpiesdongles.SlurpiesDongles;
 import com.rbs.slurpiesdongles.common.blocks.*;
+import com.rbs.slurpiesdongles.common.items.charms.AbsorptionCharm;
+import com.rbs.slurpiesdongles.core.config.ConfigGeneral;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.level.block.*;
@@ -22,6 +23,8 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SlurpiesDongles.MOD_ID);
 
+    public static RegistryObject<TorchBlock> STONE_TORCH = null;
+    public static RegistryObject<WallTorchBlock> WALL_STONE_TORCH = null;
     public static final RegistryObject<Block> BLUE_BRICKS = register("blue_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(BRICKS)
                     .requiresCorrectToolForDrops()));
@@ -58,36 +61,16 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(GLOWSTONE)));
     public static final RegistryObject<Block> RED_GLOWSTONE = register("red_glowstone",
             () -> new Block(BlockBehaviour.Properties.copy(GLOWSTONE)));
-    public static final RegistryObject<Block> REINFORCED_OBSIDIAN = register("reinforced_obsidian",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(100.0F, 2400.0F)
-                    .requiresCorrectToolForDrops()));
+    //Blocks
     public static final RegistryObject<Block> RUBY_BLOCK = register("ruby_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5.0F, 6.0F)
                     .requiresCorrectToolForDrops()));
-    public static final RegistryObject<TorchBlock> STONE_TORCH = register("stone_torch",
-            () -> new TorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
-                    .noCollission()
-                    .strength(0)
-                    .lightLevel(state -> 8)
-                    .sound(SoundType.STONE),
-                    ParticleTypes.FLAME),
-            bro -> getStoneTorchItem());
 
     public static final RegistryObject<Block> TOPAZ_BLOCK = register("topaz_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5.0F, 6.0F)
                     .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<WallTorchBlock> WALL_STONE_TORCH = registerBlockNoItem("wall_stone_torch",
-            () -> new WallTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
-                    .noCollission()
-                    .strength(0)
-                    .sound(SoundType.STONE)
-                    .lightLevel(state -> 8)
-                    .lootFrom(STONE_TORCH::get),
-                    ParticleTypes.FLAME));
 
     //Crops
     public static final RegistryObject<Block> CABBAGE_CROP = register("cabbage_crop",
@@ -102,27 +85,6 @@ public class ModBlocks {
             () -> new StrawberryCropBlock(BlockBehaviour.Properties.copy(WHEAT)));
     public static final RegistryObject<Block> TOMATO_CROP = register("tomato_crop",
             () -> new TomatoCropBlock(BlockBehaviour.Properties.copy(CARROTS)));
-    public static final RegistryObject<Block> WILD_CROPS = register("wild_crops",
-            () -> new TallGrassBlock(BlockBehaviour.Properties.copy(GRASS)));
-
-    //Ores
-    public static final RegistryObject<Block> RUBY_ORE = register("ruby_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.0F, 3.0F)
-                    .requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = register("deepslate_ruby_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.0F, 3.0F)
-                    .requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> TOPAZ_ORE = register("topaz_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.0F, 3.0F)
-                    .requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> DEEPSLATE_TOPAZ_ORE = register("deepslate_topaz_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.0F, 3.0F)
-                    .requiresCorrectToolForDrops()));
-
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -130,6 +92,68 @@ public class ModBlocks {
     }
     private static <T extends Block> RegistryObject<T> registerBlockNoItem(String name, Supplier<T> block) {
         RegistryObject<T> tooReturn = BLOCKS.register(name, block);
+
+        //Blocks
+        if (ConfigGeneral.disableBlenderBlock.get()) {
+            RegistryObject<Block> BLENDER_BLOCK = register("blender_block",
+                    () -> new BlenderBlock(BlockBehaviour.Properties.copy(WHITE_CONCRETE)));
+        }
+        if (ConfigGeneral.disableReinforcedObsidian.get()) {
+            RegistryObject<Block> REINFORCED_OBSIDIAN = register("reinforced_obsidian",
+                    () -> new ReinforcedObsidian(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(100.0F, 2400.0F)
+                            .requiresCorrectToolForDrops()));
+        }
+        if (ConfigGeneral.disableStoneTorch.get()) {
+            STONE_TORCH = register("stone_torch",
+                    () -> new TorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                            .noCollission()
+                            .strength(0)
+                            .lightLevel(state -> 8)
+                            .sound(SoundType.STONE),
+                            ParticleTypes.FLAME),
+                    bro -> getStoneTorchItem());
+        }
+        if (ConfigGeneral.disableStoneTorch.get()) {
+            WALL_STONE_TORCH = registerBlockNoItem("wall_stone_torch",
+                    () -> new WallTorchBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                            .noCollission()
+                            .strength(0)
+                            .sound(SoundType.STONE)
+                            .lightLevel(state -> 8)
+                            .lootFrom(STONE_TORCH::get),
+                            ParticleTypes.FLAME));
+        }
+        //Blocks but Crops
+        if (ConfigGeneral.disableWildCrops.get()) {
+            RegistryObject<Block> WILD_CROPS = register("wild_crops",
+                    () -> new TallGrassBlock(BlockBehaviour.Properties.copy(GRASS)));
+        }
+        //Blocks but Ores
+        if (ConfigGeneral.disableDeepslateRubyOre.get()) {
+            RegistryObject<Block> DEEPSLATE_RUBY_ORE = register("deepslate_ruby_ore",
+                    () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(3.0F, 3.0F)
+                            .requiresCorrectToolForDrops()));
+        }
+        if (ConfigGeneral.disableDeepslateTopazOre.get()) {
+            RegistryObject<Block> DEEPSLATE_TOPAZ_ORE = register("deepslate_topaz_ore",
+                    () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(3.0F, 3.0F)
+                            .requiresCorrectToolForDrops()));
+        }
+        if (ConfigGeneral.disableRubyOre.get()) {
+            RegistryObject<Block> RUBY_ORE = register("ruby_ore",
+                    () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(3.0F, 3.0F)
+                            .requiresCorrectToolForDrops()));
+        }
+        if (ConfigGeneral.disableTopazOre.get()) {
+            RegistryObject<Block> TOPAZ_ORE = register("topaz_ore",
+                    () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(3.0F, 3.0F)
+                            .requiresCorrectToolForDrops()));
+        }
         return tooReturn;
     }
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, Function<RegistryObject<T>, Supplier<? extends BlockItem>> item) {

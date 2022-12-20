@@ -14,6 +14,7 @@ import java.nio.file.Path;
         static {
             BUILDER.push("Configs");
             ConfigGeneral.init(BUILDER);
+            ConfigGeneral.init1();
             BUILDER.pop();
 
             SPEC = BUILDER.build();

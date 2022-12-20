@@ -9,6 +9,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -44,8 +45,8 @@ public class WitheredArmor extends ArmorItem {
             }
         }
     }
-    public Rarity getRarity(ItemStack stack) {
-        return stack.getCount() == 0 ? Rarity.EPIC : Rarity.EPIC;
+    public @NotNull Rarity getRarity(@NotNull ItemStack stack) {
+        return Rarity.EPIC;
 
     }
 
@@ -54,8 +55,8 @@ public class WitheredArmor extends ArmorItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack p_41421_, @Nullable Level p_41422_, List<Component> p_41423_, TooltipFlag p_41424_) {
-        p_41423_.add(Component.translatable("Wearing this armor as a set grants flight"));
+    public void appendHoverText(@NotNull ItemStack p_41421_, @Nullable Level p_41422_, List<Component> toolTip, @NotNull TooltipFlag tooltipFlag) {
+        toolTip.add(Component.translatable("Wearing this armor as a set grants flight"));
     }
     @Override
     public boolean isBookEnchantable(ItemStack stack, ItemStack book)
@@ -68,7 +69,7 @@ public class WitheredArmor extends ArmorItem {
     }
 
     @Override
-    public void onCraftedBy(ItemStack stack, Level p_41448_, net.minecraft.world.entity.player.Player p_41449_) {
+    public void onCraftedBy(ItemStack stack, @NotNull Level p_41448_, net.minecraft.world.entity.player.@NotNull Player p_41449_) {
         stack.enchant(Enchantments.ALL_DAMAGE_PROTECTION, 4);
     }
 }

@@ -1,121 +1,168 @@
 package com.rbs.slurpiesdongles.core.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
-    public class ConfigGeneral {
-        public static ConfigGeneral INSTANCE;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.config.ModConfig;
+import org.apache.commons.lang3.tuple.Pair;
 
-        //Actual Items
-        public static ForgeConfigSpec.BooleanValue disableNetherStarChunk;
-        public static ForgeConfigSpec.BooleanValue disablePopsSign;
-        public static ForgeConfigSpec.BooleanValue disableStoneRod;
-        //Armor
-        public static ForgeConfigSpec.BooleanValue disableAmethystArmor;
-        public static ForgeConfigSpec.BooleanValue disableRubyArmor;
-        public static ForgeConfigSpec.BooleanValue disableTopazArmor;
-        public static ForgeConfigSpec.BooleanValue disableWitheredArmor;
-        //Blocks
-        //Charms
-        public static ForgeConfigSpec.BooleanValue disableAbsorptionCharm;
-        public static ForgeConfigSpec.BooleanValue disableAbsorptionCharmTier2;
-        public static ForgeConfigSpec.BooleanValue disableFireResistanceCharm;
-        public static ForgeConfigSpec.BooleanValue disableNightVisionCharm;
-        public static ForgeConfigSpec.BooleanValue disableRegenerationCharm;
-        public static ForgeConfigSpec.BooleanValue disableRegenerationCharmTier2;
-        public static ForgeConfigSpec.BooleanValue disableSpeedCharm;
-        public static ForgeConfigSpec.BooleanValue disableSpeedCharmTier2;
-        public static ForgeConfigSpec.BooleanValue disableStrengthCharm;
-        public static ForgeConfigSpec.BooleanValue disableStrengthCharmTier2;
-        public static ForgeConfigSpec.BooleanValue disableWaterbreathingCharm;
-        //Drinks
-        public static ForgeConfigSpec.BooleanValue disableAppleJuice;
-        public static ForgeConfigSpec.BooleanValue disableAppleSlushie;
-        public static ForgeConfigSpec.BooleanValue disableCarrotJuice;
-        public static ForgeConfigSpec.BooleanValue disableLemonade;
-        public static ForgeConfigSpec.BooleanValue disableMelonJuice;
-        public static ForgeConfigSpec.BooleanValue disableMelonSlushie;
-        public static ForgeConfigSpec.BooleanValue disableOrangeJuice;
-        public static ForgeConfigSpec.BooleanValue disableOrangeLemonade;
-        public static ForgeConfigSpec.BooleanValue disableOrangeSlushie;
-        public static ForgeConfigSpec.BooleanValue disableStrawberryJuice;
-        public static ForgeConfigSpec.BooleanValue disableStrawberryLemonade;
-        public static ForgeConfigSpec.BooleanValue disableStrawberrySlushie;
-        public static ForgeConfigSpec.BooleanValue disableTomatoJuice;
-        //Events
-        public static ForgeConfigSpec.IntValue rawBaconDropAmount;
-        //Food
-        public static ForgeConfigSpec.BooleanValue disableAppleSlice;
-        public static ForgeConfigSpec.BooleanValue disableBacon;
-        public static ForgeConfigSpec.BooleanValue disableBaconEggSandwitch;
-        public static ForgeConfigSpec.BooleanValue disableBaconPotatoBeefStew;
-        public static ForgeConfigSpec.BooleanValue disableBaconPotatoChickenStew;
-        public static ForgeConfigSpec.BooleanValue disableBeefJerky;
-        public static ForgeConfigSpec.BooleanValue disableBeefChickenSandwich;
-        public static ForgeConfigSpec.BooleanValue disableBeefPorkSandwich;
-        public static ForgeConfigSpec.BooleanValue disableBeefSandwich;
-        public static ForgeConfigSpec.BooleanValue disableCookedCarrot;
-        public static ForgeConfigSpec.BooleanValue disableCarrotStick;
-        public static ForgeConfigSpec.BooleanValue disableChickenNugget;
-        public static ForgeConfigSpec.BooleanValue disableChickenSandwich;
-        public static ForgeConfigSpec.BooleanValue disableChickenPorkSandwich;
-        public static ForgeConfigSpec.BooleanValue disableCookedCarrotStick;
-        public static ForgeConfigSpec.BooleanValue disableCookedRabbitLeg;
-        public static ForgeConfigSpec.BooleanValue disableCorn;
-        public static ForgeConfigSpec.BooleanValue disableEggs;
-        public static ForgeConfigSpec.BooleanValue disableGoldenBacon;// 12 /1.0
-        public static ForgeConfigSpec.BooleanValue disableGoldenBakedPotato;// 10 /1.2
-        public static ForgeConfigSpec.BooleanValue disableGoldenMelonSlice;// 4 /0.6
-        public static ForgeConfigSpec.BooleanValue disableGoldenPotato;// 2 /0.6
-        public static ForgeConfigSpec.BooleanValue disableMelonSlice;
-        public static ForgeConfigSpec.BooleanValue disableMixedFruitBowl;
-        public static ForgeConfigSpec.BooleanValue disableMixedSeeds;
-        public static ForgeConfigSpec.BooleanValue disablePizza;
-        public static ForgeConfigSpec.BooleanValue disablePorkSandwich;
-        public static ForgeConfigSpec.BooleanValue disablePotatoWedge;
-        public static ForgeConfigSpec.BooleanValue disableRabbitLeg;
-        public static ForgeConfigSpec.BooleanValue disableRawBeefSlice;
-        public static ForgeConfigSpec.BooleanValue disableRawCorn;
-        public static ForgeConfigSpec.BooleanValue disableRawPotatoWedge;
-        public static ForgeConfigSpec.BooleanValue disableRoastedApple;
-        public static ForgeConfigSpec.BooleanValue disableRoastedBeetrootSeeds;
-        public static ForgeConfigSpec.BooleanValue disableRoastedMelonSeeds;
-        public static ForgeConfigSpec.BooleanValue disableRoastedMushroom;
-        public static ForgeConfigSpec.BooleanValue disableRoastedPumpkinSeeds;
-        public static ForgeConfigSpec.BooleanValue disableRoastedRedMushroom;
-        public static ForgeConfigSpec.BooleanValue disableRoastedSeeds;
-        public static ForgeConfigSpec.BooleanValue disableStrawberry;
-        public static ForgeConfigSpec.BooleanValue disableSugarCoatedApple;
-        public static ForgeConfigSpec.BooleanValue disableSugarCoatedLemon;
-        public static ForgeConfigSpec.BooleanValue disableSugarCoatedMelon;
-        public static ForgeConfigSpec.BooleanValue disableSugarCoatedOrange;
-        public static ForgeConfigSpec.BooleanValue disableSugarCoatedStrawberry;
-        public static ForgeConfigSpec.BooleanValue disableToast;
-        public static ForgeConfigSpec.BooleanValue disableToastedBaconEggSandwich;
-        //Regen Stuffs
-        public static ForgeConfigSpec.BooleanValue disableDiamondApple;
-        public static ForgeConfigSpec.BooleanValue disableEnchantedDiamondApple;
-        public static ForgeConfigSpec.BooleanValue disableEmeraldApple;
-        public static ForgeConfigSpec.BooleanValue disableEnchantedEmeraldApple;
-        public static ForgeConfigSpec.BooleanValue disableIronApple;
-        public static ForgeConfigSpec.BooleanValue disableEnchantedIronApple;
-        public static ForgeConfigSpec.BooleanValue disableHolyBread;
-        //Tools
-        public static ForgeConfigSpec.BooleanValue disableAmethystTools;
-        public static ForgeConfigSpec.BooleanValue disableRubyTools;
-        public static ForgeConfigSpec.BooleanValue disableTopazTools;
-        public static ForgeConfigSpec.BooleanValue disableVMTools;
-        public static ForgeConfigSpec.BooleanValue disableWitheredTools;
-        //Tools Vanilla Addons
-        public static ForgeConfigSpec.BooleanValue disableDiamondToolsExtras;
-        public static ForgeConfigSpec.BooleanValue disableEmeraldToolsExtras;
-        public static ForgeConfigSpec.BooleanValue disableGoldToolsExtras;
-        public static ForgeConfigSpec.BooleanValue disableIronToolsExtras;
-        public static ForgeConfigSpec.BooleanValue disableNetheriteToolsExtras;
-        public static ForgeConfigSpec.BooleanValue disableStoneToolsExtras;
-        public static ForgeConfigSpec.BooleanValue disableWoodenToolsExtras;
+import static net.minecraftforge.common.ForgeConfigSpec.*;
 
-        public static void init(ForgeConfigSpec.Builder builder) {
+public class ConfigGeneral {
+    public static ConfigGeneral INSTANCE;
+    public static Common COMMON;
+    public static ForgeConfigSpec COMMON_SPEC;
+
+    public static void init1() {
+        Pair<Common, ForgeConfigSpec> commonPair = new ForgeConfigSpec.Builder().configure(Common::new);
+
+        COMMON_SPEC = commonPair.getRight();
+        COMMON = commonPair.getLeft();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, COMMON_SPEC, "Ray's Dongles-Common.toml");
+    }
+
+    public static class Common {
+
+        public ForgeConfigSpec.BooleanValue receiveUpdateMessages;
+
+        private Common(ForgeConfigSpec.Builder builder) {
+            builder.push("General");
+            receiveUpdateMessages = builder
+                    .comment("Enable or disable the Update Checker [ true / false default: true")
+                    .define("Receive update messages", true);
+            builder.pop();
+        }
+    }
+    //Actual Items
+    public static BooleanValue disableBlender;
+    public static BooleanValue disableKnife;
+    public static BooleanValue disableNetherStarChunk;
+    public static BooleanValue disablePopsSign;
+    public static BooleanValue disableStoneRod;
+    //Armor
+    public static BooleanValue disableAmethystArmor;
+    public static BooleanValue disableRubyArmor;
+    public static BooleanValue disableTopazArmor;
+    public static BooleanValue disableWitheredArmor;
+    //Blocks
+    public static BooleanValue disableBlenderBlock;
+    public static BooleanValue disableStoneTorch;
+    public static BooleanValue disableReinforcedObsidian;
+    //Blocks but Crops
+    public static BooleanValue disableWildCrops;
+    //Blocks but Ores
+    public static BooleanValue disableDeepslateRubyOre;
+    public static BooleanValue disableDeepslateTopazOre;
+    public static BooleanValue disableRubyOre;
+    public static BooleanValue disableTopazOre;
+
+    //Charms
+    public static BooleanValue disableAbsorptionCharm;
+    public static BooleanValue disableAbsorptionCharmTier2;
+    public static BooleanValue disableFireResistanceCharm;
+    public static BooleanValue disableNightVisionCharm;
+    public static BooleanValue disableRegenerationCharm;
+    public static BooleanValue disableRegenerationCharmTier2;
+    public static BooleanValue disableSpeedCharm;
+    public static BooleanValue disableSpeedCharmTier2;
+    public static BooleanValue disableStrengthCharm;
+    public static BooleanValue disableStrengthCharmTier2;
+    public static BooleanValue disableWaterbreathingCharm;
+    //Drinks
+    public static BooleanValue disableAppleJuice;
+    public static BooleanValue disableAppleSlushie;
+    public static BooleanValue disableCarrotJuice;
+    public static BooleanValue disableLemonade;
+    public static BooleanValue disableMelonJuice;
+    public static BooleanValue disableMelonSlushie;
+    public static BooleanValue disableOrangeJuice;
+    public static BooleanValue disableOrangeLemonade;
+    public static BooleanValue disableOrangeSlushie;
+    public static BooleanValue disableStrawberryJuice;
+    public static BooleanValue disableStrawberryLemonade;
+    public static BooleanValue disableStrawberrySlushie;
+    public static BooleanValue disableTomatoJuice;
+    //Events
+    public static IntValue rawBaconDropAmount;
+    //Food
+    public static BooleanValue disableAppleSlice;
+    public static BooleanValue disableBacon;
+    public static BooleanValue disableBaconEggSandwitch;
+    public static BooleanValue disableBaconPotatoBeefStew;
+    public static BooleanValue disableBaconPotatoChickenStew;
+    public static BooleanValue disableBeefJerky;
+    public static BooleanValue disableBeefChickenSandwich;
+    public static BooleanValue disableBeefPorkSandwich;
+    public static BooleanValue disableBeefSandwich;
+    public static BooleanValue disableCookedCarrot;
+    public static BooleanValue disableCarrotStick;
+    public static BooleanValue disableChickenNugget;
+    public static BooleanValue disableChickenSandwich;
+    public static BooleanValue disableChickenPorkSandwich;
+    public static BooleanValue disableCookedCarrotStick;
+    public static BooleanValue disableCookedRabbitLeg;
+    public static BooleanValue disableCorn;
+    public static BooleanValue disableEggs;
+    public static BooleanValue disableGoldenBacon;// 12 /1.0
+    public static BooleanValue disableGoldenBakedPotato;// 10 /1.2
+    public static BooleanValue disableGoldenMelonSlice;// 4 /0.6
+    public static BooleanValue disableGoldenPotato;// 2 /0.6
+    public static BooleanValue disableMelonSlice;
+    public static BooleanValue disableMixedFruitBowl;
+    public static BooleanValue disableMixedSeeds;
+    public static BooleanValue disablePizza;
+    public static BooleanValue disablePorkSandwich;
+    public static BooleanValue disablePotatoWedge;
+    public static BooleanValue disableRabbitLeg;
+    public static BooleanValue disableRawBacon;
+    public static BooleanValue disableRawBeefSlice;
+    public static BooleanValue disableRawCorn;
+    public static BooleanValue disableRawPotatoWedge;
+    public static BooleanValue disableRoastedApple;
+    public static BooleanValue disableRoastedBeetrootSeeds;
+    public static BooleanValue disableRoastedMelonSeeds;
+    public static BooleanValue disableRoastedMushroom;
+    public static BooleanValue disableRoastedPumpkinSeeds;
+    public static BooleanValue disableRoastedRedMushroom;
+    public static BooleanValue disableRoastedSeeds;
+    public static BooleanValue disableStrawberry;
+    public static BooleanValue disableSugarCoatedApple;
+    public static BooleanValue disableSugarCoatedLemon;
+    public static BooleanValue disableSugarCoatedMelon;
+    public static BooleanValue disableSugarCoatedOrange;
+    public static BooleanValue disableSugarCoatedStrawberry;
+    public static BooleanValue disableToast;
+    public static BooleanValue disableToastedBaconEggSandwich;
+    //Regen Stuffs
+    public static BooleanValue disableDiamondApple;
+    public static BooleanValue disableEnchantedDiamondApple;
+    public static BooleanValue disableEmeraldApple;
+    public static BooleanValue disableEnchantedEmeraldApple;
+    public static BooleanValue disableIronApple;
+    public static BooleanValue disableEnchantedIronApple;
+    public static BooleanValue disableHolyBread;
+    //Tools
+    public static BooleanValue disableAmethystTools;
+    public static BooleanValue disableRubyTools;
+    public static BooleanValue disableTopazTools;
+    public static BooleanValue disableVMTools;
+    public static BooleanValue disableWitheredTools;
+    //Tools Vanilla Addons
+    public static BooleanValue disableDiamondToolsExtras;
+    public static BooleanValue disableEmeraldToolsExtras;
+    public static BooleanValue disableGoldToolsExtras;
+    public static BooleanValue disableIronToolsExtras;
+    public static BooleanValue disableNetheriteToolsExtras;
+    public static BooleanValue disableStoneToolsExtras;
+    public static BooleanValue disableWoodenToolsExtras;
+        public static void init(Builder builder) {
             //Actual Items
             builder.comment("Config section for Actual Item tweaks").push("Actual Items");
+            disableBlender = builder
+                    .comment("Enable or disable the Blender [ true / false default: true")
+                    .define("Enable Blender", true);
+            disableKnife = builder
+                    .comment("Enable or disable the Knife [ true / false default: true")
+                    .define("Enable Knife", true);
             disableNetherStarChunk = builder
                     .comment("Enable or disable Nether Star chunks [ true / false default: true")
                     .define("Enable Nether Star chunks", true);
@@ -141,6 +188,36 @@ import net.minecraftforge.common.ForgeConfigSpec;
             disableWitheredArmor = builder
                     .comment("Setting this to false will disable Withered Armor [true / false default: true]")
                     .define("Enable Withered Armor", true);
+            builder.pop();
+            //Blocks
+            builder.comment("Config section for Block tweaks").push("Blocks");
+
+            disableBlenderBlock = builder
+                    .comment("Setting this to false will disable the placeable Blender [true / false default:true")
+                    .define("Enable placeable Blender", true);
+            disableReinforcedObsidian = builder
+                    .comment("Setting this to false will disable the Reinforced Obsidian Block [true / false default:true")
+                    .define("Enable Reinforced Obsidian Block", true);
+            disableStoneTorch = builder
+                    .comment("Setting this to false will disable the Stone Torch [true / false default:true")
+                    .define("Enable Stone Torch", true);
+            //Blocks but Crops
+            disableWildCrops = builder
+                    .comment("Setting this to false will disable the Wild Crops [true / false default:true")
+                    .define("Enable Wild Crops", true);
+            //Blocks but Ores
+            disableDeepslateRubyOre = builder
+                    .comment("Setting this to false will disable the Deepslate Ruby Ore [true / false default:true")
+                    .define("Enable Deepslate Ruby Ore", true);
+            disableDeepslateTopazOre = builder
+                    .comment("Setting this to false will disable the Deepslate Topaz Ore [true / false default:true")
+                    .define("Enable Deepslate Topaz Ore", true);
+            disableRubyOre = builder
+                    .comment("Setting this to false will disable the Ruby Ore [true / false default:true")
+                    .define("Enable Ruby Ore", true);
+            disableTopazOre = builder
+                    .comment("Setting this to false will disable the Topaz Ore [true / false default:true")
+                    .define("Enable Topaz Ore", true);
             builder.pop();
             //Charms
             builder.comment("Config section for Charm tweaks").push("Charms");
@@ -220,13 +297,6 @@ import net.minecraftforge.common.ForgeConfigSpec;
             disableTomatoJuice = builder
                     .comment("Enable or disable the Tomato Juice [true / false default: true")
                     .define("Enable Tomato Juice", true);
-            builder.pop();
-            //Events
-            builder.comment("Config section for mob drops tweaks").push("Mob Drops");
-            rawBaconDropAmount = builder
-                    .comment("Amount of Raw Bacon that Pigs drop : Default is 1 Raw Bacon drop, max is 5")
-                    .comment("Set the value to 0 to disable Raw Bacon drops")
-                    .defineInRange("Raw Bacon drop amount", 1, 0, 5);
             builder.pop();
             //Food Stuffs
             builder.comment("Config section for Food Tweaks").push("Food");
@@ -317,6 +387,9 @@ import net.minecraftforge.common.ForgeConfigSpec;
             disableRabbitLeg = builder
                     .comment("Enable or Disable Rabbit Leg [true / false default: true")
                     .define("Enable Rabbit Leg", true);
+            disableRawBacon = builder
+                    .comment("Enable or Disable Raw Bacon [true / false default: true")
+                    .define("Enable Raw Bacon", true);
             disableRawBeefSlice = builder
                     .comment("Enable or Disable Raw Beef Slice [true / false default: true")
                     .define("Enable Raw Beef Slice", true);
@@ -396,6 +469,13 @@ import net.minecraftforge.common.ForgeConfigSpec;
                     .comment("Enable or disable Holy Bread [true / false default: true")
                     .define("Enable Holy Bread", true);
             builder.pop();
+            //Mob drops
+            builder.comment("Config section for mob drops tweaks").push("Mob Drops");
+            rawBaconDropAmount = builder
+                    .comment("Amount of Raw Bacon that Pigs drop : Default is 1 Raw Bacon drop, max is 5")
+                    .comment("Set the value to 0 to disable Raw Bacon drops")
+                    .defineInRange("Raw Bacon drop amount", 1, 0, 5);
+            builder.pop();
             //Tools
             builder.comment("Config section for tool set tweaks").push("Tools");
             disableAmethystTools = builder
@@ -440,3 +520,4 @@ import net.minecraftforge.common.ForgeConfigSpec;
             builder.pop();
         }
     }
+
