@@ -20,16 +20,6 @@ public class HammerItem extends DiggerItem {
     public HammerItem(float attackDamageModifier, float attackSpeedModifier, Tier tier, Properties properties) {
         super(attackDamageModifier, attackSpeedModifier, tier, SDBlockTags.Blocks.MINEABLE_WITH_HAMMER, properties);
     }
-    @Override
-    public float getDestroySpeed(ItemStack itemStack, BlockState blockState) {
-        return getTier().getSpeed();
-
-    }
-
-    @Override
-    public boolean isCorrectToolForDrops(ItemStack stack, BlockState state) {
-        return isCorrectTierForDrops(getTier(), state);
-    }
 
     @Override
     public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {

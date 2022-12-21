@@ -1,8 +1,7 @@
 {
   "replace": false,
   "values": [
-    "slurpiesdongles:ruby_ore",
-    "slurpiesdongles:deepslate_ruby_ore",
-    "slurpiesdongles:ruby_block"
+    "slurpiesdongles:topaz_ore",
+    "slurpiesdongles:deepslate_topaz_ore"
   ]
 }

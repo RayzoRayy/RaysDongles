@@ -16,9 +16,27 @@ import static com.rbs.slurpiesdongles.core.util.ModTab.tabSlurpiesDongles;
 public class ModFood {
 
     public static final DeferredRegister<Item> FOODS = DeferredRegister.create(ForgeRegistries.ITEMS, SlurpiesDongles.MOD_ID);
-    //Food
-    public static final RegistryObject<Item> RAW_BACON = FOODS.register("raw_bacon",
-            () -> new RawBaconItem(props().food(FoodStats.RAW_BACON)));
+
+    public static RegistryObject<Item> APPLE_JUICE = null;
+    public static RegistryObject<Item> APPLE_SLUSHIE = null;
+    public static RegistryObject<Item> CARROT_JUICE = null;
+    public static RegistryObject<Item> LEMONADE = null;
+    public static RegistryObject<Item> MELON_JUICE = null;
+    public static RegistryObject<Item> MELON_SLUSHIE = null;
+    public static RegistryObject<Item> ORANGE_JUICE = null;
+    public static RegistryObject<Item> ORANGE_LEMONADE = null;
+    public static RegistryObject<Item> ORANGE_SLUSHIE = null;
+    public static RegistryObject<Item> STRAWBERRY = null;
+    public static RegistryObject<Item> STRAWBERRY_JUICE = null;
+    public static RegistryObject<Item> STRAWBERRY_LEMONADE = null;
+    public static RegistryObject<Item> STRAWBERRY_SLUSHIE = null;
+    public static RegistryObject<Item> SUGARCOATED_APPLE = null;
+    public static RegistryObject<Item> SUGARCOATED_LEMON = null;
+    public static RegistryObject<Item> SUGARCOATED_MELON = null;
+    public static RegistryObject<Item> SUGARCOATED_ORANGE = null;
+    public static RegistryObject<Item> SUGARCOATED_STRAWBERRY = null;
+    public static RegistryObject<Item> TOMATO_JUICE = null;
+    public static RegistryObject<Item> RAW_BACON = null;
     //Food but crops
     public static final RegistryObject<Item> CABBAGE = FOODS.register("cabbage",
             () -> new ItemNameBlockItem(ModBlocks.CABBAGE_CROP.get(), props().food(FoodStats.CABBAGE)));
@@ -39,56 +57,56 @@ public class ModFood {
         FOODS.register(eventBus);
         //Drinks
         if (ConfigGeneral.disableAppleJuice.get()) {
-            RegistryObject<Item> APPLE_JUICE = FOODS.register("apple_juice",
+            APPLE_JUICE = FOODS.register("apple_juice",
                     () -> new DrinkItem(props().food(FoodStats.APPLE_JUICE)));
         }
         if (ConfigGeneral.disableAppleSlushie.get()) {
-            RegistryObject<Item> APPLE_SLUSHIE = FOODS.register("apple_slushie",
+           APPLE_SLUSHIE = FOODS.register("apple_slushie",
                     () -> new DrinkItem(props().food(FoodStats.APPLE_SLUSHIE)));
         }
         if (ConfigGeneral.disableCarrotJuice.get()) {
-            RegistryObject<Item> CARROT_JUICE = FOODS.register("carrot_juice",
+            CARROT_JUICE = FOODS.register("carrot_juice",
                     () -> new DrinkItem(props().food(FoodStats.CARROT_JUICE)));
         }
         if (ConfigGeneral.disableLemonade.get()) {
-            RegistryObject<Item> LEMONADE = FOODS.register("lemonade",
+            LEMONADE = FOODS.register("lemonade",
                     () -> new DrinkItem(props().food(FoodStats.LEMONADE)));
         }
         if (ConfigGeneral.disableMelonJuice.get()) {
-            RegistryObject<Item> MELON_JUICE = FOODS.register("melon_juice",
+           MELON_JUICE = FOODS.register("melon_juice",
                     () -> new DrinkItem(props().food(FoodStats.MELON_JUICE)));
         }
         if (ConfigGeneral.disableMelonSlushie.get()) {
-            RegistryObject<Item> MELON_SLUSHIE = FOODS.register("melon_slushie",
+            MELON_SLUSHIE = FOODS.register("melon_slushie",
                     () -> new DrinkItem(props().food(FoodStats.MELON_SLUSHIE)));
         }
         if (ConfigGeneral.disableOrangeJuice.get()) {
-            RegistryObject<Item> ORANGE_JUICE = FOODS.register("orange_juice",
+            ORANGE_JUICE = FOODS.register("orange_juice",
                     () -> new DrinkItem(props().food(FoodStats.ORANGE_JUICE)));
         }
         if (ConfigGeneral.disableOrangeLemonade.get()) {
-            RegistryObject<Item> ORANGE_LEMONADE = FOODS.register("orange_lemonade",
+           ORANGE_LEMONADE = FOODS.register("orange_lemonade",
                     () -> new DrinkItem(props().food(FoodStats.ORANGE_LEMONADE)));
 
         }
         if (ConfigGeneral.disableOrangeSlushie.get()) {
-            RegistryObject<Item> ORANGE_SLUSHIE = FOODS.register("orange_slushie",
+           ORANGE_SLUSHIE = FOODS.register("orange_slushie",
                     () -> new DrinkItem(props().food(FoodStats.ORANGE_SLUSHIE)));
         }
         if (ConfigGeneral.disableStrawberryJuice.get()) {
-            RegistryObject<Item> STRAWBERRY_JUICE = FOODS.register("strawberry_juice",
+           STRAWBERRY_JUICE = FOODS.register("strawberry_juice",
                     () -> new DrinkItem(props().food(FoodStats.STRAWBERRY_JUICE)));
         }
         if (ConfigGeneral.disableStrawberryLemonade.get()) {
-            RegistryObject<Item> STRAWBERRY_LEMONADE = FOODS.register("strawberry_lemonade",
+           STRAWBERRY_LEMONADE = FOODS.register("strawberry_lemonade",
                     () -> new DrinkItem(props().food(FoodStats.STRAWBERRY_LEMONADE)));
         }
         if (ConfigGeneral.disableStrawberrySlushie.get()) {
-            RegistryObject<Item> STRAWBERRY_SLUSHIE = FOODS.register("strawberry_slushie",
+            STRAWBERRY_SLUSHIE = FOODS.register("strawberry_slushie",
                     () -> new DrinkItem(props().food(FoodStats.STRAWBERRY_SLUSHIE)));
         }
         if (ConfigGeneral.disableTomatoJuice.get()) {
-            RegistryObject<Item> TOMATO_JUICE = FOODS.register("tomato_juice",
+           TOMATO_JUICE = FOODS.register("tomato_juice",
                     () -> new DrinkItem(props().food(FoodStats.TOMATO_JUICE)));
         }
         //Food
@@ -212,10 +230,15 @@ public class ModFood {
             RegistryObject<Item> RAW_BEEF_SLICE = FOODS.register("raw_beef_slice",
                     () -> new Item(props().food(FoodStats.RAW_BEEF_SLICE)));
         }
+        if (ConfigGeneral.disableRawBacon.get()) {
+            RAW_BACON = FOODS.register("raw_bacon",
+                    () -> new RawBaconItem(props().food(FoodStats.RAW_BACON)));
+        }
         if (ConfigGeneral.disableRawCorn.get()) {
             RegistryObject<Item> RAW_CORN = FOODS.register("raw_corn",
                     () -> new Item(props()));
         }
+
         if (ConfigGeneral.disableRawPotatoWedge.get()) {
             RegistryObject<Item> RAW_POTATO_WEDGE = FOODS.register("raw_potato_wedge",
                     () -> new TinyFood(props().food(FoodStats.RAW_POTATO_WEDGE)));

@@ -8,7 +8,10 @@ import com.rbs.slurpiesdongles.core.init.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModContainer;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
@@ -23,7 +26,8 @@ public class SlurpiesDongles
 {
 
     public static final String MOD_ID = "slurpiesdongles";
-    public static final Logger LOGGER = LogManager.getLogger();
+    public static final Lazy<ModContainer> MOD_CONTAINER = Lazy.of(() -> ModList.get().getModContainerById(MOD_ID).orElse(null));
+    public static final Logger LOGGER = LogManager.getLogger(MOD_ID);
 
     public SlurpiesDongles() {
 

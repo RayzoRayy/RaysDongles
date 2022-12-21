@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "slurpiesdongles:diamond_lumber_axe"
+  },
+  "result": {
+    "item": "slurpiesdongles:netherite_lumber_axe"
+  }
+}

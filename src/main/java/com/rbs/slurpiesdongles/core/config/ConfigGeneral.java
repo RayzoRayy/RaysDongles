@@ -1,10 +1,40 @@
 package com.rbs.slurpiesdongles.core.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
-    public class ConfigGeneral {
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.config.ModConfig;
+import org.apache.commons.lang3.tuple.Pair;
+
+public class ConfigGeneral {
         public static ConfigGeneral INSTANCE;
 
+    public static Common COMMON;
+    public static ForgeConfigSpec COMMON_SPEC;
+
+    public static void init1() {
+        Pair<Common, ForgeConfigSpec> commonPair = new ForgeConfigSpec.Builder().configure(Common::new);
+
+        COMMON_SPEC = commonPair.getRight();
+        COMMON = commonPair.getLeft();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, COMMON_SPEC, "Ray's Dongles-Common.toml");
+    }
+
+    public static class Common {
+
+        public ForgeConfigSpec.BooleanValue receiveUpdateMessages;
+
+        private Common(ForgeConfigSpec.Builder builder) {
+            builder.push("General");
+            receiveUpdateMessages = builder
+                    .comment("Enable or disable the Update Checker [ true / false default: true")
+                    .define("Receive update messages", true);
+            builder.pop();
+        }
+    }
+
         //Actual Items
+        public static ForgeConfigSpec.BooleanValue disableBlender;
+        public static ForgeConfigSpec.BooleanValue disableKnife;
         public static ForgeConfigSpec.BooleanValue disableNetherStarChunk;
         public static ForgeConfigSpec.BooleanValue disablePopsSign;
         public static ForgeConfigSpec.BooleanValue disableStoneRod;
@@ -14,6 +44,15 @@ import net.minecraftforge.common.ForgeConfigSpec;
         public static ForgeConfigSpec.BooleanValue disableTopazArmor;
         public static ForgeConfigSpec.BooleanValue disableWitheredArmor;
         //Blocks
+        public static ForgeConfigSpec.BooleanValue disableBlenderBlock;
+        public static ForgeConfigSpec.BooleanValue disableReinforcedObsidian;
+    //Blocks but Crops
+        public static ForgeConfigSpec.BooleanValue disableWildCrops;
+    //Blocks but Ores
+     public static ForgeConfigSpec.BooleanValue disableDeepslateRubyOre;
+        public static ForgeConfigSpec.BooleanValue disableDeepslateTopazOre;
+        public static ForgeConfigSpec.BooleanValue disableRubyOre;
+        public static ForgeConfigSpec.BooleanValue disableTopazOre;
         //Charms
         public static ForgeConfigSpec.BooleanValue disableAbsorptionCharm;
         public static ForgeConfigSpec.BooleanValue disableAbsorptionCharmTier2;
@@ -78,6 +117,7 @@ import net.minecraftforge.common.ForgeConfigSpec;
         public static ForgeConfigSpec.BooleanValue disablePotatoWedge;
         public static ForgeConfigSpec.BooleanValue disableRabbitLeg;
         public static ForgeConfigSpec.BooleanValue disableRawBeefSlice;
+        public static ForgeConfigSpec.BooleanValue disableRawBacon;
         public static ForgeConfigSpec.BooleanValue disableRawCorn;
         public static ForgeConfigSpec.BooleanValue disableRawPotatoWedge;
         public static ForgeConfigSpec.BooleanValue disableRoastedApple;
@@ -130,6 +170,12 @@ import net.minecraftforge.common.ForgeConfigSpec;
         public static void init(ForgeConfigSpec.Builder builder) {
             //Actual Items
             builder.comment("Config section for Actual Item tweaks").push("Actual Items");
+            disableBlender = builder
+                    .comment("Enable or disable the Blender [ true / false default: true")
+                    .define("Enable Blender", true);
+            disableKnife = builder
+                    .comment("Enable or disable the Knife [ true / false default: true")
+                    .define("Enable Knife", true);
             disableNetherStarChunk = builder
                     .comment("Enable or disable Nether Star chunks [ true / false default: true")
                     .define("Enable Nether Star chunks", true);
@@ -154,6 +200,33 @@ import net.minecraftforge.common.ForgeConfigSpec;
             disableWitheredArmor = builder
                     .comment("Setting this to false will disable Withered Armor [true / false default: true]")
                     .define("Enable Withered Armor", true);
+            builder.pop();
+            //Blocks
+            builder.comment("Config section for Block tweaks").push("Blocks");
+
+            disableBlenderBlock = builder
+                    .comment("Setting this to false will disable the placeable Blender [true / false default:true")
+                    .define("Enable placeable Blender", true);
+            disableReinforcedObsidian = builder
+                    .comment("Setting this to false will disable the Reinforced Obsidian Block [true / false default:true")
+                    .define("Enable Reinforced Obsidian Block", true);
+            //Blocks but Crops
+            disableWildCrops = builder
+                    .comment("Setting this to false will disable the Wild Crops [true / false default:true")
+                    .define("Enable Wild Crops", true);
+            //Blocks but Ores
+            disableDeepslateRubyOre = builder
+                    .comment("Setting this to false will disable the Deepslate Ruby Ore [true / false default:true")
+                    .define("Enable Deepslate Ruby Ore", true);
+            disableDeepslateTopazOre = builder
+                    .comment("Setting this to false will disable the Deepslate Topaz Ore [true / false default:true")
+                    .define("Enable Deepslate Topaz Ore", true);
+            disableRubyOre = builder
+                    .comment("Setting this to false will disable the Ruby Ore [true / false default:true")
+                    .define("Enable Ruby Ore", true);
+            disableTopazOre = builder
+                    .comment("Setting this to false will disable the Topaz Ore [true / false default:true")
+                    .define("Enable Topaz Ore", true);
             builder.pop();
             //Charms
             builder.comment("Config section for Charm tweaks").push("Charms");
@@ -350,6 +423,9 @@ import net.minecraftforge.common.ForgeConfigSpec;
             disableRawBeefSlice = builder
                     .comment("Enable or Disable Raw Beef Slice [true / false default: true")
                     .define("Enable Raw Beef Slice", true);
+            disableRawBacon = builder
+                    .comment("Enable or Disable Raw Bacon [true / false default: true")
+                    .define("Enable Raw Bacon", true);
             disableRawCorn = builder
                     .comment("Enable or Disable Raw Corn [true / false default: true")
                     .define("Enable Raw Corn", true);
