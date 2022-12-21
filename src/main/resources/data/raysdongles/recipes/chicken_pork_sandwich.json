@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:bread"
+    },
+	{
+	  "item": "minecraft:bread" 
+	},
+	{
+		"item": "minecraft:cooked_porkchop"
+	},
+	{
+		"item": "minecraft:cooked_chicken"
+	}
+  ],
+  "result": {
+    "item": "raysdongles:chicken_pork_sandwich"
+  }
+}

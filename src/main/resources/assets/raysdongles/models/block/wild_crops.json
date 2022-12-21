@@ -1,0 +1,7 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "raysdongles:block/wild_crops"
+    },
+    "render_type": "cutout"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:sugar"
+    },
+	{
+	  "item": "raysdongles:lemon" 
+	}
+  ],
+  "result": {
+    "item": "raysdongles:sugarcoated_lemon"
+  }
+}

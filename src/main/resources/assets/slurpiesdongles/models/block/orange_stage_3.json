@@ -1,7 +1,0 @@
-{
-    "parent": "block/crop",
-    "textures": {
-        "crop": "slurpiesdongles:block/orange_stage_3"
-    },
-    "render_type": "cutout"
-}

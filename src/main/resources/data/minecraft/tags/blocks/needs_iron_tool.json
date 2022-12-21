@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "slurpiesdongles:topaz_ore",
-    "slurpiesdongles:deepslate_topaz_ore"
+    "raysdongles:topaz_ore",
+    "raysdongles:deepslate_topaz_ore"
   ]
 }

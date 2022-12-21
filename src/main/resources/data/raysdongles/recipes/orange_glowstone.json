@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "raysdongles:orange_glowstone_dust"
+    },
+	{
+	  "item": "raysdongles:orange_glowstone_dust" 
+	},
+      {
+    
+        "item": "raysdongles:orange_glowstone_dust"  
+      },
+      {
+        "item": "raysdongles:orange_glowstone_dust" 
+      }
+  ],
+  "result": {
+    "item": "raysdongles:orange_glowstone"
+  }
+}

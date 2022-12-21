@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "minecraft:melon_seeds"
+  },
+  "result": "raysdongles:roasted_melon_seeds",
+  "experience": 0.35,
+  "cookingtime": 100
+}

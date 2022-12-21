@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "raysdongles:vmh_upgrade"
+    },
+    {
+      "item": "raysdongles:stone_hammer"
+    }
+  ],
+  "result": {
+    "item": "raysdongles:vm_hammer"
+  }
+}

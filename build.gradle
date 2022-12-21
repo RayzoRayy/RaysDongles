@@ -4,8 +4,8 @@ plugins {
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
 
-version = '6.0.3A - 1.19.3'
-group = 'com.ray.slurpiesdongles' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+version = '6.13 - 1.19.3'
+group = 'com.ray.raysdongles' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'RaysDongles'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.

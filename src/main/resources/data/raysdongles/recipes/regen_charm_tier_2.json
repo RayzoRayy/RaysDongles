@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    "SNS",
+    "RSR"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:ghast_tear"
+    },
+    "N": {
+      "item": "raysdongles:regen_charm"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "raysdongles:regen_charm_tier_2"
+  }
+}

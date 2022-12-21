@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EAE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:gold_nugget"
+    },
+    "A": {
+      "item": "raysdongles:bacon"
+    }
+  },
+  "result": {
+    "item": "raysdongles:golden_bacon"
+  }
+}

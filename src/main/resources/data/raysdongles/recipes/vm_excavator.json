@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "raysdongles:vme_upgrade"
+    },
+    {
+      "item": "raysdongles:stone_excavator"
+    }
+  ],
+  "result": {
+    "item": "raysdongles:vm_excavator"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "raysdongles:vmp_upgrade"
+    },
+	{
+	  "item": "minecraft:stone_pickaxe" 
+	}
+  ],
+  "result": {
+    "item": "raysdongles:vmpick"
+  }
+}

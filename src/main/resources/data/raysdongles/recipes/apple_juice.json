@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:apple"
+    },
+	{
+	  "item": "raysdongles:blender" 
+	}
+  ],
+  "result": {
+    "item": "raysdongles:apple_juice"
+  }
+}

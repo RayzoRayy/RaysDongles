@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TT ",
+    " H ",
+    " H "
+  ],
+  "key": {
+    "H": {
+    "item": "minecraft:stick"
+    },
+    "T": {
+    "item": "raysdongles:topaz"
+    }
+  },
+  "result": {
+    "item": "raysdongles:topaz_hoe"
+  }
+}

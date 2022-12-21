@@ -1,7 +1,0 @@
-{
-  "parent": "block/wall_torch",
-  "textures": {
-    "torch": "slurpiesdongles:block/stone_torch"
-  },
-  "render_type": "cutout"
-}

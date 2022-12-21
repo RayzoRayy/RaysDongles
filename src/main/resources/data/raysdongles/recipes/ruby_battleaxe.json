@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RRR",
+    " SR",
+    "S R"
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick"
+    },
+    "R": {
+    "item": "raysdongles:ruby"
+    }
+  },
+  "result": {
+    "item": "raysdongles:ruby_battleaxe"
+  }
+}

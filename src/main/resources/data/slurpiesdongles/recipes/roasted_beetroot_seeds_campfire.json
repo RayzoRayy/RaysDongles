@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "minecraft:beetroot_seeds"
-  },
-  "result": "slurpiesdongles:roasted_beetroot_seeds",
-  "experience": 0.35,
-  "cookingtime": 200
-}

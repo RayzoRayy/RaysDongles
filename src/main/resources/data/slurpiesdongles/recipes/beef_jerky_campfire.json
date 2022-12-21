@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "slurpiesdongles:raw_beef_slice"
-  },
-  "result": "slurpiesdongles:beef_jerky",
-  "experience": 0.35,
-  "cookingtime": 200
-}
