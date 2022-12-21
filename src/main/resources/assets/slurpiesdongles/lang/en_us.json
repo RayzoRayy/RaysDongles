@@ -1,6 +1,5 @@
 {
   "itemGroup.RaysDongles": "Ray's Dongles",
-  "text.new_update_notification": "A new update is available for {0}.",
 
   "__comment": "Armors",
   "item.slurpiesdongles.amethyst_helmet": "Amethyst Helmet",
@@ -36,6 +35,7 @@
   "item.slurpiesdongles.withered_battleaxe": "Withered Battle Axe",
   "item.slurpiesdongles.wooden_battleaxe": "Wooden Battle Axe",
   "__comment": "Blocks",
+  "block.slurpiesdongles.blender_block": "Blender",
   "block.slurpiesdongles.blue_bricks": "Blue Bricks",
   "block.slurpiesdongles.cyan_bricks": "Cyan Bricks",
   "block.slurpiesdongles.green_bricks": "Green Bricks",

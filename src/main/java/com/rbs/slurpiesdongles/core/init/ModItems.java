@@ -20,6 +20,11 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SlurpiesDongles.MOD_ID);
 
+    public static RegistryObject<Item> WITHERED_HELMET = null;
+    public static RegistryObject<Item> WITHERED_CHEST = null;
+    public static RegistryObject<Item> WITHERED_LEGS = null;
+    public static RegistryObject<Item> WITHERED_BOOTS = null;
+
     //Dusts
     public static final RegistryObject<Item> BLUE_GLOWSTONE_DUST = ITEMS.register("blue_glowstone_dust",
             () -> new Item(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
@@ -43,10 +48,6 @@ public class ModItems {
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz",
             () -> new Item(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
     //Items
-    public static final RegistryObject<Item> BLENDER = ITEMS.register("blender",
-            () -> new ContainerItem(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
-    public static final RegistryObject<Item> KNIFE = ITEMS.register("knife",
-            () -> new ContainerItem(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
 
     public static final RegistryObject<Item> VME_UPGRADE = ITEMS.register("vme_upgrade",
             () -> new Item(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
@@ -54,16 +55,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
     public static final RegistryObject<Item> VMP_UPGRADE = ITEMS.register("vmp_upgrade",
             () -> new Item(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
-
-    //Armor
-    public static final RegistryObject<Item> WITHERED_HELMET = ITEMS.register("withered_helmet",
-            () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.HEAD, new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
-    public static final RegistryObject<Item> WITHERED_CHEST = ITEMS.register("withered_chestplate",
-            () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.CHEST, new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
-    public static final RegistryObject<Item> WITHERED_LEGS = ITEMS.register("withered_leggings",
-            () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.LEGS, new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
-    public static final RegistryObject<Item> WITHERED_BOOTS = ITEMS.register("withered_boots",
-            () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.FEET, new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
 
 
     //Config Registries
@@ -115,6 +106,14 @@ public class ModItems {
                     () -> new WaterBreathingCharm(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
         }
         //Actual Items
+        if (ConfigGeneral.disableBlender.get()) {
+            RegistryObject<Item> BLENDER = ITEMS.register("blender",
+                    () -> new ContainerItem(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
+        }
+        if (ConfigGeneral.disableKnife.get()) {
+           RegistryObject<Item> KNIFE = ITEMS.register("knife",
+                    () -> new ContainerItem(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
+        }
         if (ConfigGeneral.disableNetherStarChunk.get()) {
             RegistryObject<Item> NETHER_STAR_CHUNK = ITEMS.register("nether_star_chunk",
                     () -> new Item(new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
@@ -227,6 +226,17 @@ public class ModItems {
             RegistryObject<Item> TOPAZ_SWORD = ITEMS.register("topaz_sword",
                     () -> new SwordItem(SlurpiesToolMaterials.TOPAZ_SWORD, 3, -2.4F, new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
         }
+        //Withered
+        if (ConfigGeneral.disableWitheredArmor.get()) {
+            WITHERED_HELMET = ITEMS.register("withered_helmet",
+                    () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.HEAD, props().tab(RDItemGroup.tabSlurpiesDongles)));
+            WITHERED_CHEST = ITEMS.register("withered_chestplate",
+                    () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.CHEST, props().tab(RDItemGroup.tabSlurpiesDongles)));
+            WITHERED_LEGS = ITEMS.register("withered_leggings",
+                    () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.LEGS, props().tab(RDItemGroup.tabSlurpiesDongles)));
+            WITHERED_BOOTS = ITEMS.register("withered_boots",
+                    () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.FEET, props().tab(RDItemGroup.tabSlurpiesDongles)));
+        }
         if (ConfigGeneral.disableWitheredTools.get()) {
             RegistryObject<Item> WITHERED_AXE = ITEMS.register("withered_axe",
                     () -> new AxeItem(SlurpiesToolMaterials.WITHERED, 8.0F, -2.8F, new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles)));
@@ -337,5 +347,9 @@ public class ModItems {
                 }
             }
         }
+    }
+
+    private static Item.Properties props() {
+        return new Item.Properties();
     }
 }
