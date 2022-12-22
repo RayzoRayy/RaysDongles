@@ -1,4 +1,4 @@
-package com.rbs.slurpiesdongles.core.config;
+package com.ray.raysdongles.core.config;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -13,7 +13,7 @@ public class ConfigGeneral {
     public static ForgeConfigSpec COMMON_SPEC;
 
     public static void init1() {
-        Pair<Common, ForgeConfigSpec> commonPair = new ForgeConfigSpec.Builder().configure(Common::new);
+        Pair<Common, ForgeConfigSpec> commonPair = new Builder().configure(Common::new);
 
         COMMON_SPEC = commonPair.getRight();
         COMMON = commonPair.getLeft();
@@ -22,9 +22,9 @@ public class ConfigGeneral {
 
     public static class Common {
 
-        public ForgeConfigSpec.BooleanValue receiveUpdateMessages;
+        public BooleanValue receiveUpdateMessages;
 
-        private Common(ForgeConfigSpec.Builder builder) {
+        private Common(Builder builder) {
             builder.push("General");
             receiveUpdateMessages = builder
                     .comment("Enable or disable the Update Checker [ true / false default: true")
@@ -145,6 +145,40 @@ public class ConfigGeneral {
     public static BooleanValue disableTopazTools;
     public static BooleanValue disableVMTools;
     public static BooleanValue disableWitheredTools;
+    //Tool Materials
+    //Reg
+    public static DoubleValue amethystAttackDamage;
+    public static DoubleValue amethystEfficiency;
+    public static IntValue amethystEnchantability;
+    public static IntValue amethystHarvestLevel;
+    public static IntValue amethystMaxUses;
+    public static IntValue amethystPaxelMaxUses;
+    public static DoubleValue rubyAttackDamage;
+    public static DoubleValue rubyEfficiency;
+    public static IntValue rubyEnchantability;
+    public static IntValue rubyHarvestLevel;
+    public static IntValue rubyMaxUses;
+    public static IntValue rubyPaxelMaxUses;
+    public static DoubleValue topazAttackDamage;
+    public static DoubleValue topazEfficiency;
+    public static IntValue topazEnchantability;
+    public static IntValue topazHarvestLevel;
+    public static IntValue topazMaxUses;
+    public static IntValue topazPaxelMaxUses;
+    public static DoubleValue vmAttackDamage;
+    public static DoubleValue vmEfficiency;
+    public static IntValue vmEnchantability;
+    public static IntValue vmHarvestLevel;
+    public static IntValue vmMaxUses;
+    public static DoubleValue witheredAttackDamage;
+    public static DoubleValue witheredEfficiency;
+    public static IntValue witheredEnchantability;
+    public static IntValue witheredHarvestLevel;
+    public static IntValue witheredMaxUses;
+    public static IntValue witheredPaxelMaxUses;
+
+    //Paxels
+
     //Tools Vanilla Addons
     public static BooleanValue disableDiamondToolsExtras;
     public static BooleanValue disableEmeraldToolsExtras;
@@ -473,22 +507,117 @@ public class ConfigGeneral {
                     .defineInRange("Raw Bacon drop amount", 1, 0, 5);
             builder.pop();
             //Tools
-            builder.comment("Config section for tool set tweaks").push("Tools");
+            builder.comment("Config section for Amethyst tool tweaks").push("Amethyst");
             disableAmethystTools = builder
                     .comment("Setting this to false will disable the entire Amethyst tool set [true / false default: true")
                     .define("Enable Amethyst tools", true);
+            amethystAttackDamage = builder
+                    .comment("Defines the BASE attack damage for Amethyst tools / modifying this will change damage for ALL Amethyst tools")
+                    .defineInRange("AttackDamage", 3.0,  0,40.0);
+            amethystEfficiency = builder
+                    .comment("Defines the efficiency for Amethyst tools / DOES NOT AFFECT Axes, Battleaxes, Lumberaxes, OR Swords")
+                    .defineInRange("Efficiency", 8.0, 0, 40.0);
+            amethystEnchantability = builder
+                    .comment("Defines the enchantability for Amethyst tools [Default is 13)")
+                    .defineInRange("Enchantability", 13, 0, Integer.MAX_VALUE);
+            amethystHarvestLevel = builder
+                    .comment("Defines the harvest level for Amethyst tools [Default is 3, min is 0, max is 10")
+                    .defineInRange("HarvestLevel", 3, 0, 10);
+            amethystMaxUses = builder
+                    .comment("Defines the max uses for Amethyst tools [Default is 1739 uses")
+                    .defineInRange("MaxUses", 1739, 0, Integer.MAX_VALUE);
+            amethystPaxelMaxUses = builder
+                    .comment("Defines the max uses for Amethyst paxel [Default is 5217 uses, Axe + Pickaxe + Shovel durability = 5217")
+                    .defineInRange("MaxUses", 5217, 0, Integer.MAX_VALUE);
+            builder.pop();
+            builder.comment("Config section for Ruby tool tweaks").push("Ruby");
             disableRubyTools = builder
                     .comment("Setting this to false will disable the entire Ruby tool set [true / false default: true")
                     .define("Enable Ruby tools", true);
+            rubyAttackDamage = builder
+                    .comment("Defines the BASE attack damage for Ruby tools / modifying this will change damage for ALL Ruby tools")
+                    .defineInRange("AttackDamage", 2.0,  0,40.0);
+            rubyEfficiency = builder
+                    .comment("Defines the efficiency for Ruby tools / DOES NOT AFFECT Axes, Battleaxes, Lumberaxes, OR Swords")
+                    .defineInRange("Efficiency", 6.0, 0, 40.0);
+            rubyEnchantability = builder
+                    .comment("Defines the enchantability for Ruby tools [Default is 15)")
+                    .defineInRange("Enchantability", 15, 0, Integer.MAX_VALUE);
+            rubyHarvestLevel = builder
+                    .comment("Defines the harvest level for Ruby tools [Default is 2, min is 0, max is 10")
+                    .defineInRange("HarvestLevel", 2, 0, 10);
+            rubyMaxUses = builder
+                    .comment("Defines the max uses for Ruby tools [Default is 721 uses")
+                    .defineInRange("MaxUses", 721, 0, Integer.MAX_VALUE);
+            rubyPaxelMaxUses = builder
+                    .comment("Defines the max uses for Ruby paxel [Default is 2163 uses, Axe + Pickaxe + Shovel durability = 2163")
+                    .defineInRange("MaxUses", 2163, 0, Integer.MAX_VALUE);
+            builder.pop();
+            builder.comment("Config section for Topaz tool tweaks").push("Topaz");
             disableTopazTools = builder
                     .comment("Setting this to false will disable the entire Topaz tool set [true / false default: true")
                     .define("Enable Topaz tools", true);
+            topazAttackDamage = builder
+                    .comment("Defines the BASE attack damage for Topaz tools / modifying this will change damage for ALL Topaz tools")
+                    .defineInRange("AttackDamage", 3.0,  0,40.0);
+            topazEfficiency = builder
+                    .comment("Defines the efficiency for Topaz tools / DOES NOT AFFECT Axes, Battleaxes, Lumberaxes, OR Swords")
+                    .defineInRange("Efficiency", 8.0, 0, 40.0);
+            topazEnchantability = builder
+                    .comment("Defines the enchantability for Topaz tools [Default is 12)")
+                    .defineInRange("Enchantability", 12, 0, Integer.MAX_VALUE);
+            topazHarvestLevel = builder
+                    .comment("Defines the harvest level for Topaz tools [Default is 3, min is 0, max is 10")
+                    .defineInRange("HarvestLevel", 3, 0, 10);
+            topazMaxUses = builder
+                    .comment("Defines the max uses for Topaz tools [Default is 1893 uses")
+                    .defineInRange("MaxUses", 1893, 0, Integer.MAX_VALUE);
+            topazPaxelMaxUses = builder
+                    .comment("Defines the max uses for Topaz paxel [Default is 5679 uses, Axe + Pickaxe + Shovel durability = 5679")
+                    .defineInRange("MaxUses", 5679, 0, Integer.MAX_VALUE);
+            builder.pop();
+            builder.comment("Config section for Mass Mining tool tweaks").push("Mass Mining");
             disableVMTools = builder
-                    .comment("Setting this to false will disable the entire VM tool set [true / false default: true")
+                    .comment("Setting this to false will disable the entire Mass Mining tool set [true / false default: true")
                     .define("Enable VM tools", true);
+            vmAttackDamage = builder
+                    .comment("Defines the BASE attack damage for Mass Mining tools / modifying this will change damage for ALL Mass Mining tools")
+                    .defineInRange("AttackDamage", 1.0,  0,40.0);
+            vmEfficiency = builder
+                    .comment("Defines the efficiency for Mass Mining tools / DOES NOT AFFECT Axes, Battleaxes, Lumberaxes, OR Swords")
+                    .defineInRange("Efficiency", 4.0, 0, 40.0);
+            vmEnchantability = builder
+                    .comment("Defines the enchantability for Mass Mining tools [Default is 5)")
+                    .defineInRange("Enchantability", 5, 0, Integer.MAX_VALUE);
+            vmHarvestLevel = builder
+                    .comment("Defines the harvest level for Mass Mining tools [Default is 1, min is 0, max is 10")
+                    .defineInRange("HarvestLevel", 1, 0, 10);
+            vmMaxUses = builder
+                    .comment("Defines the max uses for Mass Mining tools [Default is 18200 uses")
+                    .defineInRange("MaxUses", 18200, 0, Integer.MAX_VALUE);
+            builder.pop();
+            builder.comment("Config section for Withered tool tweaks").push("Withered");
             disableWitheredTools = builder
                     .comment("Setting this to false will disable the entire Withered tool set [true / false default: true")
                     .define("Enable Withered tools", true);
+            witheredAttackDamage = builder
+                    .comment("Defines the BASE attack damage for Withered tools / modifying this will change damage for ALL Withered tools")
+                    .defineInRange("AttackDamage", 4.0,  0,40.0);
+            witheredEfficiency = builder
+                    .comment("Defines the efficiency for Withered tools / DOES NOT AFFECT Axes, Battleaxes, Lumberaxes, OR Swords")
+                    .defineInRange("Efficiency", 11.0, 0, 40.0);
+            witheredEnchantability = builder
+                    .comment("Defines the enchantability for Withered tools [Default is 20)")
+                    .defineInRange("Enchantability", 20, 0, Integer.MAX_VALUE);
+            witheredHarvestLevel = builder
+                    .comment("Defines the harvest level for Withered tools [Default is 4, min is 0, max is 10")
+                    .defineInRange("HarvestLevel", 4, 0, 10);
+            witheredMaxUses = builder
+                    .comment("Defines the max uses for Withered tools [Default is 0 uses / This is what makes it un-breakable")
+                    .defineInRange("MaxUses", 0, 0, Integer.MAX_VALUE);
+            witheredPaxelMaxUses = builder
+                    .comment("Defines the max uses for Withered paxel [Default is 0 uses, / This is what makes it un-breakable")
+                    .defineInRange("MaxUses", 0, 0, Integer.MAX_VALUE);
             builder.pop();
             //Vanilla Tool Addons
             builder.comment("Config section for extra Vanilla tool set tweaks").push("Extra Vanilla Tools");

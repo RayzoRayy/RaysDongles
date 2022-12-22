@@ -1,4 +1,4 @@
-package com.rbs.slurpiesdongles.core.config;
+package com.ray.raysdongles.core.config;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;

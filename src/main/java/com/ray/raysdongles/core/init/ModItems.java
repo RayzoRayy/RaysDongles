@@ -5,7 +5,7 @@ import com.ray.raysdongles.common.items.ContainerItem;
 import com.ray.raysdongles.common.items.armor.material.SlurpiesArmorMaterials;
 import com.ray.raysdongles.common.items.charms.*;
 import com.ray.raysdongles.common.items.tools.*;
-import com.ray.raysdongles.common.items.tools.material.SlurpiesToolMaterials;
+import com.ray.raysdongles.common.items.tools.material.TMTiers;
 import com.ray.raysdongles.core.config.ConfigGeneral;
 import com.ray.raysdongles.common.items.armor.WitheredArmor;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -171,112 +171,112 @@ public class ModItems {
         //Tools
         if (ConfigGeneral.disableAmethystTools.get()) {
             RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe",
-                    () -> new AxeItem(SlurpiesToolMaterials.AMETHYST, 8.0F, -2.8F, props()));
+                    () -> new AxeItem(TMTiers.AMETHYST, 6.0F, -3.0F, props()));
             RegistryObject<Item> AMETHYST_BATTLE_AXE = ITEMS.register("amethyst_battleaxe",
-                    () -> new BattleAxeItem(SlurpiesToolMaterials.AMETHYST_BATTLEAXE, 5.0F, -3.0F, props()));
+                    () -> new BattleAxeItem(TMTiers.AMETHYST_BATTLEAXE, 7.0F, -2.9F, props()));
             RegistryObject<Item> AMETHYST_EXCAVATOR = ITEMS.register("amethyst_excavator",
-                    () -> new ExcavatorItem(SlurpiesToolMaterials.AMETHYST, 1, -2.8F, props()));
+                    () -> new ExcavatorItem(TMTiers.AMETHYST, 1, -3.0F, props()));
             RegistryObject<Item> AMETHYST_HAMMER = ITEMS.register("amethyst_hammer",
-                    () -> new HammerItem(1, -2.8F, SlurpiesToolMaterials.AMETHYST, props()));
+                    () -> new HammerItem(1, -2.8F, TMTiers.AMETHYST, props()));
             RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe",
-                    () -> new HoeItem(SlurpiesToolMaterials.AMETHYST, -3, 0.0F, props()));
+                    () -> new HoeItem(TMTiers.AMETHYST, -3, 0.0F, props()));
             RegistryObject<Item> AMETHYST_LUMBER_AXE = ITEMS.register("amethyst_lumber_axe",
-                    () -> new LumberAxeItem(SlurpiesToolMaterials.AMETHYST, 5.0F, -3.0F, props()));
+                    () -> new LumberAxeItem(TMTiers.AMETHYST, 6.0F, -3.0F, props()));
             RegistryObject<Item> AMETHYST_PAXEL = ITEMS.register("amethyst_paxel",
-                    () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.AMETHYST_PAXEL, props()));
+                    () -> new PaxelItem(1, -2.8F, TMTiers.AMETHYST_PAXEL, props()));
             RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe",
-                    () -> new PickaxeItem(SlurpiesToolMaterials.AMETHYST, 1, -2.8F, props()));
+                    () -> new PickaxeItem(TMTiers.AMETHYST, 1, -2.8F, props()));
             RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel",
-                    () -> new ShovelItem(SlurpiesToolMaterials.AMETHYST, 1.5F, -3.0F, props()));
+                    () -> new ShovelItem(TMTiers.AMETHYST, 1.5F, -3.0F, props()));
             RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword",
-                    () -> new SwordItem(SlurpiesToolMaterials.AMETHYST_SWORD, 3, -2.4F, props()));
+                    () -> new SwordItem(TMTiers.AMETHYST_SWORD, 4, -2.4F, props()));
         }
         if (ConfigGeneral.disableRubyTools.get()) {
             RegistryObject<Item> RUBY_AXE = ITEMS.register("ruby_axe",
-                    () -> new AxeItem(SlurpiesToolMaterials.RUBY, 8.0F, -2.8F, props()));
+                    () -> new AxeItem(TMTiers.RUBY, 7.0F, -3.1F, props()));
             RegistryObject<Item> RUBY_BATTLE_AXE = ITEMS.register("ruby_battleaxe",
-                    () -> new BattleAxeItem(SlurpiesToolMaterials.RUBY_BATTLEAXE, 5.0F, -3.0F, props()));
+                    () -> new BattleAxeItem(TMTiers.RUBY_BATTLEAXE, 8.0F, -3.0F, props()));
             RegistryObject<Item> RUBY_EXCAVATOR = ITEMS.register("ruby_excavator",
-                    () -> new ExcavatorItem(SlurpiesToolMaterials.RUBY, 1, -2.8F, props()));
+                    () -> new ExcavatorItem(TMTiers.RUBY, 1, -3.0F, props()));
             RegistryObject<Item> RUBY_HAMMER = ITEMS.register("ruby_hammer",
-                    () -> new HammerItem(1, -2.8F, SlurpiesToolMaterials.RUBY, props()));
+                    () -> new HammerItem(1, -2.8F, TMTiers.RUBY, props()));
             RegistryObject<Item> RUBY_HOE = ITEMS.register("ruby_hoe",
-                    () -> new HoeItem(SlurpiesToolMaterials.RUBY, -3, 0.0F, props()));
+                    () -> new HoeItem(TMTiers.RUBY, -2, 0.0F, props()));
             RegistryObject<Item> RUBY_LUMBER_AXE = ITEMS.register("ruby_lumber_axe",
-                    () -> new LumberAxeItem(SlurpiesToolMaterials.RUBY, 5.0F, -3.0F, props()));
+                    () -> new LumberAxeItem(TMTiers.RUBY, 7.0F, -3.1F, props()));
             RegistryObject<Item> RUBY_PAXEL = ITEMS.register("ruby_paxel",
-                    () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.RUBY_PAXEL, props()));
+                    () -> new PaxelItem(1, -2.8F, TMTiers.RUBY_PAXEL, props()));
             RegistryObject<Item> RUBY_PICKAXE = ITEMS.register("ruby_pickaxe",
-                    () -> new PickaxeItem(SlurpiesToolMaterials.RUBY, 1, -2.8F, props()));
+                    () -> new PickaxeItem(TMTiers.RUBY, 1, -2.8F, props()));
             RegistryObject<Item> RUBY_SHOVEL = ITEMS.register("ruby_shovel",
-                    () -> new ShovelItem(SlurpiesToolMaterials.RUBY, 1.5F, -3.0F, props()));
+                    () -> new ShovelItem(TMTiers.RUBY, 1.5F, -3.0F, props()));
             RegistryObject<Item> RUBY_SWORD = ITEMS.register("ruby_sword",
-                    () -> new SwordItem(SlurpiesToolMaterials.RUBY_SWORD, 3, -2.4F, props()));
+                    () -> new SwordItem(TMTiers.RUBY_SWORD, 4, -2.4F, props()));
         }
         if (ConfigGeneral.disableTopazTools.get()) {
             RegistryObject<Item> TOPAZ_AXE = ITEMS.register("topaz_axe",
-                    () -> new AxeItem(SlurpiesToolMaterials.TOPAZ, 8.0F, -2.8F, props()));
+                    () -> new AxeItem(TMTiers.TOPAZ, 5.0F, -3.0F, props()));
             RegistryObject<Item> TOPAZ_BATTLE_AXE = ITEMS.register("topaz_battleaxe",
-                    () -> new BattleAxeItem(SlurpiesToolMaterials.TOPAZ_BATTLEAXE, 5.0F, -3.0F, props()));
+                    () -> new BattleAxeItem(TMTiers.TOPAZ_BATTLEAXE, 6.0F, -2.9F, props()));
             RegistryObject<Item> TOPAZ_EXCAVATOR = ITEMS.register("topaz_excavator",
-                    () -> new ExcavatorItem(SlurpiesToolMaterials.TOPAZ, 1, -2.8F, props()));
+                    () -> new ExcavatorItem(TMTiers.TOPAZ, 1, -3.0F, props()));
             RegistryObject<Item> TOPAZ_HAMMER = ITEMS.register("topaz_hammer",
-                    () -> new HammerItem(1, -2.8F, SlurpiesToolMaterials.TOPAZ, props()));
+                    () -> new HammerItem(1, -2.8F, TMTiers.TOPAZ, props()));
             RegistryObject<Item> TOPAZ_HOE = ITEMS.register("topaz_hoe",
-                    () -> new HoeItem(SlurpiesToolMaterials.TOPAZ, -3, 0.0F, props()));
+                    () -> new HoeItem(TMTiers.TOPAZ, -3, 0.0F, props()));
             RegistryObject<Item> TOPAZ_LUMBER_AXE = ITEMS.register("topaz_lumber_axe",
-                    () -> new LumberAxeItem(SlurpiesToolMaterials.TOPAZ, 5.0F, -3.0F, props()));
+                    () -> new LumberAxeItem(TMTiers.TOPAZ, 5.0F, -3.0F, props()));
             RegistryObject<Item> TOPAZ_PAXEL = ITEMS.register("topaz_paxel",
-                    () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.TOPAZ_PAXEL, props()));
+                    () -> new PaxelItem(1, -2.8F, TMTiers.TOPAZ_PAXEL, props()));
             RegistryObject<Item> TOPAZ_PICKAXE = ITEMS.register("topaz_pickaxe",
-                    () -> new PickaxeItem(SlurpiesToolMaterials.TOPAZ, 1, -2.8F, props()));
+                    () -> new PickaxeItem(TMTiers.TOPAZ, 1, -2.8F, props()));
             RegistryObject<Item> TOPAZ_SHOVEL = ITEMS.register("topaz_shovel",
-                    () -> new ShovelItem(SlurpiesToolMaterials.TOPAZ, 1.5F, -3.0F, props()));
+                    () -> new ShovelItem(TMTiers.TOPAZ, 1.5F, -3.0F, props()));
             RegistryObject<Item> TOPAZ_SWORD = ITEMS.register("topaz_sword",
-                    () -> new SwordItem(SlurpiesToolMaterials.TOPAZ_SWORD, 3, -2.4F, props()));
+                    () -> new SwordItem(TMTiers.TOPAZ_SWORD, 3, -2.4F, props()));
         }
         if (ConfigGeneral.disableWitheredTools.get()) {
             RegistryObject<Item> WITHERED_AXE = ITEMS.register("withered_axe",
-                    () -> new AxeItem(SlurpiesToolMaterials.WITHERED, 8.0F, -2.8F, props()));
+                    () -> new AxeItem(TMTiers.WITHERED, 6.0F, -3.0F, props()));
             RegistryObject<Item> WITHERED_BATTLE_AXE = ITEMS.register("withered_battleaxe",
-                    () -> new BattleAxeItem(SlurpiesToolMaterials.WITHERED_BATTLEAXE, 5.0F, -3.0F, props()));
+                    () -> new BattleAxeItem(TMTiers.WITHERED_BATTLEAXE, 7.0F, -2.9F, props()));
             RegistryObject<Item> WITHERED_EXCAVATOR = ITEMS.register("withered_excavator",
-                    () -> new ExcavatorItem(SlurpiesToolMaterials.WITHERED, 1, -2.8F, props()));
+                    () -> new ExcavatorItem(TMTiers.WITHERED, 1, -3.0F, props()));
             RegistryObject<Item> WITHERED_HAMMER = ITEMS.register("withered_hammer",
-                    () -> new HammerItem(1, -2.8F, SlurpiesToolMaterials.WITHERED, props()));
+                    () -> new HammerItem(1, -2.8F, TMTiers.WITHERED, props()));
             RegistryObject<Item> WITHERED_HOE = ITEMS.register("withered_hoe",
-                    () -> new HoeItem(SlurpiesToolMaterials.WITHERED, -3, 0.0F, props()));
+                    () -> new HoeItem(TMTiers.WITHERED, -4, 0.0F, props()));
             RegistryObject<Item> WITHERED_LUMBER_AXE = ITEMS.register("withered_lumber_axe",
-                    () -> new LumberAxeItem(SlurpiesToolMaterials.WITHERED, 5.0F, -3.0F, props()));
+                    () -> new LumberAxeItem(TMTiers.WITHERED, 6.0F, -3.0F, props()));
             RegistryObject<Item> WITHERED_PAXEL = ITEMS.register("withered_paxel",
-                    () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.WITHERED_PAXEL, props()));
+                    () -> new PaxelItem(1, -2.8F, TMTiers.WITHERED_PAXEL, props()));
             RegistryObject<Item> WITHERED_PICKAXE = ITEMS.register("withered_pickaxe",
-                    () -> new PickaxeItem(SlurpiesToolMaterials.WITHERED, 1, -2.8F, props()));
+                    () -> new PickaxeItem(TMTiers.WITHERED, 1, -2.8F, props()));
             RegistryObject<Item> WITHERED_SHOVEL = ITEMS.register("withered_shovel",
-                    () -> new ShovelItem(SlurpiesToolMaterials.WITHERED, 1.5F, -3.0F, props()));
+                    () -> new ShovelItem(TMTiers.WITHERED, 1.5F, -3.0F, props()));
             RegistryObject<Item> WITHERED_SWORD = ITEMS.register("withered_sword",
-                    () -> new SwordItem(SlurpiesToolMaterials.WITHERED_SWORD, 3, -2.4F, props()));
+                    () -> new SwordItem(TMTiers.WITHERED_SWORD, 4, -2.4F, props()));
         }
         //Vanilla Extras
         if (ConfigGeneral.disableDiamondToolsExtras.get()) {
             RegistryObject<Item> DIAMOND_BATTLE_AXE = ITEMS.register("diamond_battleaxe",
-                    () -> new BattleAxeItem(Tiers.DIAMOND, 5.0F, -3.0F, props()));
+                    () -> new BattleAxeItem(Tiers.DIAMOND, 6.0F, -2.9F, props()));
             final RegistryObject<Item> DIAMOND_PAXEL = ITEMS.register("diamond_paxel",
-                    () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.DIAMOND_PAXEL, props()));
+                    () -> new PaxelItem(1, -2.8F, TMTiers.DIAMOND_PAXEL, props()));
             RegistryObject<Item> DIAMOND_LUMBER_AXE = ITEMS.register("diamond_lumber_axe",
                     () -> new LumberAxeItem(Tiers.DIAMOND, 5.0F, -3.0F, props()));
             RegistryObject<Item> DIAMOND_HAMMER = ITEMS.register("diamond_hammer",
                     () -> new HammerItem(1, -2.8F, Tiers.DIAMOND, props()));
             RegistryObject<Item> DIAMOND_EXCAVATOR = ITEMS.register("diamond_excavator",
-                    () -> new ExcavatorItem(Tiers.DIAMOND, 1, -2.8F, props()));
+                    () -> new ExcavatorItem(Tiers.DIAMOND, 1, -3.0F, props()));
         }
             if (ConfigGeneral.disableGoldToolsExtras.get()) {
                 RegistryObject<Item> GOLD_BATTLE_AXE = ITEMS.register("gold_battleaxe",
-                        () -> new BattleAxeItem(Tiers.GOLD, 5.0F, -3.0F, props()));
+                        () -> new BattleAxeItem(Tiers.GOLD, 7.0F, -2.9F, props()));
                 RegistryObject<Item> GOLD_PAXEL = ITEMS.register("gold_paxel",
-                        () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.GOLD_PAXEL, props()));
+                        () -> new PaxelItem(1, -2.8F, TMTiers.GOLD_PAXEL, props()));
                 RegistryObject<Item> GOLD_LUMBER_AXE = ITEMS.register("gold_lumber_axe",
-                        () -> new LumberAxeItem(Tiers.GOLD, 5.0F, -3.0F, props()));
+                        () -> new LumberAxeItem(Tiers.GOLD, 6.0F, -3.0F, props()));
                 RegistryObject<Item> GOLD_HAMMER = ITEMS.register("gold_hammer",
                         () -> new HammerItem(1, -2.8F, Tiers.GOLD, props()));
                 RegistryObject<Item> GOLD_EXCAVATOR = ITEMS.register("gold_excavator",
@@ -284,62 +284,62 @@ public class ModItems {
             }
                 if (ConfigGeneral.disableIronToolsExtras.get()) {
                     RegistryObject<Item> IRON_BATTLE_AXE = ITEMS.register("iron_battleaxe",
-                            () -> new BattleAxeItem(Tiers.IRON, 5.0F, -3.0F, props()));
+                            () -> new BattleAxeItem(Tiers.IRON, 7.0F, -3.0F, props()));
                     RegistryObject<Item> IRON_PAXEL = ITEMS.register("iron_paxel",
-                            () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.IRON_PAXEL, props()));
+                            () -> new PaxelItem(1, -3.0F, TMTiers.IRON_PAXEL, props()));
                     RegistryObject<Item> IRON_LUMBER_AXE = ITEMS.register("iron_lumber_axe",
-                            () -> new LumberAxeItem(Tiers.IRON, 5.0F, -3.0F, props()));
+                            () -> new LumberAxeItem(Tiers.IRON, 6.0F, -3.1F, props()));
                     RegistryObject<Item> IRON_HAMMER = ITEMS.register("iron_hammer",
                             () -> new HammerItem(1, -2.8F, Tiers.IRON, props()));
                     RegistryObject<Item> IRON_EXCAVATOR = ITEMS.register("iron_excavator",
-                            () -> new ExcavatorItem(Tiers.IRON, 1, -2.8F, props()));
+                            () -> new ExcavatorItem(Tiers.IRON, 1, -3.0F, props()));
                 }
                     if (ConfigGeneral.disableNetheriteToolsExtras.get()) {
                         RegistryObject<Item> NETHERITE_BATTLE_AXE = ITEMS.register("netherite_battleaxe",
-                                () -> new BattleAxeItem(Tiers.NETHERITE, 5.0F, -3.0F, props()));
+                                () -> new BattleAxeItem(Tiers.NETHERITE, 6.0F, -2.9F, props()));
                         RegistryObject<Item> NETHERITE_PAXEL = ITEMS.register("netherite_paxel",
-                                () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.NETHERITE_PAXEL, props()));
+                                () -> new PaxelItem(1, -2.8F, TMTiers.NETHERITE_PAXEL, props()));
                         RegistryObject<Item> NETHERITE_LUMBAR_AXE = ITEMS.register("netherite_lumber_axe",
                                 () -> new LumberAxeItem(Tiers.NETHERITE, 5.0F, -3.0F, props()));
                         RegistryObject<Item> NETHERITE_HAMMER = ITEMS.register("netherite_hammer",
                                 () -> new HammerItem(1, -2.8F, Tiers.NETHERITE, props()));
                         RegistryObject<Item> NETHERITE_EXCAVATOR = ITEMS.register("netherite_excavator",
-                                () -> new ExcavatorItem(Tiers.NETHERITE, 1, -2.8F, props()));
+                                () -> new ExcavatorItem(Tiers.NETHERITE, 1, -3.0F, props()));
                     }
                         if (ConfigGeneral.disableStoneToolsExtras.get()) {
                             RegistryObject<Item> STONE_BATTLE_AXE = ITEMS.register("stone_battleaxe",
-                                    () -> new BattleAxeItem(Tiers.STONE, 5.0F, -3.0F, props()));
+                                    () -> new BattleAxeItem(Tiers.STONE, 8.0F, -3.1F, props()));
                             RegistryObject<Item> STONE_PAXEL = ITEMS.register("stone_paxel",
-                                    () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.STONE_PAXEL, props()));
+                                    () -> new PaxelItem(1, -2.8F, TMTiers.STONE_PAXEL, props()));
                             RegistryObject<Item> STONE_LUMBER_AXE = ITEMS.register("stone_lumber_axe",
-                                    () -> new LumberAxeItem(Tiers.STONE, 5.0F, -3.0F, props()));
+                                    () -> new LumberAxeItem(Tiers.STONE, 7.0F, -3.2F, props()));
                             RegistryObject<Item> STONE_HAMMER = ITEMS.register("stone_hammer",
                                     () -> new HammerItem(1, -2.8F, Tiers.STONE, props()));
                             RegistryObject<Item> STONE_EXCAVATOR = ITEMS.register("stone_excavator",
-                                    () -> new ExcavatorItem(Tiers.STONE, 1, -2.8F, props()));
+                                    () -> new ExcavatorItem(Tiers.STONE, 1, -3.0F, props()));
                         }
                             if (ConfigGeneral.disableWoodenToolsExtras.get()) {
                                 RegistryObject<Item> WOODEN_BATTLE_AXE = ITEMS.register("wooden_battleaxe",
-                                        () -> new BattleAxeItem(Tiers.WOOD, 5.0F, -3.0F, props()));
+                                        () -> new BattleAxeItem(Tiers.WOOD, 7.0F, -3.1F, props()));
                                 RegistryObject<Item> WOODEN_PAXEL = ITEMS.register("wooden_paxel",
-                                        () -> new PaxelItem(1, -3.0F, SlurpiesToolMaterials.WOODEN_PAXEL, props()));
+                                        () -> new PaxelItem(1, -2.8F, TMTiers.WOODEN_PAXEL, props()));
                                 RegistryObject<Item> WOODEN_LUMBER_AXE = ITEMS.register("wooden_lumber_axe",
-                                        () -> new LumberAxeItem(Tiers.WOOD, 5.0F, -3.0F, props()));
+                                        () -> new LumberAxeItem(Tiers.WOOD, 6.0F, -3.2F, props()));
                                 RegistryObject<Item> WOODEN_HAMMER = ITEMS.register("wooden_hammer",
                                         () -> new HammerItem(1, -2.8F, Tiers.WOOD, props()));
                                 RegistryObject<Item> WOODEN_EXCAVATOR = ITEMS.register("wooden_excavator",
-                                        () -> new ExcavatorItem(Tiers.WOOD, 1, -2.8F, props()));
+                                        () -> new ExcavatorItem(Tiers.WOOD, 1, -3.0F, props()));
                             }
                                 if (ConfigGeneral.disableVMTools.get()) {
                                     RegistryObject<Item> VM_EXCAVATOR = ITEMS.register("vm_excavator",
-                                            () -> new ExcavatorItem(SlurpiesToolMaterials.VMPICK, 1, -2.8F, props()));
+                                            () -> new ExcavatorItem(TMTiers.VM, 1, -3.0F, props()));
                                     RegistryObject<Item> VM_HAMMER = ITEMS.register("vm_hammer",
-                                            () -> new HammerItem(1, -2.8F, SlurpiesToolMaterials.VMPICK, props()));
+                                            () -> new HammerItem(1, -2.8F, TMTiers.VM, props()));
                                     RegistryObject<Item> VM_PICKAXE = ITEMS.register("vmpick",
-                                            () -> new PickaxeItem(SlurpiesToolMaterials.VMPICK, 1, -2.8F, props()));
+                                            () -> new PickaxeItem(TMTiers.VM, 1, -2.8F, props()));
                                 }
                             }
     private static Item.Properties props () {
         return new Item.Properties();
     }
-    }
+}

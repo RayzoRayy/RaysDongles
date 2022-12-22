@@ -14,7 +14,7 @@ public enum SlurpiesArmorMaterials implements ArmorMaterial {
     AMETHYST ("raysdongles:amethyst", 34, new int[]{3, 6, 7, 4}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND,2.0F, 0F, () -> Ingredient.of(Items.AMETHYST_SHARD)),
     RUBY("raysdongles:ruby", 16, new int[]{2, 6, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_DIAMOND, 0.0F, 0F, () -> Ingredient.of(ModItems.RUBY.get())),
     TOPAZ("raysdongles:topaz", 35, new int[]{4, 6, 8, 4}, 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0F, () -> Ingredient.of(ModItems.TOPAZ.get())),
-    WITHERED("raysdongles:withered", 0, new int[]{4, 6, 7, 4}, 25, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0F, () -> Ingredient.of(Items.COAL));
+    WITHERED("raysdongles:withered", 0, new int[]{4, 6, 7, 4}, 25, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0F, () -> Ingredient.of());
 
     private static final int[] HEALTH_PER_SLOT = { 13, 15, 16, 11 };
     private final String name;

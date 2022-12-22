@@ -1,5 +1,6 @@
 package com.ray.raysdongles.common.items.armor;
 
+import com.ray.raysdongles.core.config.ConfigGeneral;
 import com.ray.raysdongles.core.init.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -27,22 +28,22 @@ public class WitheredArmor extends ArmorItem {
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
-        if (player.getItemBySlot(EquipmentSlot.HEAD) != null && player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.WITHERED_HELMET.get()
-                && player.getItemBySlot(EquipmentSlot.CHEST) != null && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.WITHERED_CHEST.get()
-                && player.getItemBySlot(EquipmentSlot.LEGS) != null && player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.WITHERED_LEGS.get()
-                && player.getItemBySlot(EquipmentSlot.FEET) != null && player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.WITHERED_BOOTS.get()) {
+            if (player.getItemBySlot(EquipmentSlot.HEAD) != null && player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModItems.WITHERED_HELMET.get()
+                    && player.getItemBySlot(EquipmentSlot.CHEST) != null && player.getItemBySlot(EquipmentSlot.CHEST).getItem() == ModItems.WITHERED_CHEST.get()
+                    && player.getItemBySlot(EquipmentSlot.LEGS) != null && player.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.WITHERED_LEGS.get()
+                    && player.getItemBySlot(EquipmentSlot.FEET) != null && player.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.WITHERED_BOOTS.get()) {
 
-            if (!player.isCreative()) {
-                if (!player.getAbilities().mayfly) {
-                    player.getAbilities().mayfly = true;
+                if (!player.isCreative()) {
+                    if (!player.getAbilities().mayfly) {
+                        player.getAbilities().mayfly = true;
+                    }
+                }
+            } else {
+                if (!player.isCreative()) {
+                    player.getAbilities().flying = false;
+                    player.getAbilities().mayfly = false;
                 }
             }
-        } else {
-            if (!player.isCreative()) {
-                player.getAbilities().flying = false;
-                player.getAbilities().mayfly = false;
-            }
-        }
     }
     public Rarity getRarity(ItemStack stack) {
         return stack.getCount() == 0 ? Rarity.EPIC : Rarity.EPIC;
