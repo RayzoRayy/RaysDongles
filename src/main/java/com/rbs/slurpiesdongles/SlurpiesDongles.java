@@ -5,8 +5,8 @@ import com.rbs.slurpiesdongles.core.events.ModMobDrops;
 import com.rbs.slurpiesdongles.core.init.ModBlocks;
 import com.rbs.slurpiesdongles.core.init.ModFood;
 import com.rbs.slurpiesdongles.core.init.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
+import com.rbs.slurpiesdongles.core.world.OreGeneration;
+import com.rbs.slurpiesdongles.core.world.feature.ModOrePlacement;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,10 +40,14 @@ public class SlurpiesDongles
         ModFood.register(bus);
         ModItems.register(bus);
 
+        ModOrePlacement.register(bus);
+        OreGeneration.register(bus);
+
         MinecraftForge.EVENT_BUS.register(ModMobDrops.class);
         bus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+
 
 
     }

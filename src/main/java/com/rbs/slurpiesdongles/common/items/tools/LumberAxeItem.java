@@ -2,7 +2,6 @@ package com.rbs.slurpiesdongles.common.items.tools;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-import com.rbs.slurpiesdongles.common.items.tools.material.SlurpiesToolMaterials;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;

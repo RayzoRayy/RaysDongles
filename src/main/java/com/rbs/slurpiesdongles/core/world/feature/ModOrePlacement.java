@@ -7,6 +7,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.*;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -16,11 +17,11 @@ public class ModOrePlacement {
 
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, SlurpiesDongles.MOD_ID);
 
-    public static final RegistryObject<PlacedFeature> RUBY_ORE = PLACED_FEATURES.register("ruby_ore_placed.json",
+    public static final RegistryObject<PlacedFeature> RUBY_ORE_PLACED = PLACED_FEATURES.register("ruby_ore_placed",
             ()-> new PlacedFeature(OreGeneration.RUBY_ORE.getHolder().get(), commonOrePlacement(ConfigGeneral.rubyOreVeinsPerChunk.get(), //Veins Per Chunk
                     HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-ConfigGeneral.rubyLowY.get()), VerticalAnchor.aboveBottom(ConfigGeneral.rubyHighY.get())))));
 
-    public static final RegistryObject<PlacedFeature> TOPAZ_ORE = PLACED_FEATURES.register("topaz_ore_placed",
+    public static final RegistryObject<PlacedFeature> TOPAZ_ORE_PLACED = PLACED_FEATURES.register("topaz_ore_placed",
             ()-> new PlacedFeature(OreGeneration.TOPAZ_ORE.getHolder().get(), commonOrePlacement(ConfigGeneral.topazOreVeinsPerChunk.get(), //Veins Per Chunk
                     HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-ConfigGeneral.topazLowY.get()), VerticalAnchor.aboveBottom(ConfigGeneral.topazHighY.get())))));
 
@@ -41,6 +42,8 @@ public class ModOrePlacement {
         return orePlacement(RarityFilter.onAverageOnceEvery(p_195350_), p_195351_);
     }
 
-
+    public static void register(IEventBus eventBus) {
+        PLACED_FEATURES.register(eventBus);
+    }
 
 }
