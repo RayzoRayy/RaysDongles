@@ -343,6 +343,6 @@ public class ModItems {
     }
 
     private static Item.Properties props() {
-        return new Item.Properties();
+        return new Item.Properties().tab(RDItemGroup.tabSlurpiesDongles);
     }
 }
