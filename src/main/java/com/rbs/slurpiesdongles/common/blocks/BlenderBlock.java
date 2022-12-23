@@ -104,99 +104,99 @@ public class BlenderBlock extends Block {
                 if (!player.getInventory().add(APPLE_SLUSHIE)) {
                     player.drop(APPLE_SLUSHIE, false);
                 }
-                if (player.getItemInHand(hand).getItem() == Items.CARROT) {
+            }
+            if (player.getItemInHand(hand).getItem() == Items.CARROT) {
 
-                    ItemStack CARROT_JUICE = new ItemStack(ModFood.CARROT_JUICE.get());
+                ItemStack CARROT_JUICE = new ItemStack(ModFood.CARROT_JUICE.get());
 
-                    player.getMainHandItem();
-                    player.getItemInHand(hand).shrink(1);
-                    if (!player.getInventory().add(CARROT_JUICE)) {
-                        player.drop(CARROT_JUICE, false);
-                    }
-                    if (player.getItemInHand(hand).getItem() == ModFood.SUGARCOATED_LEMON.get()) {
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                if (!player.getInventory().add(CARROT_JUICE)) {
+                    player.drop(CARROT_JUICE, false);
+                }
+            }
+            if (player.getItemInHand(hand).getItem() == ModFood.SUGARCOATED_LEMON.get()) {
 
-                        ItemStack LEMONADE = new ItemStack(ModFood.LEMONADE.get());
+                ItemStack LEMONADE = new ItemStack(ModFood.LEMONADE.get());
 
-                        player.getMainHandItem();
-                        player.getItemInHand(hand).shrink(1);
-                        if (!player.getInventory().add(LEMONADE)) {
-                            player.drop(LEMONADE, false);
-                        }
-                        if (player.getItemInHand(hand).getItem() == Items.MELON_SLICE) {
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                if (!player.getInventory().add(LEMONADE)) {
+                    player.drop(LEMONADE, false);
+                }
+            }
+            if (player.getItemInHand(hand).getItem() == Items.MELON_SLICE) {
 
-                            ItemStack MELON_JUICE = new ItemStack(ModFood.MELON_JUICE.get());
+                ItemStack MELON_JUICE = new ItemStack(ModFood.MELON_JUICE.get());
 
-                            player.getMainHandItem();
-                            player.getItemInHand(hand).shrink(1);
-                            if (!player.getInventory().add(MELON_JUICE)) {
-                                player.drop(MELON_JUICE, false);
-                            }
-                            if (player.getItemInHand(hand).getItem() == ModFood.SUGARCOATED_MELON.get()) {
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                if (!player.getInventory().add(MELON_JUICE)) {
+                    player.drop(MELON_JUICE, false);
+                }
+            }
+            if (player.getItemInHand(hand).getItem() == ModFood.SUGARCOATED_MELON.get()) {
 
-                                ItemStack MELON_SLUSHIE = new ItemStack(ModFood.MELON_SLUSHIE.get());
+                ItemStack MELON_SLUSHIE = new ItemStack(ModFood.MELON_SLUSHIE.get());
 
-                                player.getMainHandItem();
-                                player.getItemInHand(hand).shrink(1);
-                                if (!player.getInventory().add(MELON_SLUSHIE)) {
-                                    player.drop(MELON_SLUSHIE, false);
-                                }
-                                if (player.getItemInHand(hand).getItem() == ModFood.ORANGE.get()) {
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                if (!player.getInventory().add(MELON_SLUSHIE)) {
+                    player.drop(MELON_SLUSHIE, false);
+                }
+            }
+            if (player.getItemInHand(hand).getItem() == ModFood.ORANGE.get()) {
 
-                                    ItemStack ORANGE_JUICE = new ItemStack(ModFood.ORANGE_JUICE.get());
+                ItemStack ORANGE_JUICE = new ItemStack(ModFood.ORANGE_JUICE.get());
 
-                                    player.getMainHandItem();
-                                    player.getItemInHand(hand).shrink(1);
-                                    //player.addItem(APPLE_JUICE);
-                                    if (!player.getInventory().add(ORANGE_JUICE)) {
-                                        player.drop(ORANGE_JUICE, false);
-                                    }
-                                    if (player.getItemInHand(hand).getItem() == ModFood.SUGARCOATED_ORANGE.get()) {
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                //player.addItem(APPLE_JUICE);
+                if (!player.getInventory().add(ORANGE_JUICE)) {
+                    player.drop(ORANGE_JUICE, false);
+                }
+            }
+            if (player.getItemInHand(hand).getItem() == ModFood.SUGARCOATED_ORANGE.get()) {
 
-                                        ItemStack ORANGE_SLUSHIE = new ItemStack(ModFood.ORANGE_SLUSHIE.get());
+                ItemStack ORANGE_SLUSHIE = new ItemStack(ModFood.ORANGE_SLUSHIE.get());
 
-                                        player.getMainHandItem();
-                                        player.getItemInHand(hand).shrink(1);
-                                        if (!player.getInventory().add(ORANGE_SLUSHIE)) {
-                                            player.drop(ORANGE_SLUSHIE, false);
-                                        }
-                                        if (player.getItemInHand(hand).getItem() == ModFood.STRAWBERRY.get()) {
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                if (!player.getInventory().add(ORANGE_SLUSHIE)) {
+                    player.drop(ORANGE_SLUSHIE, false);
+                }
+            }
+            if (player.getItemInHand(hand).getItem() == ModFood.STRAWBERRY.get()) {
 
-                                            ItemStack STRAWBERRY_JUICE = new ItemStack(ModFood.STRAWBERRY_JUICE.get());
+                ItemStack STRAWBERRY_JUICE = new ItemStack(ModFood.STRAWBERRY_JUICE.get());
 
-                                            player.getMainHandItem();
-                                            player.getItemInHand(hand).shrink(1);
-                                            if (!player.getInventory().add(STRAWBERRY_JUICE)) {
-                                                player.drop(STRAWBERRY_JUICE, false);
-                                            }
-                                            if (player.getItemInHand(hand).getItem() == ModFood.SUGARCOATED_STRAWBERRY.get()) {
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                if (!player.getInventory().add(STRAWBERRY_JUICE)) {
+                    player.drop(STRAWBERRY_JUICE, false);
+                }
+            }
+            if (player.getItemInHand(hand).getItem() == ModFood.SUGARCOATED_STRAWBERRY.get()) {
 
-                                                ItemStack STRAWBERRY_SLUSHIE = new ItemStack(ModFood.STRAWBERRY_SLUSHIE.get());
+                ItemStack STRAWBERRY_SLUSHIE = new ItemStack(ModFood.STRAWBERRY_SLUSHIE.get());
 
-                                                player.getMainHandItem();
-                                                player.getItemInHand(hand).shrink(1);
-                                                if (!player.getInventory().add(STRAWBERRY_SLUSHIE)) {
-                                                    player.drop(STRAWBERRY_SLUSHIE, false);
-                                                }
-                                                if (player.getItemInHand(hand).getItem() == ModFood.TOMATO.get()) {
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                if (!player.getInventory().add(STRAWBERRY_SLUSHIE)) {
+                    player.drop(STRAWBERRY_SLUSHIE, false);
+                }
+            }
+            if (player.getItemInHand(hand).getItem() == ModFood.TOMATO.get()) {
 
-                                                    ItemStack TOMATO_JUICE = new ItemStack(ModFood.TOMATO_JUICE.get());
+                ItemStack TOMATO_JUICE = new ItemStack(ModFood.TOMATO_JUICE.get());
 
-                                                    player.getMainHandItem();
-                                                    player.getItemInHand(hand).shrink(1);
-                                                    if (!player.getInventory().add(TOMATO_JUICE)) {
-                                                        player.drop(TOMATO_JUICE, false);
-                                                    }
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                player.getMainHandItem();
+                player.getItemInHand(hand).shrink(1);
+                if (!player.getInventory().add(TOMATO_JUICE)) {
+                    player.drop(TOMATO_JUICE, false);
+                }
+            }
+        }
         return InteractionResult.FAIL;
     }
 }

@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class HammerItem extends PickaxeItem {
 
-    public HammerItem(Tier p_42961_, int p_42962_, float p_42963_, Properties p_42964_) {
+    public HammerItem(int p_42962_, float p_42963_, Tier p_42961_, Properties p_42964_) {
         super(p_42961_, p_42962_, p_42963_, p_42964_);
     }
 
