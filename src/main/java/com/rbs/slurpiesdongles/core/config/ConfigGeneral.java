@@ -22,12 +22,16 @@ public class ConfigGeneral {
     public static class Common {
 
         public ForgeConfigSpec.BooleanValue receiveUpdateMessages;
+        public ForgeConfigSpec.BooleanValue receiveThankyouMessage;
 
         private Common(ForgeConfigSpec.Builder builder) {
             builder.push("General");
             receiveUpdateMessages = builder
                     .comment("Enable or disable the Update Checker [ true / false default: true")
                     .define("Receive update messages", true);
+            receiveThankyouMessage = builder
+                    .comment("Enable or disable the thank you message [ true / false default: true")
+                    .define("Receive thank you message", true);
             builder.pop();
         }
     }
@@ -507,12 +511,12 @@ public class ConfigGeneral {
         builder.comment("Config section for Ore tweaks").push("Ores");
         rubyOreVeinsPerChunk = builder
                 .comment("Defines the veins per chunk")
-                .comment("Default is 9, set to 0 to disable this ore spawning")
-                .defineInRange("Ruby Ore Veins Per Chunk", 9, 0, 32);
+                .comment("Default is 20, set to 0 to disable this ore spawning")
+                .defineInRange("Ruby Ore Veins Per Chunk", 20, 0, 32);
         rubyVeinSize = builder
                 .comment("Defines the vein size")
-                .comment("Default is 6")
-                .defineInRange("Ruby Vein Size", 6, 0, 12);
+                .comment("Default is 9")
+                .defineInRange("Ruby Vein Size", 9, 0, 12);
         rubyLowY = builder
                 .comment("Defines the lowest Y level that this can spawn")
                 .comment("Default is -80")
@@ -523,12 +527,12 @@ public class ConfigGeneral {
                 .defineInRange("Ruby High Y", 80, 0, 200);
         topazOreVeinsPerChunk = builder
                 .comment("Defines the veins per chunk")
-                .comment("Default is 5, set to 0 to disable this ore spawning")
-                .defineInRange("Topaz Ore Veins Per Chunk", 5, 0, 32);
+                .comment("Default is 13, set to 0 to disable this ore spawning")
+                .defineInRange("Topaz Ore Veins Per Chunk", 13, 0, 32);
         topazVeinSize = builder
                 .comment("Defines the vein size")
-                .comment("Default is 4")
-                .defineInRange("Topaz Vein Size", 4, 0, 12);
+                .comment("Default is 7")
+                .defineInRange("Topaz Vein Size", 7, 0, 12);
         topazLowY = builder
                 .comment("Defines the lowest Y level that this can spawn")
                 .comment("Default is -80")

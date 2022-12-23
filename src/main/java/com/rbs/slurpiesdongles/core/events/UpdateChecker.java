@@ -20,6 +20,9 @@ public class UpdateChecker {
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
     public static void join(ClientPlayerNetworkEvent.LoggingIn event) {
+        if (ConfigGeneral.COMMON.receiveThankyouMessage.get()) {
+            event.getPlayer().displayClientMessage(Component.literal((ChatFormatting.GREEN + "Thank you for downloading " + ChatFormatting.AQUA + "Ray's Dongles")), false);
+        }
         if (ConfigGeneral.COMMON.receiveUpdateMessages.get()) {
             VersionChecker.CheckResult result = VersionChecker.getResult(SlurpiesDongles.MOD_CONTAINER.get().getModInfo());
             if (result.status() == VersionChecker.Status.BETA_OUTDATED || result.status() == VersionChecker.Status.OUTDATED) {
