@@ -19,6 +19,7 @@ public class ModItems {
 
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RaysDongles.MOD_ID);
 
+    //These are listed here as null, so they can be called in other classes
     public static RegistryObject<Item> WITHERED_HELMET = null;
     public static RegistryObject<Item> WITHERED_CHEST = null;
     public static RegistryObject<Item> WITHERED_LEGS = null;
@@ -47,17 +48,14 @@ public class ModItems {
     public static final RegistryObject<Item> TOPAZ = ITEMS.register("topaz",
             () -> new Item(props()));
     //Items
-
     public static final RegistryObject<Item> VME_UPGRADE = ITEMS.register("vme_upgrade",
             () -> new Item(props()));
     public static final RegistryObject<Item> VMH_UPGRADE = ITEMS.register("vmh_upgrade",
             () -> new Item(props()));
     public static final RegistryObject<Item> VMP_UPGRADE = ITEMS.register("vmp_upgrade",
             () -> new Item(props()));
-    //Tools
 
-
-    //Config Registries
+    //Config Section
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
 

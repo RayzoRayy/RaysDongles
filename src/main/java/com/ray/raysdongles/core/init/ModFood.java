@@ -12,6 +12,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModFood {
+
+    //These are listed here as null, so they can be called in other classes
 public static RegistryObject<Item> APPLE_JUICE = null;
 public static RegistryObject<Item> APPLE_SLUSHIE = null;
 public static RegistryObject<Item> CARROT_JUICE = null;

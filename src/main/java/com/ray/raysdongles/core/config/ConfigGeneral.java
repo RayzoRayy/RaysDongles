@@ -23,12 +23,16 @@ public class ConfigGeneral {
     public static class Common {
 
         public BooleanValue receiveUpdateMessages;
+        public BooleanValue receiveThankyouMessage;
 
         private Common(Builder builder) {
             builder.push("General");
             receiveUpdateMessages = builder
                     .comment("Enable or disable the Update Checker [ true / false default: true")
                     .define("Receive update messages", true);
+            receiveThankyouMessage = builder
+                    .comment("Enable or disable the thank you message [ true / false default: true")
+                    .define("Receive thank you message", true);
             builder.pop();
         }
     }
