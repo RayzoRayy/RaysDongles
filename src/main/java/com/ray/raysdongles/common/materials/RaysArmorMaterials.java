@@ -1,4 +1,4 @@
-package com.ray.raysdongles.common.items.armor.material;
+package com.ray.raysdongles.common.materials;
 
 import com.ray.raysdongles.core.init.ModItems;
 import net.minecraft.sounds.SoundEvent;
@@ -11,7 +11,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum SlurpiesArmorMaterials implements ArmorMaterial {
+public enum RaysArmorMaterials implements ArmorMaterial {
     AMETHYST ("raysdongles:amethyst", 35, new int[]{3, 6, 8, 3}, 13, SoundEvents.ARMOR_EQUIP_DIAMOND,2.5F, 0F, () -> Ingredient.of(Items.AMETHYST_SHARD)),
     RUBY("raysdongles:ruby", 17, new int[]{2, 6, 6, 3}, 10, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0F, () -> Ingredient.of(ModItems.RUBY.get())),
     TOPAZ("raysdongles:topaz", 33, new int[]{3, 6, 8, 3}, 11, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0F, () -> Ingredient.of(ModItems.TOPAZ.get())),
@@ -27,7 +27,7 @@ public enum SlurpiesArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    SlurpiesArmorMaterials(String pName, int pDurabilityMultiplier, int[] pSlotProtections, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier<Ingredient> pRepairIngredient) {
+    RaysArmorMaterials(String pName, int pDurabilityMultiplier, int[] pSlotProtections, int pEnchantmentValue, SoundEvent pSound, float pToughness, float pKnockbackResistance, Supplier<Ingredient> pRepairIngredient) {
         this.name = pName;
         this.durabilityMultiplier = pDurabilityMultiplier;
         this.slotProtections = pSlotProtections;

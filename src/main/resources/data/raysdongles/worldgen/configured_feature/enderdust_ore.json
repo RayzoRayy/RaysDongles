@@ -2,11 +2,11 @@
   "type": "minecraft:ore",
   "config": {
     "discard_chance_on_air_exposure": 0.0,
-    "size": 7,
+    "size": 8,
     "targets": [
       {
         "state": {
-          "Name": "raysdongles:ruby_ore"
+          "Name": "raysdongles:enderdust_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "raysdongles:deepslate_ruby_ore"
+          "Name": "raysdongles:deepslate_enderdust_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

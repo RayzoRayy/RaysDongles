@@ -2,10 +2,10 @@ package com.ray.raysdongles.core.init;
 
 import com.ray.raysdongles.RaysDongles;
 import com.ray.raysdongles.common.items.ContainerItem;
-import com.ray.raysdongles.common.items.armor.material.SlurpiesArmorMaterials;
+import com.ray.raysdongles.common.materials.RaysArmorMaterials;
 import com.ray.raysdongles.common.items.charms.*;
 import com.ray.raysdongles.common.items.tools.*;
-import com.ray.raysdongles.common.items.tools.material.TMTiers;
+import com.ray.raysdongles.common.materials.TMTiers;
 import com.ray.raysdongles.core.config.ConfigGeneral;
 import com.ray.raysdongles.common.items.armor.WitheredArmor;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -26,6 +26,9 @@ public class ModItems {
     public static RegistryObject<Item> WITHERED_BOOTS = null;
 
     //Dusts
+    public static final RegistryObject<Item> ENDER_DUST = ITEMS.register("ender_dust",
+            () -> new Item(props()));
+    //Glowstone Dusts
     public static final RegistryObject<Item> BLUE_GLOWSTONE_DUST = ITEMS.register("blue_glowstone_dust",
             () -> new Item(props()));
     public static final RegistryObject<Item> GRAY_GLOWSTONE_DUST = ITEMS.register("gray_glowstone_dust",
@@ -83,43 +86,43 @@ public class ModItems {
         //Armor
         if (ConfigGeneral.disableAmethystArmor.get()) {
             RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
-                    () -> new ArmorItem(SlurpiesArmorMaterials.AMETHYST, EquipmentSlot.HEAD, props()));
+                    () -> new ArmorItem(RaysArmorMaterials.AMETHYST, EquipmentSlot.HEAD, props()));
             RegistryObject<Item> AMETHYST_CHEST = ITEMS.register("amethyst_chestplate",
-                    () -> new ArmorItem(SlurpiesArmorMaterials.AMETHYST, EquipmentSlot.CHEST, props()));
+                    () -> new ArmorItem(RaysArmorMaterials.AMETHYST, EquipmentSlot.CHEST, props()));
             RegistryObject<Item> AMETHYST_LEGS = ITEMS.register("amethyst_leggings",
-                    () -> new ArmorItem(SlurpiesArmorMaterials.AMETHYST, EquipmentSlot.LEGS, props()));
+                    () -> new ArmorItem(RaysArmorMaterials.AMETHYST, EquipmentSlot.LEGS, props()));
             RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots",
-                    () -> new ArmorItem(SlurpiesArmorMaterials.AMETHYST, EquipmentSlot.FEET, props()));
+                    () -> new ArmorItem(RaysArmorMaterials.AMETHYST, EquipmentSlot.FEET, props()));
         }
             if (ConfigGeneral.disableRubyArmor.get()) {
                 RegistryObject<Item> RUBY_HELMET = ITEMS.register("ruby_helmet",
-                        () -> new ArmorItem(SlurpiesArmorMaterials.RUBY, EquipmentSlot.HEAD, props()));
+                        () -> new ArmorItem(RaysArmorMaterials.RUBY, EquipmentSlot.HEAD, props()));
                 RegistryObject<Item> RUBY_CHEST = ITEMS.register("ruby_chestplate",
-                        () -> new ArmorItem(SlurpiesArmorMaterials.RUBY, EquipmentSlot.CHEST, props()));
+                        () -> new ArmorItem(RaysArmorMaterials.RUBY, EquipmentSlot.CHEST, props()));
                 RegistryObject<Item> RUBY_LEGS = ITEMS.register("ruby_leggings",
-                        () -> new ArmorItem(SlurpiesArmorMaterials.RUBY, EquipmentSlot.LEGS, props()));
+                        () -> new ArmorItem(RaysArmorMaterials.RUBY, EquipmentSlot.LEGS, props()));
                 RegistryObject<Item> RUBY_BOOTS = ITEMS.register("ruby_boots",
-                        () -> new ArmorItem(SlurpiesArmorMaterials.RUBY, EquipmentSlot.FEET, props()));
+                        () -> new ArmorItem(RaysArmorMaterials.RUBY, EquipmentSlot.FEET, props()));
             }
         if (ConfigGeneral.disableTopazArmor.get()) {
             RegistryObject<Item> TOPAZ_HELMET = ITEMS.register("topaz_helmet",
-                    () -> new ArmorItem(SlurpiesArmorMaterials.TOPAZ, EquipmentSlot.HEAD, props()));
+                    () -> new ArmorItem(RaysArmorMaterials.TOPAZ, EquipmentSlot.HEAD, props()));
             RegistryObject<Item> TOPAZ_CHEST = ITEMS.register("topaz_chestplate",
-                    () -> new ArmorItem(SlurpiesArmorMaterials.TOPAZ, EquipmentSlot.CHEST, props()));
+                    () -> new ArmorItem(RaysArmorMaterials.TOPAZ, EquipmentSlot.CHEST, props()));
             RegistryObject<Item> TOPAZ_LEGS = ITEMS.register("topaz_leggings",
-                    () -> new ArmorItem(SlurpiesArmorMaterials.TOPAZ, EquipmentSlot.LEGS, props()));
+                    () -> new ArmorItem(RaysArmorMaterials.TOPAZ, EquipmentSlot.LEGS, props()));
             RegistryObject<Item> TOPAZ_BOOTS = ITEMS.register("topaz_boots",
-                    () -> new ArmorItem(SlurpiesArmorMaterials.TOPAZ, EquipmentSlot.FEET, props()));
+                    () -> new ArmorItem(RaysArmorMaterials.TOPAZ, EquipmentSlot.FEET, props()));
         }
             if (ConfigGeneral.disableWitheredArmor.get()) {
             WITHERED_HELMET = ITEMS.register("withered_helmet",
-                    () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.HEAD, props()));
+                    () -> new WitheredArmor(RaysArmorMaterials.WITHERED, EquipmentSlot.HEAD, props()));
             WITHERED_CHEST = ITEMS.register("withered_chestplate",
-                    () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.CHEST, props()));
+                    () -> new WitheredArmor(RaysArmorMaterials.WITHERED, EquipmentSlot.CHEST, props()));
              WITHERED_LEGS = ITEMS.register("withered_leggings",
-                    () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.LEGS, props()));
+                    () -> new WitheredArmor(RaysArmorMaterials.WITHERED, EquipmentSlot.LEGS, props()));
              WITHERED_BOOTS = ITEMS.register("withered_boots",
-                    () -> new WitheredArmor(SlurpiesArmorMaterials.WITHERED, EquipmentSlot.FEET, props()));
+                    () -> new WitheredArmor(RaysArmorMaterials.WITHERED, EquipmentSlot.FEET, props()));
         }
         //Charms
         if (ConfigGeneral.disableAbsorptionCharm.get()) {

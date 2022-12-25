@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "raysdongles:topaz_paxel"
+      "item": "raysdongles:netherite_paxel"
     },
     {
       "item": "minecraft:nether_star"

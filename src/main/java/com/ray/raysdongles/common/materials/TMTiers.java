@@ -1,4 +1,4 @@
-package com.ray.raysdongles.common.items.tools.material;
+package com.ray.raysdongles.common.materials;
 
 import com.ray.raysdongles.core.config.ConfigGeneral;
 import com.ray.raysdongles.core.init.ModItems;

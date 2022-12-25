@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "raysdongles:topaz_boots"
+      "item": "minecraft:netherite_boots"
     },
     {
       "item": "minecraft:nether_star"

@@ -53,8 +53,10 @@ public class ConfigGeneral {
     //Blocks but Crops
     public static BooleanValue disableWildCrops;
     //Blocks but Ores
+    public static BooleanValue disableDeepslateEnderDustOre;
     public static BooleanValue disableDeepslateRubyOre;
     public static BooleanValue disableDeepslateTopazOre;
+    public static BooleanValue disableEnderdustOre;
     public static BooleanValue disableRubyOre;
     public static BooleanValue disableTopazOre;
 
@@ -240,12 +242,18 @@ public class ConfigGeneral {
                     .comment("Setting this to false will disable the Wild Crops [true / false default:true")
                     .define("Enable Wild Crops", true);
             //Blocks but Ores
+            disableDeepslateEnderDustOre = builder
+                    .comment("Setting this to false will disable the Deepslate Enderdust Ore [true / false default:true")
+                    .define("Enable Deepslate Enderdust Ore", true);
             disableDeepslateRubyOre = builder
                     .comment("Setting this to false will disable the Deepslate Ruby Ore [true / false default:true")
                     .define("Enable Deepslate Ruby Ore", true);
             disableDeepslateTopazOre = builder
                     .comment("Setting this to false will disable the Deepslate Topaz Ore [true / false default:true")
                     .define("Enable Deepslate Topaz Ore", true);
+            disableEnderdustOre = builder
+                    .comment("Setting this to false will disable the Enderdust Ore [true / false default:true")
+                    .define("Enable Enderdust Ore", true);
             disableRubyOre = builder
                     .comment("Setting this to false will disable the Ruby Ore [true / false default:true")
                     .define("Enable Ruby Ore", true);

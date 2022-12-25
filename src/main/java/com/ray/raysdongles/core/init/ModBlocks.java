@@ -122,6 +122,12 @@ public class ModBlocks {
                     () -> new TallGrassBlock(BlockBehaviour.Properties.copy(GRASS)));
         }
         //Blocks but Ores
+        if (ConfigGeneral.disableDeepslateEnderDustOre.get()) {
+            RegistryObject<Block> DEEPSLATE_ENDERDUST_ORE = register("deepslate_enderdust_ore",
+                    () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(2.5F, 3.0F)
+                            .requiresCorrectToolForDrops()));
+        }
         if (ConfigGeneral.disableDeepslateRubyOre.get()) {
             RegistryObject<Block> DEEPSLATE_RUBY_ORE = register("deepslate_ruby_ore",
                     () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
@@ -133,6 +139,13 @@ public class ModBlocks {
                     () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                             .strength(3.0F, 3.0F)
                             .requiresCorrectToolForDrops()));
+        }
+        if (ConfigGeneral.disableEnderdustOre.get()) {
+            RegistryObject<Block> ENDERDUST_ORE = register("enderdust_ore",
+                    () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(2.5F, 3.0F)
+                            .requiresCorrectToolForDrops()));
+
         }
         if (ConfigGeneral.disableRubyOre.get()) {
             RegistryObject<Block> RUBY_ORE = register("ruby_ore",

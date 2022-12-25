@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "raysdongles:topaz_battleaxe"
+      "item": "raysdongles:netherite_battleaxe"
     },
     {
       "item": "minecraft:nether_star"
