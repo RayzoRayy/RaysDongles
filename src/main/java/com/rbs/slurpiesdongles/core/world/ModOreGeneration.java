@@ -18,6 +18,7 @@ public class ModOreGeneration {
         List<Holder<PlacedFeature>> base =
                 event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES);
 
+        base.add(ModOreFeatures.ENDERDUST_ORE_PLACED);
         base.add(ModOreFeatures.RUBY_ORE_PLACED);
         base.add(ModOreFeatures.TOPAZ_ORE_PLACED);
     }

@@ -4,7 +4,7 @@ issueTrackerURL="https://github.com/RayzoRayy/RaysDongles/issues"
 license="MIT"
 [[mods]]
 modId="slurpiesdongles"
-version="4.15"
+version="4.16"
 displayName="Ray's Dongles"
 updateJSONURL="https://raw.githubusercontent.com/RayzoRayy/RaysDongles/1.18.2/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/slurpies-dongles"

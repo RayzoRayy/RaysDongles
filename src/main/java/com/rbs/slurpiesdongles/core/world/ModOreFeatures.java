@@ -26,6 +26,9 @@ import java.util.function.Supplier;
 
 public class ModOreFeatures {
 
+    public static final List<OreConfiguration.TargetBlockState> OVERWORLD_ENDERDUST_ORES = List.of(
+            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.ENDERDUST_ORE.get().defaultBlockState()),
+            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_ENDERDUST_ORE.get().defaultBlockState()));
     public static final List<OreConfiguration.TargetBlockState> OVERWORLD_RUBY_ORES = List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.RUBY_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
@@ -38,9 +41,13 @@ public class ModOreFeatures {
                     new RandomPatchConfiguration(ConfigGeneral.wildCropsChance.get(), ConfigGeneral.wildCropsXZSpread.get(), ConfigGeneral.wildCropsYSpread.get(), PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                             new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.WILD_CROPS.get())))));
 
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> ENDERDUST_ORE = FeatureUtils.register("enderdust_ore",
+            Feature.ORE, new OreConfiguration(OVERWORLD_ENDERDUST_ORES, ConfigGeneral.enderdustVeinSize.get()));
+    public static final Holder<PlacedFeature> ENDERDUST_ORE_PLACED = PlacementUtils.register("enderdust_ore_placed",
+            ModOreFeatures.ENDERDUST_ORE, ModOrePlacement.commonOrePlacement(ConfigGeneral.enderdustOreVeinsPerChunk.get(),
+                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(ConfigGeneral.enderdustLowY.get()), VerticalAnchor.aboveBottom(ConfigGeneral.enderdustHighY.get()))));
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> RUBY_ORE = FeatureUtils.register("ruby_ore",
             Feature.ORE, new OreConfiguration(OVERWORLD_RUBY_ORES, ConfigGeneral.rubyVeinSize.get()));
-
     public static final Holder<PlacedFeature> RUBY_ORE_PLACED = PlacementUtils.register("ruby_ore_placed",
             ModOreFeatures.RUBY_ORE, ModOrePlacement.commonOrePlacement(ConfigGeneral.rubyOreVeinsPerChunk.get(),
                     HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(ConfigGeneral.rubyLowY.get()), VerticalAnchor.aboveBottom(ConfigGeneral.rubyHighY.get()))));
