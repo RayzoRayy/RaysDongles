@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "slurpiesdongles:topaz_paxel"
+      "item": "slurpiesdongles:netherite_paxel"
     },
     {
       "item": "minecraft:nether_star"

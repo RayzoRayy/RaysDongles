@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "slurpiesdongles:topaz_battleaxe"
+      "item": "slurpiesdongles:netherite_battleaxe"
     },
     {
       "item": "minecraft:nether_star"

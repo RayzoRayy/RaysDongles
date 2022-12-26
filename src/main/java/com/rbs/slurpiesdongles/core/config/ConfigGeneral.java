@@ -53,8 +53,10 @@ public class ConfigGeneral {
     //Blocks but Crops
     public static ForgeConfigSpec.BooleanValue disableWildCrops;
     //Blocks but Ores
+    public static ForgeConfigSpec.BooleanValue disableDeepslateEnderdustOre;
     public static ForgeConfigSpec.BooleanValue disableDeepslateRubyOre;
     public static ForgeConfigSpec.BooleanValue disableDeepslateTopazOre;
+    public static ForgeConfigSpec.BooleanValue disableEnderdustOre;
     public static ForgeConfigSpec.BooleanValue disableRubyOre;
     public static ForgeConfigSpec.BooleanValue disableTopazOre;
 
@@ -149,6 +151,10 @@ public class ConfigGeneral {
     public static ForgeConfigSpec.BooleanValue disableEnchantedIronApple;
     public static ForgeConfigSpec.BooleanValue disableHolyBread;
     //Ore Stuffs
+    public static ForgeConfigSpec.IntValue enderdustOreVeinsPerChunk;
+    public static ForgeConfigSpec.IntValue enderdustLowY;
+    public static ForgeConfigSpec.IntValue enderdustHighY;
+    public static ForgeConfigSpec.IntValue enderdustVeinSize;
     public static ForgeConfigSpec.IntValue rubyOreVeinsPerChunk;
     public static ForgeConfigSpec.IntValue rubyLowY;
     public static ForgeConfigSpec.IntValue rubyHighY;
@@ -251,12 +257,18 @@ public class ConfigGeneral {
                 .comment("Setting this to false will disable the Wild Crops [true / false default:true")
                 .define("Enable Wild Crops", true);
         //Blocks but Ores
+        disableDeepslateEnderdustOre = builder
+                .comment("Setting this to false will disable the Deepslate Enderdust Ore [true / false default:true")
+                .define("Enable Deepslate Enderdust Ore", true);
         disableDeepslateRubyOre = builder
                 .comment("Setting this to false will disable the Deepslate Ruby Ore [true / false default:true")
                 .define("Enable Deepslate Ruby Ore", true);
         disableDeepslateTopazOre = builder
                 .comment("Setting this to false will disable the Deepslate Topaz Ore [true / false default:true")
                 .define("Enable Deepslate Topaz Ore", true);
+        disableEnderdustOre = builder
+                .comment("Setting this to false will disable the Enderdust Ore [true / false default:true")
+                .define("Enable Enderdust Ore", true);
         disableRubyOre = builder
                 .comment("Setting this to false will disable the Ruby Ore [true / false default:true")
                 .define("Enable Ruby Ore", true);
@@ -509,22 +521,38 @@ public class ConfigGeneral {
         builder.pop();
         //Ore Stuffs
         builder.comment("Config section for Ore tweaks").push("Ores");
+        enderdustOreVeinsPerChunk = builder
+                .comment("Defines the veins per chunk")
+                .comment("Default is 13, set to 0 to disable this ore spawning")
+                .defineInRange("Enderdust Ore Veins Per Chunk", 13, 0, 32);
+        enderdustVeinSize = builder
+                .comment("Defines the vein size")
+                .comment("Default is 7")
+                .defineInRange("Enderdust Vein Size", 7, 0, 12);
+        enderdustLowY = builder
+                .comment("Defines the lowest Y level that this can spawn")
+                .comment("Default is -56")
+                .defineInRange("Enderdust Low Y", -56, -100, -10);
+        enderdustHighY = builder
+                .comment("Defines the highest Y level that this can spawn")
+                .comment("Default is 56")
+                .defineInRange("Enderdust High Y", 56, 0, 200);
         rubyOreVeinsPerChunk = builder
                 .comment("Defines the veins per chunk")
-                .comment("Default is 20, set to 0 to disable this ore spawning")
-                .defineInRange("Ruby Ore Veins Per Chunk", 20, 0, 32);
+                .comment("Default is 18, set to 0 to disable this ore spawning")
+                .defineInRange("Ruby Ore Veins Per Chunk", 18, 0, 32);
         rubyVeinSize = builder
                 .comment("Defines the vein size")
                 .comment("Default is 9")
                 .defineInRange("Ruby Vein Size", 9, 0, 12);
         rubyLowY = builder
                 .comment("Defines the lowest Y level that this can spawn")
-                .comment("Default is -80")
-                .defineInRange("Ruby Low Y", -80, -100, -10);
+                .comment("Default is -64")
+                .defineInRange("Ruby Low Y", -64, -100, -10);
         rubyHighY = builder
                 .comment("Defines the highest Y level that this can spawn")
-                .comment("Default is 80")
-                .defineInRange("Ruby High Y", 80, 0, 200);
+                .comment("Default is 48")
+                .defineInRange("Ruby High Y", 48, 0, 200);
         topazOreVeinsPerChunk = builder
                 .comment("Defines the veins per chunk")
                 .comment("Default is 13, set to 0 to disable this ore spawning")
@@ -539,8 +567,8 @@ public class ConfigGeneral {
                 .defineInRange("Topaz Low Y", -80, -100, -10);
         topazHighY = builder
                 .comment("Defines the highest Y level that this can spawn")
-                .comment("Default is 80")
-                .defineInRange("Topaz High Y", 80, 0, 200);
+                .comment("Default is 32")
+                .defineInRange("Topaz High Y", 32, 0, 200);
         builder.pop();
         //Regen Stuffs
         builder.comment("Config section for Defensive Food Tweaks").push("Defensive Food");

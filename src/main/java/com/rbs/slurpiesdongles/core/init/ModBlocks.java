@@ -26,9 +26,11 @@ public class ModBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, SlurpiesDongles.MOD_ID);
 
+    public static RegistryObject<Block> DEEPSLATE_ENDERDUST_ORE = null;
     public static RegistryObject<Block> DEEPSLATE_RUBY_ORE = null;
-    public static RegistryObject<Block> RUBY_ORE = null;
     public static RegistryObject<Block> DEEPSLATE_TOPAZ_ORE = null;
+    public static RegistryObject<Block> ENDERDUST_ORE = null;
+    public static RegistryObject<Block> RUBY_ORE = null;
     public static RegistryObject<Block> TOPAZ_ORE = null;
     public static RegistryObject<Block> WILD_CROPS = null;
 
@@ -131,6 +133,12 @@ public class ModBlocks {
                     () -> new TallGrassBlock(BlockBehaviour.Properties.copy(GRASS)));
         }
         //Blocks but Ores
+        if (ConfigGeneral.disableDeepslateEnderdustOre.get()) {
+            DEEPSLATE_ENDERDUST_ORE = register("deepslate_enderdust_ore",
+                    () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(2.5F, 3.0F)
+                            .requiresCorrectToolForDrops()));
+        }
         if (ConfigGeneral.disableDeepslateRubyOre.get()) {
             DEEPSLATE_RUBY_ORE = register("deepslate_ruby_ore",
                     () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
@@ -142,6 +150,13 @@ public class ModBlocks {
                     () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
                             .strength(3.0F, 3.0F)
                             .requiresCorrectToolForDrops()));
+        }
+        if (ConfigGeneral.disableEnderdustOre.get()) {
+            ENDERDUST_ORE = register("enderdust_ore",
+                    () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
+                            .strength(2.5F, 3.0F)
+                            .requiresCorrectToolForDrops()));
+
         }
         if (ConfigGeneral.disableRubyOre.get()) {
             RUBY_ORE = register("ruby_ore",

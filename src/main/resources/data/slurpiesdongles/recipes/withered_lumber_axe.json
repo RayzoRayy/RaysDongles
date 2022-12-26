@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "slurpiesdongles:topaz_lumber_axe"
+      "item": "slurpiesdongles:netherite_lumber_axe"
     },
     {
       "item": "minecraft:nether_star"

@@ -1,5 +1,6 @@
 {
 	"values": [
+		"#forge:ores/ender",
 		"#forge:ores/topaz",
 		"#forge:ores/ruby"
 	]

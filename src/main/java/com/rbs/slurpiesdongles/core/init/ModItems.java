@@ -32,7 +32,12 @@ public class ModItems {
     public static RegistryObject<Item> WITHERED_CHEST = null;
     public static RegistryObject<Item> WITHERED_LEGS = null;
     public static RegistryObject<Item> WITHERED_BOOTS = null;
+
     //Dusts
+    public static final RegistryObject<Item> ENDER_DUST = ITEMS.register("ender_dust",
+            () -> new Item(props()));
+
+    //Glowstone Dusts
     public static final RegistryObject<Item> BLUE_GLOWSTONE_DUST = ITEMS.register("blue_glowstone_dust",
             () -> new Item(props()));
     public static final RegistryObject<Item> GRAY_GLOWSTONE_DUST = ITEMS.register("gray_glowstone_dust",

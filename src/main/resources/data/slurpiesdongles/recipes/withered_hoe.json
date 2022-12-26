@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "slurpiesdongles:topaz_hoe"
+      "item": "minecraft:netherite_hoe"
     },
     {
       "item": "minecraft:nether_star"
