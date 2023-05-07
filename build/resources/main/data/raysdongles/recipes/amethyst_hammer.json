@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "THT",
+    " H "
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "result": {
+    "item": "raysdongles:amethyst_hammer"
+  }
+}

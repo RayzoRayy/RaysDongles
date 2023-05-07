@@ -1,0 +1,15 @@
+{
+  "values": [
+    "#forge:tools/hammers/amethyst",
+    "#forge:tools/hammers/diamond",
+    "#forge:tools/hammers/gold",
+    "#forge:tools/hammers/iron",
+    "#forge:tools/hammers/ruby",
+    "#forge:tools/hammers/stone",
+    "#forge:tools/hammers/topaz",
+    "#forge:tools/hammers/vmhammer",
+    "#forge:tools/hammers/withered",
+    "#forge:tools/hammers/wood"
+
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "raysdongles:strawberry"
+    },
+    {
+      "item": "raysdongles:blender"
+    }
+  ],
+  "result": {
+    "item": "raysdongles:strawberry_juice"
+  }
+}

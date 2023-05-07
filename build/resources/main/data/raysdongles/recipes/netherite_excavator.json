@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "raysdongles:diamond_excavator"
+  },
+  "result": {
+    "item": "raysdongles:netherite_excavator"
+  }
+}

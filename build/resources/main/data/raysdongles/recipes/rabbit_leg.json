@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:rabbit"
+    },
+	{
+	  "item": "raysdongles:knife" 
+	}
+  ],
+  "result": {
+    "item": "raysdongles:rabbit_leg",
+	"count": 4
+  }
+}

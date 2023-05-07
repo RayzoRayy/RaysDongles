@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "raysdongles:carrot_stick"
+  },
+  "result": "raysdongles:cooked_carrot_stick",
+  "experience": 0.35,
+  "cookingtime": 200
+}

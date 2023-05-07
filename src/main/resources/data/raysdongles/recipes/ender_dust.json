@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "raysdongles:ender_dust"
+    },
+	{
+	  "item": "raysdongles:ender_dust"
+	},
+      {
+    
+        "item": "raysdongles:ender_dust"
+      },
+      {
+        "item": "raysdongles:ender_dust"
+      }
+  ],
+  "result": {
+    "item": "minecraft:ender_pearl"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ADP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick"
+    },
+    "A": {
+    "item": "minecraft:wooden_axe"
+    },
+      "D": {
+    "item": "minecraft:wooden_shovel"
+      },
+      "P": {
+          "item": "minecraft:wooden_pickaxe"
+      }
+  },
+  "result": {
+    "item": "raysdongles:wooden_paxel"
+  }
+}

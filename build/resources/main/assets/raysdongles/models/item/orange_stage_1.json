@@ -1,0 +1,5 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "raysdongles:blocks/orange_stage_1"
+    }}

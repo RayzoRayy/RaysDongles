@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    " SG",
+    "S G"
+  ],
+  "key": {
+    "S": {
+    "item": "minecraft:stick"
+    },
+    "G": {
+    "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "raysdongles:gold_battleaxe"
+  }
+}

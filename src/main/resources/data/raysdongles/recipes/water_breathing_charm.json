@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "ENE",
+    "XEX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:pufferfish"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "E": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "raysdongles:water_breathing_charm"
+  }
+}

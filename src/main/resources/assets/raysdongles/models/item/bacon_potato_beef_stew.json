@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "raysdongles:item/bacon_potato_beef_stew"
+    }
+}

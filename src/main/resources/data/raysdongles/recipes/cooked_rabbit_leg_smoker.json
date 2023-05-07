@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "raysdongles:rabbit_leg"
+  },
+  "result": "raysdongles:cooked_rabbit_leg",
+  "experience": 0.35,
+  "cookingtime": 100
+}

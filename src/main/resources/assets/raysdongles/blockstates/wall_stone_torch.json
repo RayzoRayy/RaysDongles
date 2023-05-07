@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=east": { "model": "raysdongles:block/wall_stone_torch" },
+    "facing=south": { "model": "raysdongles:block/wall_stone_torch", "y": 90 },
+    "facing=west": { "model": "raysdongles:block/wall_stone_torch", "y": 180 },
+    "facing=north": { "model": "raysdongles:block/wall_stone_torch", "y": 270 }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "raysdongles:raw_topaz"
+  },
+  "result": "raysdongles:topaz",
+  "experience": 1.0,
+  "cookingtime": 100
+}

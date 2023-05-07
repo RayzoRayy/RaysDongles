@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="[44,)"
+issueTrackerURL="https://github.com/RayzoRayy/RaysDongles/issues"
+license="LGPL-3"
+[[mods]]
+modId="raysdongles"
+version="6.16"
+displayName="Ray's Dongles"
+updateJSONURL="https://raw.githubusercontent.com/RayzoRayy/RaysDongles/1.19.3/update.json"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/slurpies-dongles"
+logoFile=""
+credits="See https://github.com/RayzoRayy/RaysDongles/wiki/Contributors for credits"
+authors="RayzoRayy"
+description='''
+Please see https://www.curseforge.com/minecraft/mc-mods/slurpies-dongles for more info on my mod, however, if you see this message, I hope that you have got my mod from Curse Forge or Modrinth! Any other site
+does NOT have my permission to host my mod, and may contain malware or viruses. I support Curse Forge only & Modrinth only..
+'''
+[[dependencies.raysdongles]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[44,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.raysdongles]]
+    modId="minecraft"
+    mandatory=true
+# This version range declares a minimum of the current minecraft version up to but not including the next major version
+    versionRange="[1.19.3,1.20)"
+    ordering="NONE"
+    side="BOTH"	

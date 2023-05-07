@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	{
+      "item": "minecraft:melon_slice"
+    },
+	{
+	  "item": "raysdongles:knife" 
+	}
+  ],
+  "result": {
+    "item": "raysdongles:melon_slice",
+    "count": 9
+  }
+}

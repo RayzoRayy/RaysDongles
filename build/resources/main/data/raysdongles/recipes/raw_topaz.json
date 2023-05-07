@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "raysdongles:raw_topaz"
+  },
+  "result": "raysdongles:topaz",
+  "experience": 0.35,
+  "cookingtime": 200
+}

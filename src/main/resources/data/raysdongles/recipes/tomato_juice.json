@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "raysdongles:tomato"
+    },
+    {
+      "item": "raysdongles:blender"
+    }
+  ],
+  "result": {
+    "item": "raysdongles:tomato_juice"
+  }
+}

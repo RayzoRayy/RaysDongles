@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#forge:tools/paxels/amethyst",
+    "#forge:tools/paxels/diamond",
+    "#forge:tools/paxels/gold",
+    "#forge:tools/paxels/iron",
+    "#forge:tools/paxels/ruby",
+    "#forge:tools/paxels/stone",
+    "#forge:tools/paxels/topaz",
+    "#forge:tools/paxels/withered",
+    "#forge:tools/paxels/wood"
+  ]
+}

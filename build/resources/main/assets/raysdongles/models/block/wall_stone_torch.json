@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_torch",
+  "textures": {
+    "torch": "raysdongles:block/stone_torch"
+  },
+  "render_type": "cutout"
+}

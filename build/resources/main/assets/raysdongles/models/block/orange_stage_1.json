@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "raysdongles:block/orange_stage_1"
+    },
+    "render_type": "cutout"
+}

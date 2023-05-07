@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "raysdongles:blue_bricks",
+    "raysdongles:cyan_bricks",
+    "raysdongles:green_bricks",
+    "raysdongles:orange_bricks",
+    "raysdongles:purple_bricks",
+    "raysdongles:rainbow_bricks",
+    "raysdongles:yellow_bricks",
+    "raysdongles:blender_block",
+    "raysdongles:enderdust_ore",
+    "raysdongles:deepslate_enderdust_ore",
+    "raysdongles:ruby_ore",
+    "raysdongles:deepslate_ruby_ore",
+    "raysdongles:ruby_block"
+  ]
+}
