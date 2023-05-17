@@ -1,7 +1,0 @@
-{
-    "parent": "block/crop",
-    "textures": {
-        "crop": "raysdongles:block/tomato4"
-    },
-    "render_type": "cutout"
-}

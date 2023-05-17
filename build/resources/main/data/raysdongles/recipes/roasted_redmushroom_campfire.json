@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "minecraft:red_mushroom"
-  },
-  "result": "raysdongles:roasted_red_mushroom",
-  "experience": 0.35,
-  "cookingtime": 200
-}

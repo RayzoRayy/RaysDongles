@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "item": "raysdongles:raw_potato_wedge"
-  },
-  "result": "raysdongles:potato_wedge",
-  "experience": 0.35,
-  "cookingtime": 200
-}

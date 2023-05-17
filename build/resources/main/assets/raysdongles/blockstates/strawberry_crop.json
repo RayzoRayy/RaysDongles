@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "age=0": { "model": "raysdongles:block/strawberry0" },
-        "age=1": { "model": "raysdongles:block/strawberry1" },
-        "age=2": { "model": "raysdongles:block/strawberry2" },
-        "age=3": { "model": "raysdongles:block/strawberry3" }
-    }
-}

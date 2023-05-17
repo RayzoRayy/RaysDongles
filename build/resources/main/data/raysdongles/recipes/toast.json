@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "item": "minecraft:bread"
-  },
-  "result": "raysdongles:toast",
-  "experience": 0.35,
-  "cookingtime": 200
-}

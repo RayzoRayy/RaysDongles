@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "minecraft:beetroot_seeds"
-  },
-  "result": "raysdongles:roasted_beetroot_seeds",
-  "experience": 0.35,
-  "cookingtime": 100
-}

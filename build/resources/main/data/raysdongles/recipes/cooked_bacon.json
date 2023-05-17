@@ -1,9 +1,0 @@
-{
-  "type": "smelting",
-  "ingredient": {
-    "item": "raysdongles:raw_bacon"
-  },
-  "result": "raysdongles:bacon",
-  "experience": 0.35,
-  "cookingtime": 200
-}

@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "minecraft:apple"
-  },
-  "result": "raysdongles:roasted_apple",
-  "experience": 0.35,
-  "cookingtime": 200
-}

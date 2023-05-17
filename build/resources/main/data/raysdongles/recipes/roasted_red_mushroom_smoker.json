@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "raysdongles:red_mushroom"
-  },
-  "result": "raysdongles:roasted_red_mushroom",
-  "experience": 0.35,
-  "cookingtime": 100
-}
