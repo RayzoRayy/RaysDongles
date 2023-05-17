@@ -1,7 +1,0 @@
-
-[General]
-	#Enable or disable the Update Checker [ true / false default: true
-	"Receive update messages" = true
-	#Enable or disable the thank you message [ true / false default: true
-	"Receive thank you message" = true
-
